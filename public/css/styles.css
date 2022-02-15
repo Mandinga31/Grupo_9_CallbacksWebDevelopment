@@ -7,10 +7,14 @@
 body{
     font-family: 'Roboto';
     background-color: #e8e4e6;
+    margin-top: 200px;
 }
 header{
     background-color: #195855;
     width: fit-content;
+    position: fixed;
+    top: 0%;
+    z-index: 99;
 }
     
 
@@ -81,7 +85,6 @@ header form .search-bar, .texto-search{
     
 }
 
-
   .reloj, img.top{
     max-width: 350px;
     padding: 10px;
@@ -139,6 +142,12 @@ button.register {
 button.register:hover {
     background-color: #195855;
 }
+
+.each{
+        text-align: center;
+        color: #004643;
+    }
+
 .main-body{
     display: flex;
     flex-direction: column;
@@ -147,6 +156,7 @@ button.register:hover {
     margin-right: auto;
     background-color: #fff;
     width: min-content;
+    margin-top: 250px;
 }
 
 .control-formulario {
@@ -237,6 +247,19 @@ button.home:hover {
 }
 .navbar li a:hover{
     color: #56918e
+}
+
+.top-img{
+    display: flex;
+    margin-bottom: 50px;
+}
+.top-img p {
+    font-size: 12px;
+}
+.top-img p:hover{
+    color: #004643;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 @media (max-width: 650px){
