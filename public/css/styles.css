@@ -176,7 +176,7 @@ button.register:hover {
 
 .each{
         text-align: center;
-        color: #004643;
+        color: #56918e;
     }
 
 .main-body{
@@ -199,6 +199,7 @@ button.register:hover {
 div.control-formulario input {
     display: flex;
     margin-bottom: 15px;
+    
 }
 .control {
     width: 90%;
@@ -211,6 +212,7 @@ div.control-formulario input {
     margin-right: auto;
     max-width: 800px;
     text-align: center;
+    
 }
 .ingresa h2{
     text-align: center;
@@ -240,6 +242,7 @@ button.home {
 }
 button.home:hover {
     background-color: #195855;
+    cursor: pointer;
 }
 .contenedor {
     position: relative;
@@ -306,6 +309,43 @@ button.home:hover {
     margin-bottom: 30px;
     color: white;
 }
+.login {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color:#195855;
+    border-radius: 10px;
+    border: black 2px solid;
+    padding: 50px;
+    margin: auto;
+    width: 320px;
+    margin-bottom: 40px;
+}
+.login form{
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    padding: 10px;
+} 
+.login form .botonSend{
+    margin-top: 20px;
+    border: black 1px solid;
+}
+
+input {
+    height: 35px;
+    border: black 1px solid;
+    width: 190px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+input#newsletter
+    {
+        width: auto;
+        height: auto;
+    }
+
 
 
 @media (max-width: 650px){
@@ -395,35 +435,8 @@ button.home:hover {
         width: 100%
     }
 }
-body{
-    background-color:white;
-    width: 100%;
-}
-
-.login {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    background-color:#195855;
-    border-radius: 10px;
-    border: black 2px solid;
-    padding: 50px;
-    margin: auto;
-    width: 320px;
-}
-.login form{
-    display: flex;
-    flex-direction: column;
-    margin:auto;
-    padding: 10px;
-} 
-.login form .botonSend{
-    margin-top: 20px;
-    border: black 3px solid;
-}
-
-input{
-    height: 35px;
-    border: black 2px solid;
-    width: 190px;
+@media(max-width:800px){
+    html{
+        inline-size: fit-content;
+    }
 }
