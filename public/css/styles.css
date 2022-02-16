@@ -16,10 +16,16 @@ header{
     top: 0%;
     z-index: 99;
 }
+p{
+    
+    text-align: center;
+}
+
 footer{
     
     background-color: #195855;
     padding: 40px;
+    margin-top: 50px;
     
 }
 .mapa iframe{
@@ -346,7 +352,9 @@ input#newsletter
         height: auto;
     }
 
+.formulario-login{
 
+}
 
 @media (max-width: 650px){
     header form .search-bar, .texto-search {
