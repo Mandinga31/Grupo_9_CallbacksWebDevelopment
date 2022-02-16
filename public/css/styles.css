@@ -16,7 +16,38 @@ header{
     top: 0%;
     z-index: 99;
 }
+footer{
     
+    background-color: #195855;
+    padding: 40px;
+    
+}
+.mapa iframe{
+    
+        width: 300px;
+        height: 200px;
+        border: 5px solid green;
+      
+}
+.footer ol {
+    list-style: none;
+    text-align: center;
+    margin-top: 50px;
+    
+    
+}
+.footer ol li {
+    margin-bottom: 28px;
+}
+.footer ol li:hover {
+    color:#56918e;
+    cursor: pointer;
+}
+.copyright{
+    color: #fff;
+    margin-top: 20px;
+}
+
 
 .top-header{
     display: flex;
@@ -157,6 +188,7 @@ button.register:hover {
     background-color: #fff;
     width: min-content;
     margin-top: 250px;
+    margin-bottom: 50px;
 }
 
 .control-formulario {
@@ -262,6 +294,20 @@ button.home:hover {
     font-weight: bold;
 }
 
+.mapa{
+    text-align: center;
+}
+.mapa h4{
+    color: #fff;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+.footer, .elementos1y2footer {
+    margin-bottom: 30px;
+    color: white;
+}
+
+
 @media (max-width: 650px){
     header form .search-bar, .texto-search {
         display: none;
@@ -333,6 +379,11 @@ button.home:hover {
     .navbar li a:hover{
         color: #56918e
     }
+    .elementos1y2footer{
+        display: flex;
+        justify-content: space-between;
+        
+    }
 }
 
 @media(max-width: 459px){
@@ -344,4 +395,8 @@ button.home:hover {
         background-color: #195855;
         width: 100%
     }
+}
+@media(max-width: 800px){
+    html{
+        inline-size: fit-content;}
 }
