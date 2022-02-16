@@ -47,16 +47,40 @@
         </div>    
         </section>
         </header>
+        <div class="ingresa"><h2>Completá los datos para ingresar</h2></div>
         <main class="login">
-            <form action="/" method="POST">
-                <input type="text" name="user" placeholder="Nombre de usuario...">
-                <input type="email" name="email" placeholder="Escribí tu correo electrónico...">
-                <input type="password" name="pass" placeholder="Escribí tu contraseña...">
-                <input class="botonSend" type="submit" value="Ingresar">
+            
+            <form action="/" method="get">
+                <input type="text" name="user" placeholder="Nombre de usuario">
+                <input type="email" name="email" placeholder="Correo electrónico">
+                <input type="password" name="pass" placeholder="Escribí tu contraseña">
+                <div class="each">
+                    <input type="checkbox" name="newsletter" value="newsletter" id="newsletter">
+                    <label for="newsletter">Recordar mi contraseña</label>
+                </div>
+                <div class="control"><button type="submit" class="home">Ingresar</button></div>
             </form>
         </main>
 </body>
 <footer>
+        
+    <div class="elementos1y2footer">
+        <div class="footer">
+            <ol>
+            <li>Terminos Y Condiciones</li>
+            <li>Formas de pago</li>
+            <li>Botón de arrepentimiento</li>
+            <li>Preguntas Frecuentes</li>
+            </ol>
+        </div>
+    
+        
+        <div class="mapa">
+            <h4>¿Cómo llegar?</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7645.836141410436!2d-58.42962255256714!3d-34.577087256291954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1644964448236!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+        <div class="copyright"><p>Copyright © 2022 Callwatch</p></div>
 </footer>
 </body>
 </html>
