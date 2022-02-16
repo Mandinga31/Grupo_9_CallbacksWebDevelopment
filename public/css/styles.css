@@ -345,3 +345,36 @@ button.home:hover {
         width: 100%
     }
 }
+
+body{
+    background-color:white;
+    width: 100%;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color:#195855;
+    border-radius: 10px;
+    border: black 2px solid;
+    padding: 50px;
+    margin: auto;
+    width: 320px;
+}
+.login form{
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    padding: 10px;
+} 
+.login form .botonSend{
+    margin-top: 20px;
+    border: black 3px solid;
+}
+
+input{
+    height: 35px;
+    border: black 2px solid;
+    width: 190px;
+}
