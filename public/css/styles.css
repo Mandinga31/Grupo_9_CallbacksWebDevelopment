@@ -16,9 +16,10 @@ header{
     top: 0%;
     z-index: 99;
 }
-p{
+p, .olvidastecontra{
     
     text-align: center;
+    margin-top: 20px;
 }
 
 footer{
@@ -352,9 +353,7 @@ input#newsletter
         height: auto;
     }
 
-.formulario-login{
 
-}
 
 @media (max-width: 650px){
     header form .search-bar, .texto-search {
