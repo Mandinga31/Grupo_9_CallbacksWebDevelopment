@@ -363,7 +363,7 @@ input#newsletter
         width: 70%;
         transition: all 450ms;
         border-color: transparent;
-        max-width: 800px;
+        max-width: 150px;
         align-self: center;
     }
     button.agregar-carrito:hover {
@@ -404,16 +404,34 @@ h5{
 
 .elemento-carrito{
     align-self: center;
+    text-align: center;
+}
+.elemento-comprar {
+    
+    background-color: #fff;
+    padding: 10px;
+
+    text-align: right;
+}
+.title-carrito{
+    margin-bottom: 20px;
 }
 .elementos-carrito{
     display: flex;
     justify-content: space-around;
     background-color: #fff;
     padding: 15px;
-    margin: 20px;
+
 }
+.carrito{
+    padding: 30px;
+}
+
 .elementos-carrito img{
-    width: 200px;
+    width: 150px;
+}
+.boton-comprar{
+    text-align: right;
 }
 
 @media (max-width: 650px){

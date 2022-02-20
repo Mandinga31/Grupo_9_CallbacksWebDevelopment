@@ -63,16 +63,29 @@
 
     <main>
     <div class="carrito">
-            <h3>Carrito de compras</h3>
+        <div class="title-carrito"><h3>Carrito de compras</h3>
         </div>
+        
         <div class="elementos-carrito">
-            <img src="images/Reloj-2.jpg" alt="imagen-principal"/> 
-            <div class="elemento-carrito"><h5>Reloj Callwatch Tommy M-905</h5></div>
+            
+            <div class="elemento-carrito"><h5>Reloj Callwatch Tommy M-905</h5><img src="images/Reloj-2.jpg" alt="imagen-principal"/></div> 
+            <div class="elemento-carrito">
+            <label for="cantidad">Cantidad</label>
+            <select id="cantidad" name="cantidad">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="+">+</option>
+              </select>
+            </div>
             <div class="elemento-carrito"><h5>$30.905</h5></div>
 
             
         </div>
-        <div class="elemento-carrito"><button class="agregar-carrito" type="submit">Comprar</button></div>
+        <p class="elemento-comprar">Subtotal: $30.905 </p>
+        <p class="elemento-comprar">Envío: $560 </p>
+        <p class="elemento-comprar">Total a pagar: $31.465</p>
+        <div class="boton-comprar"><button class="agregar-carrito" type="submit">Finalizar compra</button></div>
     </div>
         
     <div class="mas-vendidos"><h2>Te pueden interesar</h2></div>
@@ -83,6 +96,7 @@
         <div class="lista-imagenes">
             
             <div class="card"> 
+                
                 <img src="images/Reloj-2.jpg" alt="imagen-principal"/> 
                 <div class="cuerpo-card">
                     <h5>Reloj Callwatch Tommy M-905</h5>
