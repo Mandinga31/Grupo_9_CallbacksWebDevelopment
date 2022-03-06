@@ -8,4 +8,5 @@ router.get('/register',controlador.register);
 router.get('/login',controlador.login);
 router.get('/carrito',controlador.carrito);
 router.get('/detalle',controlador.detalle);
+router.get('/create',controlador.crear);
 module.exports = router;

@@ -29,6 +29,10 @@ footer{
     margin-top: 50px;
     
 }
+textarea{
+font-family: 'Roboto';
+ 
+}
 .mapa iframe{
     
         width: 300px;
@@ -81,7 +85,13 @@ footer{
     color: #fff;
 }
 .logo{
-    width: 30%;
+    
+    max-width: 30%
+    
+}
+.logo-solo{
+    
+    max-width: 100px
     
 }
 .logo-register{
@@ -181,7 +191,7 @@ button.register:hover {
     background-color: #195855;
 }
 
-.each{
+.each-checkbox{
         text-align: center;
         color: #56918e;
     }
@@ -207,6 +217,18 @@ div.control-formulario input {
     display: flex;
     margin-bottom: 15px;
     
+}
+.control-formulario label{
+    align-self: center;
+    margin-bottom: 10px;
+}
+.control-precio{
+    display: flex;
+    justify-content: center;
+
+}
+.control-precio input {
+    width: 40%;
 }
 .control {
     width: 90%;
@@ -339,11 +361,7 @@ button.home:hover {
     border: black 1px solid;
 }
 
-input {
-    height: 35px;
-    border: black 1px solid;
-    width: 190px;
-    padding: 15px;
+input, textarea {
     margin-bottom: 15px;
 }
 
@@ -410,20 +428,36 @@ h5{
     
     background-color: #fff;
     padding: 10px;
-
+    display: flex;
+    justify-content: space-between;
     text-align: right;
+}
+p.bold{
+    font-weight: bold;
 }
 .title-carrito{
     margin-bottom: 20px;
+    text-align: center;
+    color: #004643;
 }
 .elementos-carrito{
     display: flex;
     justify-content: space-around;
     background-color: #fff;
     padding: 15px;
+    width: 100%;
+    margin-right: 20px;
+
 
 }
+.elementos-carrito-2{
+    background-color: #fff;
+    padding: 20px;
+
+}
+
 .carrito{
+  
     padding: 30px;
 }
 
@@ -433,6 +467,25 @@ h5{
 .boton-comprar{
     text-align: right;
 }
+
+/*Página create*/
+.control-formulario-radio {
+    display: flex;
+    justify-content: space-around;
+}
+.control-formulario-radio .each {
+    display: flex;
+    
+}
+.color{
+    width: 15px;
+    height: 15px;
+    margin: 0px 10px;
+}   
+.color-detalle{
+    margin-bottom: 20px;
+}
+
 
 @media (max-width: 650px){
     header form .search-bar, .texto-search {
@@ -445,6 +498,14 @@ h5{
         display: flex;
         flex-direction: row;
         
+    }
+    .carrito {display: flex;
+    justify-content: space-around;}
+    .elementos-carrito-2{
+        background-color: #fff;
+        padding: 20px;
+        width: 40%;
+    
     }
     
     

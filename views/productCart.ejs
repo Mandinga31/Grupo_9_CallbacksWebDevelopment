@@ -1,70 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-        <title>Callwatch</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-        <link rel="stylesheet" href="css/styles.css">
-</head>
+<%- include ('./partials/head.ejs') %> 
 <body>
-    <header>
-    <section class="top-header"> 
-        <div class="main-header-top-elemento1">
-            <img src="images/logo3.jpg" alt="Logo de Callwatch" class="logo"></div>
-
-        <div class="main-header-top-elemento2">
-                <form class="search-bar" action="#" method="get">
-                
-                <label for="search-bar"></label>
-                
-                <div class="search-bar"><i class="fa fa-search"></i>
-                <input type="search" name="search-bar" id="search-bar" class="texto-search" 
-                placeholder="¿Qué estas buscando?">
-                </div>
-                </form> 
-        </div>
-        
-
-        <div class="icons">
-            <div class="icon">
-                
-                <li><a href="/"><i class="fas fa-home"></i></a></li>
-                
-            </div>
-            <div class="icon">
-                
-                <li><a href="/login"><i class="fas fa-user-circle"></i></a></li>
-                
-            </div>
-            <div class="icon">
-                
-                <li><a href="/carrito"><i class="fas fa-shopping-cart"></i></a></li>
-                
-            </div>
-            
-            
-           
-        </div>
-        
-    </section>
-    <nav class="main-nav-bar">
-        <ul class="navbar">
-            <li><a href="#">Relojes</a></li>
-            <li><a href="#">Joyas</a></li>
-            <li><a href="#">Tech</a></li>
-            <li><a href="#">Eyewear</a></li>
-            
-        </ul>
-        
-    </nav>
-    </header>
+<%- include ('./partials/header.ejs') %> 
 
     <main>
-    <div class="carrito">
-        <div class="title-carrito"><h3>Carrito de compras</h3>
+        <div class="title-carrito"><h2>Carrito de compras</h2>
         </div>
+    <div class="carrito">
+        
         
         <div class="elementos-carrito">
             
@@ -82,11 +26,33 @@
 
             
         </div>
-        <p class="elemento-comprar">Subtotal: $30.905 </p>
-        <p class="elemento-comprar">Envío: $560 </p>
-        <p class="elemento-comprar">Total a pagar: $31.465</p>
-        <div class="boton-comprar"><button class="agregar-carrito" type="submit">Finalizar compra</button></div>
+        <div class="elementos-carrito-2">
+            <p class="bold">Detalle de la compra:</p>
+            
+            <div class="elemento-comprar">
+                <p>Subtotal:</p>
+                <p>$30.905</p>
+            </div>
+            <div class="elemento-comprar">
+                <p>Envío:</p>
+                <p>$560</p>
+            </div>
+            
+            <tr><td colspan="2"><hr class="separatorTotals"></td></tr>
+            <div class="elemento-comprar">
+                <p class="bold">Total a pagar:</p>
+                <p class="bold">$31.605</p>
+            </div>
+            
+            
+            <form action='/' method="get" class="formulario-login">
+                <div class="boton-comprar"><button class="agregar-carrito" type="submit">Finalizar compra</button></div>
+                </form>  
+            
+        </div>
+        
     </div>
+    
         
     <div class="mas-vendidos"><h2>Te pueden interesar</h2></div>
     <section class="galeria">
@@ -161,26 +127,8 @@
 
     </section>
     </main>
-    <footer>
-        
-        <div class="elementos1y2footer">
-            <div class="footer">
-                <ol>
-                <li>Terminos Y Condiciones</li>
-                <li>Formas de pago</li>
-                <li>Botón de arrepentimiento</li>
-                <li>Preguntas Frecuentes</li>
-                </ol>
-            </div>
-        
-            
-            <div class="mapa">
-                <h4>¿Cómo llegar?</h4>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7645.836141410436!2d-58.42962255256714!3d-34.577087256291954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1644964448236!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-            <div class="copyright"><p>Copyright © 2022 Callwatch</p></div>
-    </footer>
+
+<%- include ('./partials/footer.ejs') %> 
 
 
 </body>
