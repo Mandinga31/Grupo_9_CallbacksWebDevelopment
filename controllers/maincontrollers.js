@@ -17,6 +17,9 @@ carrito: (req,res)=>{
 },
 detalle: (req,res)=>{
     res.render(path.join(__dirname , '../views/productDetail.ejs'));
-}
+},
+crear: (req,res)=>{
+    res.render(path.join(__dirname , '../views/create.ejs'));
+},
 };
 module.exports = controlador;
