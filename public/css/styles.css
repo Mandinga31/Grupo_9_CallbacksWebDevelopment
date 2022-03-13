@@ -62,6 +62,7 @@ font-family: 'Roboto';
     width: 100%;
     margin-bottom: 40px;
 }
+
 .imagenes-banner-2{
 text-align: center;
 margin: 100px auto;
@@ -412,7 +413,7 @@ input#newsletter
 .mas-vendidos{
     text-align: center;
 }
-h5{
+h4{
     text-align: center;
 }
 .card img{
@@ -445,6 +446,7 @@ h5{
 p.bold{
     font-weight: bold;
 }
+
 .title-carrito {
     margin-bottom: 20px;
     text-align: center;
@@ -497,6 +499,31 @@ p.bold{
     margin-bottom: 20px;
 }
 
+/*Página index*/
+.products{
+    padding: 70px;
+
+}
+.producto img {
+    width: 100%;
+    padding: 10px;
+}
+.producto{
+    background-color: #fff
+}
+.producto:hover {
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+    cursor: pointer;
+    width: 26%;
+}
+.cuerpo-card{
+    padding: 15px;
+}
+.cuerpo-card h3 {
+    text-align: center;
+    
+    
+}
 
 @media (max-width: 650px){
     header form .search-bar, .texto-search {
@@ -510,8 +537,11 @@ p.bold{
         flex-direction: row;
         
     }
-    .carrito {display: flex;
-    justify-content: space-around;}
+    .carrito {
+        display: flex;
+        justify-content: space-around;
+    }
+
     .elementos-carrito-2{
         background-color: #fff;
         padding: 20px;
@@ -519,6 +549,13 @@ p.bold{
     
     }
     
+    .products{
+     display: flex;
+     justify-content: space-around;
+    }
+    .producto {
+        width: 23%;
+    }
     
     button.register {
         width: 300px;
