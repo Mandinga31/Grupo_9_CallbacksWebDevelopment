@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include ('../partials/head.ejs') %> 
+<%- include ('../partials/head.ejs') %> 
 <body>
 <%- include ('../partials/header.ejs') %> 
 
@@ -11,14 +11,13 @@
         <div class="body-elemento1">
             <div class="top-img">
                 <p>Relojes / </p>
-                <p>Hombres / </p>
-                <p>Reloj Master Callwatch P-2345</p> 
+                <p><%= productToEdit.category %>  / </p>
+                <p><%= productToEdit.nombre %></p> 
             </div>
 
                 
             <div class="contenedor">
-                <img src="images/reloj1.jpg" class="reloj" />
-                <img class="top" src= "images/reloj1a.jpg"  />
+                <img src="../public/images/<%= productToEdit.imagen %>" class="reloj" />
             </div>
         
             
@@ -26,20 +25,20 @@
 
         <div class="body-elemento-2">
             <h2 class="nombre">
-                Reloj Master Callwatch P-2345
+                <%= productToEdit.nombre %>
             </h2>
             <h4 class="color-detalle">
-                Color: Negro
+                <%= productToEdit.color %>
             </h4>
             
             <h3 class="precio">
-                $37.195
+                $ <%= productToEdit.precio %>
             </h3>
             <h4 class="cuotas">
-                12 cuotas sin interés de $ 3.099,58
+                12 cuotas sin interés de $ <%= Math.trunc(productToEdit.precio / 12) %>
             </h4>
             <h4 class="cuota">
-                10% OFF en una cuota: $33475,50
+                10% OFF en una cuota: $ <%= Math.trunc(productToEdit.precio - (productToEdit.precio * (10 / 100))) %>
             </h4>
             
             
@@ -53,88 +52,10 @@
 
             <div class="descripcion">
                 <h3 class="titulo-descripcion">Descripcion del producto</h3>
-                <p>Con un diseño sobrio y ultradelgado, el Master Callwatch  captura 
-                    el ADN de la marca gracias a su forma arquitectónica de caja. 
-                    Diseñado para todo hombre moderno que le guste mantener las 
-                    cosas simples, este reloj minimalista de dos agujas se asegura 
-                    con una pulsera de malla o una correa de cuero suave. La esfera 
-                    de rayos de sol cepillada con anillo reflector se completa con
-                     índices recortados y con el icónico logotipo de BOSS</p>
+                <p> <%= productToEdit.descripcion %></p>
             </div>
         </div>
     </div>
-
-    <div class="mas-vendidos"><h2>Los más vendidos</h2></div>
-    <section class="galeria">
-        
-       
-        
-        <div class="lista-imagenes">
-            
-            <div class="card"> 
-                <img src="images/Reloj-2.jpg" alt="imagen-principal"/> 
-                <div class="cuerpo-card">
-                    <h5>Reloj Callwatch Tommy M-905</h5>
-                    <p>$30.905</p>
-                
-
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/Reloj-4.jpg" alt="imagen-principal"/> 
-                <div class="cuerpo-card">
-                    <h5>Reloj Callwatch Pioneer P-908</h5>
-                    <p>$60.300</p>
-
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/reloj-3.jpg" alt="imagen-principal"/> 
-                <div class="cuerpo-card">
-                    <h5>Reloj Callwatch Grandmaster</h5>
-                    <p>$23.405</p>
-
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/reloj-6.jpg" alt="imagen-principal"/> 
-                <div class="cuerpo-card">
-                    <h5>Reloj Golden-Fetch Callwatch P-345</h5>
-                    <p>$27.795</p>
-
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/reloj-7.jpg" alt="imagen-principal"/> 
-                <div class="cuerpo-card">
-                    <h5>Reloj Catmar Callwatch Y-905</h5>
-                    <p>$29.350</p>
-
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/reloj-8.jpg" alt="imagen-principal"/> 
-                <div class="cuerpo-card">
-                    <h5> Reloj Silver-lining Callwatch T-5905</h5>
-                    <p>$45.000</p>
-
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/reloj-9.jpg" alt="imagen-principal"/> 
-                <div class="cuerpo-card">
-                    <h5>Reloj Peña Callwatch T-786</h5>
-                    <p>$25.905</p>
-
-                </div>
-            </div>
-            
-            
-            
-        </div>
-
-
-    </section>
     </main>
 <%- include ('../partials/footer.ejs') %> 
 

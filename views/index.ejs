@@ -3,93 +3,55 @@
 <%- include ('./partials/head.ejs') %> 
 <body>
 <%- include ('./partials/header.ejs') %> 
+  
+
+<!--es es el div del banner  -->
+  <div class="imagenes-banner">
+	<img src="images/banner.jpg" alt="banner">
+</div>
     
     
 
-    <!--es es el div de las imagenes  -->
-    <div class="imagenes-banner">
-        <img src="images/banner.jpg" alt="banner">
-    </div>
+<!-- este es el div de la categoria female-->
+	<div class="todos-productos"><h2>Regalo para el día de la mujer</h2></div>
 
-
-    
-    <div class="mas-vendidos"><h2>Los más vendidos</h2></div>
 	<div class="products">
+		<% for(let i = 0; i < products.length; i ++){ if (products[i].category == 'Female' ) { %> 
+		<a href="/products/detalle/<%= products[i].id %>">
 		<article class="producto">
-			<img src="images/Reloj-2.jpg" alt="imagen-principal">
+			<img src= <%= products[i].imagen %>  alt="imagen-principal">
 			<div class="cuerpo-card"> 
-                    <h3>Reloj Callwatch Tommy M-905</h3>
-                    <p>$30.905</p>
+                    <h3><%= products[i].nombre %> </h3>
+                    <p>$<%= products[i].precio %></p>
 			</div> 
 				
 
 		</article>
-		<article class="producto">
-			<img src="images/reloj-3.jpg" alt="imagen-principal"> 
-			<div class="cuerpo-card">
-                    <h3>Reloj Callwatch Grandmaster</h3>
-                    <p>$23.405</p>
-
-            </div>
-		</article>
-		<article class="producto">
-			<img src="images/Reloj-4.jpg" alt="imagen-principal">
-			
-			<div class="cuerpo-card">
-				<h3>Reloj Callwatch Pioneer P-908</h3>
-				<p>$20.300</p>
-
-			</div>
-		</article>
-		<article class="producto">
-			<img src="images/reloj-6.jpg" alt="imagen-principal">
-			<div class="cuerpo-card">
-				<h3>Reloj Fetch Callwatch P-345</h3>
-				<p>$27.795</p>
-
-			</div>
-		</article>
-		
+	    </a>
+	    
+		<% }} %> 
     
     </div>
+	
     <!-- este es el div de la categoria inteligentes -->
-	<div class="mas-vendidos"><h2>Linea smartWatch by Callwatch</h2></div>
+	<h2 style="text-align: center;">Línea Smartwatch by CallWatch</h2>
+
 	<div class="products">
-		<article class="producto">
-			<img src="images/Reloj-2.jpg" alt="imagen-principal">
-			<div class="cuerpo-card"> 
-                    <h3>Reloj Callwatch Tommy M-905</h3>
-                    <p>$30.905</p>
-			</div> 
-				
-
-		</article>
-		<article class="producto">
-			<img src="images/reloj-3.jpg" alt="imagen-principal"> 
-			<div class="cuerpo-card">
-                    <h3>Reloj Callwatch Grandmaster</h3>
-                    <p>$23.405</p>
-
-            </div>
-		</article>
-		<article class="producto">
-			<img src="images/Reloj-4.jpg" alt="imagen-principal">
+		<% for(let i = 0; i < products.length; i ++){ if (products[i].category == 'smartwatch') { %> 
 			
-			<div class="cuerpo-card">
-				<h3>Reloj Callwatch Pioneer P-908</h3>
-				<p>$20.300</p>
+		    <article class="producto">
+			
+			<img src= <%= products[i].imagen %>  alt="imagen-principal">
+			<div class="cuerpo-card"> 
+                    <h3><%= products[i].nombre %> </h3>
+                    <p>$<%= products[i].precio %></p>
+			</div> 
+			
 
-			</div>
 		</article>
-		<article class="producto">
-			<img src="images/reloj-6.jpg" alt="imagen-principal">
-			<div class="cuerpo-card">
-				<h3>Reloj Fetch Callwatch P-345</h3>
-				<p>$27.795</p>
-
-			</div>
-		</article>
-		
+	    	
+	    
+		<% }} %> 
     
     </div>
     <div class="imagenes-banner-2" >
