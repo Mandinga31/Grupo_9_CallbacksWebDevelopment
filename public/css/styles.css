@@ -412,6 +412,11 @@ input#newsletter
 }
 .mas-vendidos{
     text-align: center;
+    
+}
+.todos-productos{
+    text-align: center;
+    margin-top: 200px;
 }
 h4{
     text-align: center;
@@ -498,24 +503,45 @@ p.bold{
 .color-detalle{
     margin-bottom: 20px;
 }
+button.register {
+    width: 300px;
+    height: 50px;
+    padding: 8px;
+    border-radius: 10px;
+    border-color: transparent;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    background-color: #004643;
+    color: #fff;
+    cursor: pointer;
+    
+    
+}
+button.register:hover {
+    background-color: #195855;
+}
+
 
 /*Página index*/
 .products{
     padding: 70px;
+    
 
+}
+.products a {
+    display: block;
 }
 .producto img {
     width: 100%;
     padding: 10px;
 }
 .producto{
-    background-color: #fff
+    background-color: #fff;
+    margin-bottom: 50px;
 }
-.producto:hover {
-    box-shadow: 0px 0px 10px rgb(100 100 100);
-    cursor: pointer;
-    width: 26%;
-}
+
 .cuerpo-card{
     padding: 15px;
 }
@@ -525,84 +551,8 @@ p.bold{
     
 }
 
-@media (max-width: 650px){
-    header form .search-bar, .texto-search {
-        display: none;
 
-    }
-}
-@media(min-width: 650px){
-    .main-body{
-        display: flex;
-        flex-direction: row;
-        
-    }
-    .carrito {
-        display: flex;
-        justify-content: space-around;
-    }
 
-    .elementos-carrito-2{
-        background-color: #fff;
-        padding: 20px;
-        width: 40%;
-    
-    }
-    
-    .products{
-     display: flex;
-     justify-content: space-around;
-    }
-    .producto {
-        width: 23%;
-    }
-    
-    button.register {
-        width: 300px;
-        height: 50px;
-        padding: 8px;
-        border-radius: 10px;
-        border-color: transparent;
-        margin-top: 5px;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 1200px;
-        background-color: #004643;
-        color: #fff;
-        cursor: pointer;
-        
-        
-    }
-    button.register:hover {
-        background-color: #195855;
-    }
-    
-    .detail-bottom{
-        display: flex;
-        justify-content: flex-start;
-    }
-    header form .search-bar, .texto-search{
-        width: 300px;
-    }
-    
-    
-   
-}
-@media(min-width:460px){
-    header{
-        background-color: #195855;
-        width: 100%
-    }
-    .lista-imagenes{
-        
-        width: 600px;
-        
-    }
-    
-   
-    
-    
-}
 @media(min-width:361px){
     .main-nav-bar {
         display: flex;
@@ -630,6 +580,30 @@ p.bold{
         justify-content: space-between;
         
     }
+    
+}
+@media(min-width:460px){
+    header{
+        background-color: #195855;
+        width: 100%
+    }
+    .lista-imagenes{
+        
+        width: 600px;
+        
+    }
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+       }
+    .producto {
+           width: 48%;
+       }
+    
+   
+    
+    
 }
 
 @media(max-width: 459px){
@@ -646,4 +620,56 @@ p.bold{
     html{
         inline-size: fit-content;
     }
+}
+@media (max-width: 650px){
+    header form .search-bar, .texto-search {
+        display: none;
+
+    }
+}
+@media(min-width: 650px){
+    .main-body{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .carrito {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .elementos-carrito-2{
+        background-color: #fff;
+        padding: 20px;
+        width: 40%;
+    
+    }
+    
+    .products{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+    }
+    .producto {
+        width: 23%;
+    }
+    .producto:hover {
+        box-shadow: 0px 0px 10px rgb(100 100 100);
+        cursor: pointer;
+        width: 26%;
+    }
+    .products a {
+        display: block;
+    }
+    
+    .detail-bottom{
+        display: flex;
+        justify-content: flex-start;
+    }
+    header form .search-bar, .texto-search{
+        width: 300px;
+    }
+    
+    
+   
 }

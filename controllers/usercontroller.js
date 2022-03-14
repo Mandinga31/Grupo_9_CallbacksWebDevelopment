@@ -10,8 +10,11 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
 
 const controlador = {
 
-index: (req,res)=>{
-res.render('index',{products})
+register: (req,res)=>{
+    res.render('users/register');
+},
+login: (req,res)=>{
+    res.render ('users/login');
 }
 };
 module.exports = controlador; 
