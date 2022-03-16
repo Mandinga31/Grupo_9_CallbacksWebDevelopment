@@ -1,18 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-        <title>Callwatch</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-        <link rel="stylesheet" href="css/styles.css">
-</head>
+    <%- include ('../partials/head.ejs') %> 
 <body>
-    <header>
-        <div class="main-header-top-elemento1">
-            <img src="images/logo.jpg" alt="Logo de Callwatch" class="logo-register"></div>
-    </header>
+    <%- include ('../partials/header-logo.ejs') %> 
     
     <main>
         <div class="ingresa"><h2>Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</h2></div>
@@ -31,16 +21,26 @@
             <label for="email"></label>
             <input type="email" name="email" id="email" class="control" placeholder="E-mail">
         </div>
-        <div class="each">
+        <div class="control-formulario">
+            <label for="password"></label>
+            <input type="password" name="password" id="password" class="control" placeholder="Ingresá tu contraseña">
+        </div>
+        <div class="control-formulario">
+            <label for="password"></label>
+            <input type="password" name="password" id="password" class="control" placeholder="Confirmá tu contraseña">
+        </div>
+        <div class="each-checkbox">
             <input type="checkbox" name="newsletter" value="newsletter" id="newsletter">
             <label for="newsletter">Quiero recibir la newsletter para recibir descuentos y novedades</label>
         </div>
 
         <div class="control"><button type="submit" class="home">Continuar</button>   </div>
+        
           
         
     </form>
     
     </main>
+<%- include ('../partials/footer.ejs') %> 
 </body>
 </html>

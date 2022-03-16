@@ -7,7 +7,7 @@
 body{
     font-family: 'Roboto';
     background-color: #e8e4e6;
-    margin-top: 200px;
+    margin-top: 160px;
 }
 header{
     background-color: #195855;
@@ -16,7 +16,60 @@ header{
     top: 0%;
     z-index: 99;
 }
+p, .olvidastecontra{
     
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer{
+    
+    background-color: #195855;
+    padding: 40px;
+    margin-top: 50px;
+    
+}
+textarea{
+font-family: 'Roboto';
+ 
+}
+.mapa iframe{
+    
+        width: 300px;
+        height: 200px;
+        border: 5px solid green;
+      
+}
+.footer ol {
+    list-style: none;
+    text-align: center;
+    margin-top: 50px;
+    
+    
+}
+.footer ol li {
+    margin-bottom: 28px;
+}
+.footer ol li:hover {
+    color:#56918e;
+    cursor: pointer;
+}
+.copyright{
+    color: #fff;
+    margin-top: 20px;
+}
+.imagenes-banner img{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.imagenes-banner-2{
+text-align: center;
+margin: 100px auto;
+
+max-width: 70%;
+}
+
 
 .top-header{
     display: flex;
@@ -43,7 +96,13 @@ header{
     color: #fff;
 }
 .logo{
-    width: 50%;
+    
+    max-width: 30%
+    
+}
+.logo-solo{
+    
+    max-width: 100px
     
 }
 .logo-register{
@@ -143,9 +202,9 @@ button.register:hover {
     background-color: #195855;
 }
 
-.each{
+.each-checkbox{
         text-align: center;
-        color: #004643;
+        color: #56918e;
     }
 
 .main-body{
@@ -157,6 +216,7 @@ button.register:hover {
     background-color: #fff;
     width: min-content;
     margin-top: 250px;
+    margin-bottom: 50px;
 }
 
 .control-formulario {
@@ -167,6 +227,19 @@ button.register:hover {
 div.control-formulario input {
     display: flex;
     margin-bottom: 15px;
+    
+}
+.control-formulario label{
+    align-self: center;
+    margin-bottom: 10px;
+}
+.control-precio{
+    display: flex;
+    justify-content: center;
+
+}
+.control-precio input {
+    width: 40%;
 }
 .control {
     width: 90%;
@@ -179,6 +252,7 @@ div.control-formulario input {
     margin-right: auto;
     max-width: 800px;
     text-align: center;
+    
 }
 .ingresa h2{
     text-align: center;
@@ -208,6 +282,7 @@ button.home {
 }
 button.home:hover {
     background-color: #195855;
+    cursor: pointer;
 }
 .contenedor {
     position: relative;
@@ -243,7 +318,7 @@ button.home:hover {
 .navbar li a {
     color: white;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 10px;
 }
 .navbar li a:hover{
     color: #56918e
@@ -262,55 +337,222 @@ button.home:hover {
     font-weight: bold;
 }
 
-@media (max-width: 650px){
-    header form .search-bar, .texto-search {
-        display: none;
+.mapa{
+    text-align: center;
+}
+.mapa h4{
+    color: #fff;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+.footer, .elementos1y2footer {
+    margin-bottom: 30px;
+    color: white;
+}
+.login {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color:#195855;
+    border-radius: 10px;
+    border: black 2px solid;
+    padding: 50px;
+    margin: auto;
+    width: 320px;
+    margin-bottom: 40px;
+}
+.login form{
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    padding: 10px;
+} 
+.login form .botonSend{
+    margin-top: 20px;
+    border: black 1px solid;
+}
 
-    }
-    
+input, textarea {
+    margin-bottom: 15px;
 }
-@media(min-width: 650px){
-    .main-body{
-        display: flex;
-        flex-direction: row;
-        
+
+input#newsletter
+    {
+        width: auto;
+        height: auto;
     }
-    button.register {
-        width: 300px;
-        height: 50px;
-        padding: 8px;
-        border-radius: 10px;
-        border-color: transparent;
-        margin-top: 5px;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 1200px;
+
+    button.agregar-carrito {
         background-color: #004643;
+        border-radius: 5px;
         color: #fff;
+        font-size: 15px;
+        margin: 15px 0px 20px 0px;
+        padding: 10px;
+        width: 70%;
+        transition: all 450ms;
+        border-color: transparent;
+        max-width: 150px;
+        align-self: center;
+    }
+    button.agregar-carrito:hover {
+        background-color: #195855;
         cursor: pointer;
-        
-        
     }
-    button.register:hover {
-        background-color: #195855;
-    }
-    
-    .detail-bottom{
-        display: flex;
-        justify-content: flex-start;
-    }
-    header form .search-bar, .texto-search{
-        width: 300px;
-    }
-   
+.lista-imagenes{
+    display: flex;
+    width: 200px;
+    overflow-y: auto;
 }
-@media(min-width:460px){
-    header{
-        background-color: #195855;
-        width: 100%
-    }
+.galeria{
+    display: flex;
+    overflow-y: auto;
+    padding: 16px;
+    justify-content: center;
+}
+.mas-vendidos{
+    text-align: center;
     
 }
+.todos-productos{
+    text-align: center;
+    margin-top: 200px;
+}
+h4{
+    text-align: center;
+}
+.card img{
+    max-width: 400px;
+    height: 200px;
+    object-fit: cover;
+    padding: 15px;
+}
+.card{
+    text-decoration:none;
+    padding: 10px;
+}
+.card:hover{
+     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    cursor: pointer;
+}
+
+.elemento-carrito{
+    align-self: center;
+    text-align: center;
+}
+.elemento-comprar {
+    
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+}
+p.bold{
+    font-weight: bold;
+}
+
+.title-carrito {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #004643;
+    margin-top: 200px ;
+}
+.elementos-carrito{
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 15px;
+    width: 100%;
+    margin-right: 20px;
+
+
+}
+.elementos-carrito-2{
+    background-color: #fff;
+    padding: 20px;
+
+}
+
+.carrito{
+  
+    padding: 30px;
+}
+
+.elementos-carrito img{
+    width: 150px;
+}
+.boton-comprar{
+    text-align: right;
+}
+
+/*Página create*/
+.control-formulario-radio {
+    display: flex;
+    justify-content: space-around;
+}
+.control-formulario-radio .each {
+    display: flex;
+    
+}
+.color{
+    width: 15px;
+    height: 15px;
+    margin: 0px 10px;
+}   
+.color-detalle{
+    margin-bottom: 20px;
+}
+button.register {
+    width: 300px;
+    height: 50px;
+    padding: 8px;
+    border-radius: 10px;
+    border-color: transparent;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    background-color: #004643;
+    color: #fff;
+    cursor: pointer;
+    
+    
+}
+button.register:hover {
+    background-color: #195855;
+}
+
+
+/*Página index*/
+.products{
+    padding: 70px;
+    
+
+}
+.products a {
+    display: block;
+}
+.producto img {
+    width: 100%;
+    padding: 10px;
+}
+.producto{
+    background-color: #fff;
+    margin-bottom: 50px;
+}
+
+.cuerpo-card{
+    padding: 15px;
+}
+.cuerpo-card h3 {
+    text-align: center;
+    
+    
+}
+
+
+
 @media(min-width:361px){
     .main-nav-bar {
         display: flex;
@@ -328,11 +570,40 @@ button.home:hover {
     .navbar li a {
         color: white;
         text-decoration: none;
-        font-size: 20px;
+        font-size: 15px;
     }
     .navbar li a:hover{
         color: #56918e
     }
+    .elementos1y2footer{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    
+}
+@media(min-width:460px){
+    header{
+        background-color: #195855;
+        width: 100%
+    }
+    .lista-imagenes{
+        
+        width: 600px;
+        
+    }
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+       }
+    .producto {
+           width: 48%;
+       }
+    
+   
+    
+    
 }
 
 @media(max-width: 459px){
@@ -344,4 +615,61 @@ button.home:hover {
         background-color: #195855;
         width: 100%
     }
+}
+@media(max-width:800px){
+    html{
+        inline-size: fit-content;
+    }
+}
+@media (max-width: 650px){
+    header form .search-bar, .texto-search {
+        display: none;
+
+    }
+}
+@media(min-width: 650px){
+    .main-body{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .carrito {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .elementos-carrito-2{
+        background-color: #fff;
+        padding: 20px;
+        width: 40%;
+    
+    }
+    
+    .products{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+    }
+    .producto {
+        width: 23%;
+    }
+    .producto:hover {
+        box-shadow: 0px 0px 10px rgb(100 100 100);
+        cursor: pointer;
+        width: 26%;
+    }
+    .products a {
+        display: block;
+    }
+    
+    .detail-bottom{
+        display: flex;
+        justify-content: flex-start;
+    }
+    header form .search-bar, .texto-search{
+        width: 300px;
+    }
+    
+    
+   
 }

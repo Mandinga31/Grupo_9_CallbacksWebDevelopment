@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('./partials/head.ejs') %> 
+<body>
+<%- include ('./partials/header.ejs') %> 
+  
+
+<!--es es el div del banner  -->
+  <div class="imagenes-banner">
+	<img src="images/banner.jpg" alt="banner">
+</div>
+    
+    
+
+<!-- este es el div de la categoria female-->
+	<div class="todos-productos"><h2>Regalo para el día de la mujer</h2></div>
+
+	<div class="products">
+		<% for(let i = 0; i < products.length; i ++){ if (products[i].category == 'Female' ) { %> 
+		<a href="/products/detalle/<%= products[i].id %>">
+		<article class="producto">
+			<img src= <%= products[i].imagen %>  alt="imagen-principal">
+			<div class="cuerpo-card"> 
+                    <h3><%= products[i].nombre %> </h3>
+                    <p>$<%= products[i].precio %></p>
+			</div> 
+				
+
+		</article>
+	    </a>
+	    
+		<% }} %> 
+    
+    </div>
+	
+    <!-- este es el div de la categoria inteligentes -->
+	<h2 style="text-align: center;">Línea Smartwatch by CallWatch</h2>
+
+	<div class="products">
+		<% for(let i = 0; i < products.length; i ++){ if (products[i].category == 'smartwatch') { %> 
+			
+		    <article class="producto">
+			
+			<img src= <%= products[i].imagen %>  alt="imagen-principal">
+			<div class="cuerpo-card"> 
+                    <h3><%= products[i].nombre %> </h3>
+                    <p>$<%= products[i].precio %></p>
+			</div> 
+			
+
+		</article>
+	    	
+	    
+		<% }} %> 
+    
+    </div>
+    <div class="imagenes-banner-2" >
+		
+        <h2>Globemaster Callwatch Annual Calendar
+        </h2>
+        <p>Conozca los tres nuevos modelos de esta colección de estilo clásico, 
+            fabricados en diversos materiales y con esferas en color verde, burdeos y oro</p>
+            <button class="agregar-carrito" type="submit">Descubrir nuevos Relojes</button>
+</div>
+<%- include ('./partials/footer.ejs') %> 
+</body>
+
+</body>
+</html>

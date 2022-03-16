@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('../partials/head.ejs') %> 
+<body>
+<%- include ('../partials/header.ejs') %> 
+
+    <main>
+        
+        <div class="main-body">
+        
+        <div class="body-elemento1">
+            <div class="top-img">
+                <p>Relojes / </p>
+                <p><%= productToEdit.category %>  / </p>
+                <p><%= productToEdit.nombre %></p> 
+            </div>
+
+                
+            <div class="contenedor">
+                <img src="../public/images/<%= productToEdit.imagen %>" class="reloj" />
+            </div>
+        
+            
+        </div>
+
+        <div class="body-elemento-2">
+            <h2 class="nombre">
+                <%= productToEdit.nombre %>
+            </h2>
+            <h4 class="color-detalle">
+                <%= productToEdit.color %>
+            </h4>
+            
+            <h3 class="precio">
+                $ <%= productToEdit.precio %>
+            </h3>
+            <h4 class="cuotas">
+                12 cuotas sin interés de $ <%= Math.trunc(productToEdit.precio / 12) %>
+            </h4>
+            <h4 class="cuota">
+                10% OFF en una cuota: $ <%= Math.trunc(productToEdit.precio - (productToEdit.precio * (10 / 100))) %>
+            </h4>
+            
+            
+            <div class="detail-bottom">
+                <i class="fas fa-info-circle"></i>
+                <form action='/carrito' method="get" class="formulario-login">
+                <div class="control"><button type="submit" class="register">Agregar al Carrito</button></div>
+                </form>
+
+            </div>
+
+            <div class="descripcion">
+                <h3 class="titulo-descripcion">Descripcion del producto</h3>
+                <p> <%= productToEdit.descripcion %></p>
+            </div>
+        </div>
+    </div>
+    </main>
+<%- include ('../partials/footer.ejs') %> 
+
+
+</body>
+</html>
