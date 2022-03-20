@@ -64,12 +64,11 @@
     },
     {
         "id": 8,
-        "nombre": "Callwatch Boss R-890",
-        "descripcion": "Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.",
-        "imagen": "../images/smartwatch-1.jpg",
-        "category": "smartwatch",
-        "color": "Red",
-        "precio": 19190
+        "nombre": "Reloj Smartwatch pink",
+        "category": "reloj-smart",
+        "color": "color-negro",
+        "precio": "19190",
+        "descripcion": "SE VE LA DESCRIPCION? "
     },
     {
         "id": 9,
@@ -154,17 +153,12 @@
         "id": 19
     },
     {
-        "nombre": "HOA",
-        "color": "negro",
-        "precio": "8000",
-        "imagen": "1647297112271Nueva Imagen",
-        "id": 20
-    },
-    {
-        "nombre": "Valentina Clara",
-        "color": "marron",
-        "precio": "700",
-        "imagen": "1647297458127.jpg",
-        "id": 21
+        "nombre": "Reloj nuevo",
+        "descripcion": "  Lo",
+        "category": "hombre",
+        "color": "color-negro",
+        "precio": "7800",
+        "id": 20,
+        "imagen": "1647808965530.jpg"
     }
 ]

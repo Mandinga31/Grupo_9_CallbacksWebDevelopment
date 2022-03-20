@@ -4,23 +4,24 @@
 <body>
 <%- include ('../partials/header.ejs') %> 
 <main>
-    <div class="title-carrito"><h2>Vendé tus Relojes</h2></div>
-<form action='/products' method="POST" class="formulario" enctype="multipart/form-data">
+    <div class="title-carrito"><h2>Editá  tus productos</h2></div>
+<form action='../<%= productToEdit.id %>?_method=PUT' method="POST" class="formulario" enctype="multipart/form-data">
     
     
     <div class="control-formulario">
         <label for="nombre"></label>
-        <input type="text" name="nombre" id="nombre" class="control" placeholder="Nombre del producto" >
+        <input type="text" name="nombre" id="nombre" class="control" placeholder="<%= productToEdit.nombre %>" value="<%= productToEdit.nombre %>" >
     </div>
     <div class="control-formulario">
         <label for="descripcion">Descripción del producto</label>
-        <textarea type="text" id="descripcion" class="control" placeholder="Descripción del producto"> </textarea>
+        <textarea name="descripcion" type="text" id="descripcion" class="control" placeholder="<%= productToEdit.descripcion %>" value="<%= productToEdit.descripcion %>"> <%= productToEdit.descripcion %></textarea>
     </div>
     
     
     <div class="control-formulario">
-        <label for="categorias">Categorias</label>
-        <select class="control">
+        <label for="categorias" name="category">Categorias</label>
+        <select class="control" name="category">
+            <option value="">Seleccionar</option>
             <option value="unisex">Unisex</option>
             <option value="mujer">Mujer</option>
             <option value="hombre">Hombre</option>
@@ -36,17 +37,17 @@
         
             <div class="each">
                 <input type="radio" name="color" value="color-marron" class="radio" id="color-marron">
-                <img src="../images/marron.png" alt="imagen-marron" class="color"/> 
+                <img src="../../images/marron.png" alt="imagen-marron" class="color"/> 
                 <label for="color-marron">Marrón</label>
             </div>
             <div class="each">
                 <input type="radio" name="color" value="color-negro" class="radio" id="color-negro">
-                <img src="../images/negro.png" alt="imagen-negro" class="color"/> 
+                <img src="../../images/negro.png" alt="imagen-negro" class="color"/> 
                 <label for="color-negro">Negro</label>
             </div>
             <div class="each">
                 <input type="radio" name="color" value="color-azul" class="radio" id="color-azul">
-                <img src="../images/azul.png" alt="imagen-azul" class="color" /> 
+                <img src="../../images/azul.png" alt="imagen-azul" class="color" /> 
                 <label for="color-azul">Azul</label>
             </div>
     </div>   
@@ -54,17 +55,17 @@
         
             <div class="each">
                 <input type="radio" name="color" value="color-blanco" class="radio" id="color-blanco">
-                <img src="../images/blanco.png" alt="imagen-rojo" class="color"/> 
+                <img src="../../images/blanco.png" alt="imagen-rojo" class="color"/> 
                 <label class="colores" for="color-blanco">Blanco</label>
             </div>
             <div class="each">
                 <input type="radio" name="color" value="color-verde" class="radio" id="color-verde">
-                <img src="../images/verde.png" alt="imagen-verde" class="color"/> 
+                <img src="../../images/verde.png" alt="imagen-verde" class="color"/> 
                 <label class="colores" for="color-verde">Verde</label>
             </div>
             <div class="each">
                 <input type="radio" name="color" value="color-rojo" class="radio" id="color-rojo">
-                <img src="../images/rojo.png" alt="imagen-rojo" class="color"/> 
+                <img src="../../images/rojo.png" alt="imagen-rojo" class="color"/> 
                 <label class="colores" for="color-rojo">Rojo</label>
             </div>
             
@@ -73,14 +74,15 @@
     
     <div class="control-formulario">
         <label for="imagen">Foto del producto</label>    
-        <input type="file" name="imagen-de-producto" id="imagen" class="control" accept=".jpg" id="imagen">
+        <input type="file" name="imagen" id="imagen" class="control" accept=".jpg" id="imagen">
     </div>
     
     
     
     <div class="control-formulario">
         <label for="precio">Precio</label>
-        <input type= "number" name="precio" placeholder="Precio del producto" id="precio" class="control"> 
+        <input type= "number" name="precio" placeholder="Precio del producto" id="precio" class="control"
+        value="<%= productToEdit.precio %>"> 
         
         <!--  
         <div class="control-precio">
@@ -94,12 +96,12 @@
         <input type="checkbox" name="envio" value="envio" id="envio">
         <label for="envio">Envío gratis</label>
 </div>
-    <div>
+    
         
-       <form action='/index' method="get" class="formulario-login">
-           <div class="control"><button type="submit" class="register">Crear</button></div>
-           </form>  
-    </div>
+       
+ <div class="control"><button type="submit" class="register">Guardar cambios</button></div>
+             
+
 
 
 </main>

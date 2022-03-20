@@ -11,13 +11,13 @@
         <div class="body-elemento1">
             <div class="top-img">
                 <p>Relojes / </p>
-                <p><%= productToEdit.category %>  / </p>
+                <p>  <%= productToEdit.category %> / </p>
                 <p><%= productToEdit.nombre %></p> 
             </div>
 
                 
             <div class="contenedor">
-                <img src="../public/images/<%= productToEdit.imagen %>" class="reloj" />
+                <img src="../../images/<%= productToEdit.imagen %>" class="reloj" />
             </div>
         
             
@@ -44,15 +44,27 @@
             
             <div class="detail-bottom">
                 <i class="fas fa-info-circle"></i>
-                <form action='/carrito' method="get" class="formulario-login">
+                <form action='/products/carrito/<%=productToEdit.id %> ' method="get" class="formulario-login">
                 <div class="control"><button type="submit" class="register">Agregar al Carrito</button></div>
                 </form>
 
             </div>
 
+            <form action='<%=productToEdit.id%>?_method=DELETE' method="POST" class="formulario-login">
+                <div class="control">
+                    <button type="submit" class="">
+                        Eliminar
+                    </button>
+                </div>
+            </form>
+            <button><a href="../<%=productToEdit.id%>/edit">Editar</a></button>
+            
+
+            
+            
             <div class="descripcion">
-                <h3 class="titulo-descripcion">Descripcion del producto</h3>
-                <p> <%= productToEdit.descripcion %></p>
+            <h3 class="titulo-descripcion">Descripcion del producto</h3>
+            <p> <%= productToEdit.descripcion %></p>
             </div>
         </div>
     </div>
