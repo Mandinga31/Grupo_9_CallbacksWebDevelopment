@@ -13,13 +13,15 @@
     
 
 <!-- este es el div de la categoria female-->
-	<div class="todos-productos"><h2>Regalo para el día de la mujer</h2></div>
+	<h2 style="text-align: center;">Regalo para el día de la mujer</h2>
 
 	<div class="products">
+
+
 		<% for(let i = 0; i < products.length; i ++){ if (products[i].category == 'Female' ) { %> 
 		<a href="/products/detalle/<%= products[i].id %>">
 		<article class="producto">
-			<img src= <%= products[i].imagen %>  alt="imagen-principal">
+			<img src= '../../images/<%= products[i].imagen %>'  alt="imagen-principal">
 			<div class="cuerpo-card"> 
                     <h3><%= products[i].nombre %> </h3>
                     <p>$<%= products[i].precio %></p>
@@ -37,19 +39,20 @@
 	<h2 style="text-align: center;">Línea Smartwatch by CallWatch</h2>
 
 	<div class="products">
-		<% for(let i = 0; i < products.length; i ++){ if (products[i].category == 'smartwatch') { %> 
-			
-		    <article class="producto">
-			
-			<img src= <%= products[i].imagen %>  alt="imagen-principal">
+
+		
+		<% for(let i = 0; i < products.length; i ++){ if (products[i].category == 'smartwatch' ) { %> 
+		<a href="/products/detalle/<%= products[i].id %>">
+		<article class="producto">
+			<img src= '../../images/<%= products[i].imagen %>'  alt="imagen-principal">
 			<div class="cuerpo-card"> 
                     <h3><%= products[i].nombre %> </h3>
                     <p>$<%= products[i].precio %></p>
 			</div> 
-			
+				
 
 		</article>
-	    	
+	    </a>
 	    
 		<% }} %> 
     

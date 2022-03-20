@@ -5,13 +5,15 @@
 <%- include ('./partials/header.ejs') %> 
     
     
-<div class="mas-vendidos"><h2>Todos los productos</h2></div>
+<div class="todos-productos"><h2>Todos los productos</h2></div>
 
 	<div class="products">
+
+
 		<% for(let i = 0; i < products.length; i ++){  %> 
-			
+		<a href="/products/detalle/<%= products[i].id %>">
 		<article class="producto">
-			<img src= <%= products[i].imagen %>  alt="imagen-principal">
+			<img src= '../images/<%= products[i].imagen %>'  alt="imagen-principal">
 			<div class="cuerpo-card"> 
                     <h3><%= products[i].nombre %> </h3>
                     <p>$<%= products[i].precio %></p>
@@ -19,6 +21,7 @@
 				
 
 		</article>
+	    </a>
 	    
 		<% } %> 
     
