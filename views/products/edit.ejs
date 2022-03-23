@@ -21,7 +21,7 @@
     <div class="control-formulario">
         <label for="categorias" name="category">Categorias</label>
         <select class="control" name="category">
-            <option value="">Seleccionar</option>
+            <option value="<%= productToEdit.category%>"><%= productToEdit.category%></option>
             <option value="unisex">Unisex</option>
             <option value="mujer">Mujer</option>
             <option value="hombre">Hombre</option>
@@ -73,8 +73,8 @@
     </div>
     
     <div class="control-formulario">
-        <label for="imagen">Foto del producto</label>    
-        <input type="file" name="imagen" id="imagen" class="control" accept=".jpg" id="imagen">
+        <label for="imagen">Selecciona una nueva foto del producto</label>    
+        <input type="file" name="imagen" id="imagen" class="control" accept=".jpg" id="imagen" > 
     </div>
     
     
@@ -82,7 +82,7 @@
     <div class="control-formulario">
         <label for="precio">Precio</label>
         <input type= "number" name="precio" placeholder="Precio del producto" id="precio" class="control"
-        value="<%= productToEdit.precio %>"> 
+        value="<%=productToEdit.precio %>"> 
         
         <!--  
         <div class="control-precio">
@@ -97,7 +97,7 @@
         <label for="envio">Envío gratis</label>
 </div>
     
-        
+
        
  <div class="control"><button type="submit" class="register">Guardar cambios</button></div>
              
