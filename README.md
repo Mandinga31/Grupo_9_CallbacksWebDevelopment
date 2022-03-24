@@ -3,7 +3,7 @@ Proyecto Digital House
 
 
 
-Link de Trello Sprint 3: https://trello.com/invite/b/AehxMhYe/28650b40be09b0e827a0d06726d383b4/sprint-1
+Link de Trello Sprint 4: https://trello.com/invite/b/AehxMhYe/28650b40be09b0e827a0d06726d383b4/sprint-1
 
 -Relojes Callwatch.
 La página va a ofrecer ventas de relojes y accesorios.
