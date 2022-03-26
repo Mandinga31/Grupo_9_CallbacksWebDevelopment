@@ -8,3 +8,4 @@ Logramos una mejor organización pero todavia nos falta encontrar los momentos p
 Como mencionamos en la retro anterior destacamos la voluntad y disposicion de todos los integrantes del grupo para realizar
 las tareas dispuestas. 
 
+Retro sprint 3 = Falta encontrar el momento para juntarnos. Creemos que debemos dividirnos mejor las tareas y poner una fecha límite interna (previa a la dispuesta por DH) en el caso de uno no haya podido llegar a realizar lo dispuesto, ese punto lo haremos entre todos asi evitamos entregar tarde.   
