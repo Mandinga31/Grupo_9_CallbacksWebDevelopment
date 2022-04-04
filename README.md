@@ -13,7 +13,7 @@ En cuanto a la página, mas allá de sus funcionalidades, queremos lograr un dis
 ## Integrantes
 ### Boris Gallegos | Soldador | 23 años
 ### Gonzalos Rozas | Empleado de comercio | 34 años
-### Valentina Espíndola | Estudiante universitario | 19 años 
+### Valentina Espíndola | Estudiante | 19 años 
 ### Braian Romero | Estudiante | 20 años
 
 
