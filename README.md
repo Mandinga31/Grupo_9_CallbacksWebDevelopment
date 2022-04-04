@@ -30,20 +30,21 @@ Buenas soy Braian, soy estudiante.
 😀 Edad : 20 años.
 😎 Hobbies : Juguegos en la compu, tomar mates y los findes salir a pasar el dia en algun lado.
 
+SWATCH
 https://www.swatch.com/
-elegimos este sitio por la estética y la funcionalidad del carrito de compras; Y porque tiene ofertas para todo público.
-
+Elegimos este sitio por la estética y la funcionalidad del carrito de compras; Y porque tiene ofertas para todo público.
+INTEGRADOS ARGENTINOS
 https://www.integradosargentinos.com/ 
-elegimos este sitio por la forma de las animaciones en la barra de anavegación.
-
+Elegimos este sitio por la forma de las animaciones en la barra de anavegación.
+ABACO
 https://abaco.la/
 Elegimos este página porque ofrece una suscripción como primer paso al conectarse, tambien por su estetica.
-
+OMEGA 
 https://www.omegawatches.com/es/
-elegimos esta página por su flujo de navegación.
-
+Elegimos esta página por su flujo de navegación.
+ROLEX
 https://www.rolex.com/
-elegimos este página porque le ofrece al usuario la opción de modificar la visualización del sitio (aumentar el contraste, Reducir animaciones).
+Elegimos este página porque le ofrece al usuario la opción de modificar la visualización del sitio (aumentar el contraste, Reducir animaciones).
 
 
 
