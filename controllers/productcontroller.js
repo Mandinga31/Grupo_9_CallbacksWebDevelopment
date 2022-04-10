@@ -29,7 +29,7 @@ crear: (req,res)=>{
     res.render('products/create', {products});
 },
 creado: (req,res)=>{
-    const newProduct = req.body
+    const newProduct = req.body 
     console.log(req.body)
 	let newProductId = (products[products.length - 1].id) + 1;
    
@@ -80,7 +80,7 @@ editado: (req,res)=>{
 				products[i].nombre = body.nombre;
 				products[i].descripcion = body.descripcion;
 				products[i].category = body.category;
-				products[i].imagen = req.file.filename 
+				products[i].imagen = req.file.filename  
 
 
 				

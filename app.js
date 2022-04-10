@@ -1,8 +1,13 @@
 const express = require('express');
+const session = require('express-session');
 const app = express();
 const methodOverride = require('method-override');
 
-
+app.use(session({
+    secret: 'shhh, secreto',
+    resave: false,
+    saveUninitialized: false
+}));
 app.use(express.static('public'));
 app.set('view engine', 'ejs')
 

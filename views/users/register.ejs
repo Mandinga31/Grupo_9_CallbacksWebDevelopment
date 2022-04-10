@@ -6,7 +6,7 @@
     
     <main>
         <div class="ingresa"><h2>Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</h2></div>
-    <form action='/' method="get" class="formulario">
+    <form action="" method="POST" class="formulario" enctype="multipart/form-data">
         
         
         <div class="control-formulario">
@@ -20,6 +20,12 @@
         <div class="control-formulario">
             <label for="email"></label>
             <input type="email" name="email" id="email" class="control" placeholder="E-mail">
+        </div>
+        <div class="control-formulario">
+            <label for="imagen">Selecciona una nueva foto del producto</label>    
+             
+            <input type="file" name="imagen" id="imagen" class="control" accept=".jpg"> 
+        <!-- Acá lo que tenemos que hacer es que por defecto quede la imagen ya ingresada.-->
         </div>
         <div class="control-formulario">
             <label for="password"></label>
