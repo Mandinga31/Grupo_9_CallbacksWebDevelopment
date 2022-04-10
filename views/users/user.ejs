@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('../partials/head.ejs') %> 
+<body>
+<%- include ('../partials/header.ejs') %> 
+<div class="bienvenido"><h2>Bienvenido de vuelta @<%= user.usuario %></h2></div>
+<main class="main-bievenidos" style="background-color: #fff;">
+    
+    <div class="bienvenido-main-body">
+    
+    <div class="body-elemento1">
+        <div class="bienvenido-contenedor">
+            <img src="../images/avatar-1.jpg " class="reloj">
+        </div>
+    
+        
+    </div>
+
+    <div class="body-elemento-2">
+        <h2 class="nombre">
+        Rhoda 
+        </h2>
+                
+        <h3 class="nombre">
+            rortegao 
+        </h3>
+    </div>          
+</div>
+<div><h4>Mi wishlist</h4></div>
+<div><h4>Mis pedidos</h4></div>
+<div><a href="/users/logout/"><h4>Logout</h4></a></div>  
+
+</main>
+
+<%- include ('../partials/footer.ejs') %> 
+</body>
+</html>

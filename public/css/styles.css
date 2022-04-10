@@ -5,7 +5,7 @@
     }
 
 body{
-    font-family: 'Roboto';
+    font-family: 'Montserrat';
     background-color: #e8e4e6;
     margin-top: 160px;
 }
@@ -22,7 +22,11 @@ p, .olvidastecontra{
     margin-top: 20px;
     margin-bottom: 15px;
 }
-
+.error{
+    color: #e62929;
+    margin-block-start: auto;
+    font-size: small;
+}
 footer{
     
     background-color: #195855;
@@ -31,7 +35,7 @@ footer{
     
 }
 textarea{
-font-family: 'Roboto';
+font-family: 'Montserrat';
  
 }
 .mapa iframe{
@@ -136,6 +140,45 @@ header form .search-bar, .texto-search{
     
   
   }
+  /**** Página User* **/
+  .bienvenido {
+    text-align: center;
+    margin-top: 236px;
+    color: #004643;}
+
+    .bienvenido-contenedor{
+    position: relative;
+    height: 290px;
+    width: 290px;
+    float: left;
+    }
+    .main-bievenidos{
+        padding: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #fff;
+        width: min-content;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+    
+    .bienvenido-main-body{
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #fff;
+        width: min-content;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+    .bienvenido-contenedor img {
+        position: absolute;
+        left: 0;
+        transition: opacity 1.5s ease-in-out;
+        max-width: -webkit-fill-available;
+      }
   /*** ESTILOS BOTÓN SLIDE LEFT ***/
 .boton-css-nuevo a {
       text-decoration: none;
@@ -359,7 +402,6 @@ div.control-formulario input {
 }
 .ingresa h2{
     text-align: center;
-    margin-top: 70px;
     margin-bottom: 20px;
     color: #004643;
 }
@@ -466,6 +508,7 @@ button.home:hover {
     margin-bottom: 30px;
     color: white;
 }
+
 .login {
     display: flex;
     justify-content: center;
@@ -764,6 +807,10 @@ button.register:hover {
         display: flex;
         flex-direction: row;
         
+    }
+    .bienvenido-main-body{
+        display: flex;
+        flex-direction: row;
     }
     .carrito {
         display: flex;

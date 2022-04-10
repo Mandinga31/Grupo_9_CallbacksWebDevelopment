@@ -1,1 +1,101 @@
-[{"id":1,"nombre":"Callwatch Fendi P-98","descripcion":"Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.","imagen":"../images/Reloj-4.jpg","category":"Female","color":"Blue","precio":25730},{"id":2,"nombre":"Callwatch Sauza Silver","descripcion":"Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.","imagen":"../images/reloj-6.jpg","category":"Male","color":"Aquamarine","precio":26440},{"id":3,"nombre":"Callwatch Sprouts","descripcion":"Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.","imagen":"../images/reloj-7.jpg","category":"Female","color":"Maroon","precio":24610},{"id":4,"nombre":"Callwatch Platinium Grape","descripcion":"Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.","imagen":"../images/reloj-8.jpg","category":"Female","color":"Violet","precio":20550},{"id":5,"nombre":"Callwatch Kieths N-900","descripcion":"Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.","imagen":"../images/reloj-9.jpg","category":"Female","color":"Blue","precio":19949},{"id":6,"nombre":"Callwatch Golden-Cherry","descripcion":"Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.","imagen":"../images/reloj1a.jpg","category":"Agender","color":"Khaki","precio":28650},{"id":7,"nombre":"Callwatch Toku Katsuo","descripcion":"Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.","imagen":"../images/Reloj-2.jpg","category":"Agender","color":"Fuscia","precio":19490},{"id":9,"nombre":"Callwatch Peach P-200","descripcion":"Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.","imagen":"../images/smartwatch-2.jpg","category":"smartwatch","color":"Green","precio":15950},{"id":10,"nombre":" Callwatch Blue Brizard","descripcion":"Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.","imagen":"../images/smartwatch-3.jpg","category":"smartwatch","color":"Turquoise","precio":13960},{"id":11,"nombre":"Callwatch Margarine F-670","descripcion":"Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.","imagen":"../images/smartwatch-4.jpg","category":"smartwatch","color":"Purple","precio":24690},{"nombre":"Callwatch Pink SmartWatch P-90","descripcion":" Este smartWatch esta buenisimo compralo!!!","category":"smartwatch","color":"blanco","precio":"15000","imagen":"1647811072250.jpg","id":13}]
+[
+    {
+        "id": 1,
+        "nombre": "Callwatch Fendi P-98",
+        "descripcion": "Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.",
+        "imagen": "../images/Reloj-4.jpg",
+        "category": "Female",
+        "color": "Blue",
+        "precio": 25730
+    },
+    {
+        "id": 2,
+        "nombre": "Callwatch Sauza Silver",
+        "descripcion": "Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.",
+        "imagen": "../images/reloj-6.jpg",
+        "category": "Male",
+        "color": "Aquamarine",
+        "precio": 26440
+    },
+    {
+        "id": 3,
+        "nombre": "Callwatch Sprouts",
+        "descripcion": "Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.",
+        "imagen": "../images/reloj-7.jpg",
+        "category": "Female",
+        "color": "Maroon",
+        "precio": 24610
+    },
+    {
+        "id": 4,
+        "nombre": "Callwatch Platinium Grape",
+        "descripcion": "Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.",
+        "imagen": "../images/reloj-8.jpg",
+        "category": "Female",
+        "color": "Violet",
+        "precio": 20550
+    },
+    {
+        "id": 5,
+        "nombre": "Callwatch Kieths N-900",
+        "descripcion": "Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.",
+        "imagen": "../images/reloj-9.jpg",
+        "category": "Female",
+        "color": "Blue",
+        "precio": 19949
+    },
+    {
+        "id": 6,
+        "nombre": "Callwatch Golden-Cherry",
+        "descripcion": "Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.",
+        "imagen": "../images/reloj1a.jpg",
+        "category": "Agender",
+        "color": "Khaki",
+        "precio": 28650
+    },
+    {
+        "id": 7,
+        "nombre": "Callwatch Toku Katsuo",
+        "descripcion": "Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.",
+        "imagen": "../images/Reloj-2.jpg",
+        "category": "Agender",
+        "color": "Fuscia",
+        "precio": 19490
+    },
+    {
+        "id": 9,
+        "nombre": "Callwatch Peach P-200",
+        "descripcion": "Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.",
+        "imagen": "../images/smartwatch-2.jpg",
+        "category": "smartwatch",
+        "color": "Green",
+        "precio": 15950
+    },
+    {
+        "id": 10,
+        "nombre": " Callwatch Blue Brizard",
+        "descripcion": "Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.",
+        "imagen": "../images/smartwatch-3.jpg",
+        "category": "smartwatch",
+        "color": "Turquoise",
+        "precio": 13960
+    },
+    {
+        "id": 11,
+        "nombre": "Callwatch Margarine F-670",
+        "descripcion": "Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.",
+        "imagen": "../images/smartwatch-4.jpg",
+        "category": "smartwatch",
+        "color": "Purple",
+        "precio": 24690
+    },
+    {
+        "nombre": "Callwatch Pink SmartWatch P-90",
+        "descripcion": " Este smartWatch esta buenisimo compralo!!!",
+        "category": "smartwatch",
+        "color": "blanco",
+        "precio": "15000",
+        "imagen": "1647811072250.jpg",
+        "id": 13
+    }
+]
