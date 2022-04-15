@@ -4,6 +4,12 @@
     padding: 0px;
     }
 
+.text-danger{
+    color: red;
+    display: flex;
+    justify-content: center;
+}
+
 body{
     font-family: 'Montserrat';
     background-color: #e8e4e6;
