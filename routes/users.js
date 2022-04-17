@@ -44,7 +44,7 @@ const registerValidations = [
     check("password").notEmpty().withMessage("Debes completar con tu contraseña").bail(),
     check("imagen").custom((values, {req}) =>{
         let file = req.file;
-        let extensionesValidas = [".jpg", ".png", ",gift"]
+        let extensionesValidas = [".jpg", ".png", ".gift"]
 
         if (!file){
             throw new Error ("Debes seleccionar una imagen de perfil")
