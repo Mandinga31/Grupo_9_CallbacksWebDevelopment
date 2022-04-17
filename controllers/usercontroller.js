@@ -3,7 +3,7 @@ const app = express();
 const path = require('path')
 const fs = require('fs')
 const {validationResult} = require('express-validator')
-
+const bcryptjs = require('bcryptjs') 
 
 
 //Acá requiero las funcionalidades de model/user.js 
@@ -38,9 +38,10 @@ processLogin: (req,res)=>{
         let userToLogin = User.findByField('email', emailIngresado)
         
         if(userToLogin){ 
-            // let passwordIsOkey = bcryptjs.compareSync(contraseñaIngresada, userToLogin.contraseña)
-            //if(passwordIsOkey){}
-            if (userToLogin.contraseña == contraseñaIngresada){
+            let passwordIsOkey = bcryptjs.compareSync(contraseñaIngresada, userToLogin.contraseña)
+            //if(passwordIsOkey){ req.session.userLogged = userToLogin
+                //return res.redirect('userProfile')}
+            if(contraseñaIngresada == userToLogin.contraseña){
                 req.session.userLogged = userToLogin
                 return res.redirect('userProfile')
             }
