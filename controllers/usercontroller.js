@@ -7,7 +7,6 @@ const bcrypt = require("bcryptjs")
 
 
 
-
 //Acá requiero las funcionalidades de model/user.js 
 
 const User = require('../model/User');
@@ -62,9 +61,10 @@ processLogin: (req,res)=>{
         let userToLogin = User.findByField('email', emailIngresado)
         
         if(userToLogin){ 
-            // let passwordIsOkey = bcryptjs.compareSync(contraseñaIngresada, userToLogin.contraseña)
-            //if(passwordIsOkey){}
-            if (userToLogin.contraseña == contraseñaIngresada){
+            let passwordIsOkey = bcryptjs.compareSync(contraseñaIngresada, userToLogin.contraseña)
+            //if(passwordIsOkey){ req.session.userLogged = userToLogin
+                //return res.redirect('userProfile')}
+            if(contraseñaIngresada == userToLogin.contraseña){
                 req.session.userLogged = userToLogin
                 return res.redirect('userProfile')
             }

@@ -10,7 +10,7 @@
     
     <div class="body-elemento1">
         <div class="bienvenido-contenedor">
-            <img src="../images/avatar-1.jpg " class="reloj">
+            <img src="../images/avatar-1.jpg " class="imagen">
         </div>
     
         
@@ -18,17 +18,40 @@
 
     <div class="body-elemento-2">
         <h2 class="nombre">
-        Rhoda 
+            
+            <p style="align-self: center;">Hola <%= user.nombre %>!</p>
         </h2>
+        <div class="user-icons">
+            
+            
+            <a style="color: black; text-decoration: none; cursor: pointer;" href="#">
                 
-        <h3 class="nombre">
-            rortegao 
-        </h3>
+                <i class="fa-brands fa-gratipay"></i>
+                <h4>Mi wishlist</h4>
+            </a>
+        </div>
+        <div class="user-icons">
+            
+            
+            <a style="color: black; text-decoration: none; cursor: pointer;" href="#">
+                
+                <i class="fa-solid fa-receipt"></i>
+                <h4>Mis pedidos</h4>
+            </a>
+        </div>
+        
+      
     </div>          
 </div>
-<div><h4>Mi wishlist</h4></div>
-<div><h4>Mis pedidos</h4></div>
-<div><a href="/users/logout/"><h4>Logout</h4></a></div>  
+
+
+
+<hr>
+<div style="text-align-last: center;">
+    <a class="boton-css-nuevo" href="/users/logout/">Logout</a>
+</div>
+
+
 
 </main>
 
