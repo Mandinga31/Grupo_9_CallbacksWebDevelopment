@@ -28,10 +28,11 @@ p, .olvidastecontra{
     font-size: small;
 }
 footer{
-    
+    max-height: fit-content;
     background-color: #195855;
-    padding: 40px;
-    margin-top: 50px;
+    padding: 30px;
+    min-width: fit-content;
+    
     
 }
 textarea{
@@ -79,6 +80,13 @@ max-width: 70%;
 .top-header{
     display: flex;
     justify-content: space-between;
+}
+.user-icons{
+    text-align-last: center;
+}
+.user-icons i{
+    font-size: 1.5em;
+    margin-top: 10px;
 }
 .icons{
     display: flex;
@@ -247,6 +255,11 @@ h2.nombre {
     margin-top: 20px;
     margin-bottom: 5px;
     
+}
+h2.nombre p {
+    align-self: center;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 h4.color{
     margin-bottom: 20px;
@@ -686,7 +699,9 @@ button.register:hover {
 
 
 /*Página index*/
-.products{
+
+  
+  .products{
     padding: 70px;
     
 
@@ -790,8 +805,14 @@ button.register:hover {
         background-color: #195855;
         width: 100%
     }
+    footer{
+    max-height: fit-content;
+    background-color: #195855;
+    padding: 30px;
+    min-width: none;
+    }
 }
-@media(max-width:800px){
+@media(max-width:560px){
     html{
         inline-size: fit-content;
     }
