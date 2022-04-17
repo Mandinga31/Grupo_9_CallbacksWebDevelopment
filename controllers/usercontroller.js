@@ -3,7 +3,8 @@ const app = express();
 const path = require('path')
 const fs = require('fs')
 const {validationResult} = require('express-validator')
-const bcryptjs = require('bcryptjs') 
+const bcrypt = require("bcryptjs")
+
 
 
 //Acá requiero las funcionalidades de model/user.js 
@@ -23,9 +24,31 @@ register: (req,res)=>{
     res.render('users/register');
 },
 processRegister: (req,res) =>{
-   //if {Validaciones} 
-   
-},
+    //if {Validaciones} 
+    const resultValidation = validationResult(req);
+ 
+    if(resultValidation.errors.length > 0){
+     console.log(resultValidation.mapped())
+     return res.render("users/register", {errors: resultValidation.mapped(),
+     oldData: req.body})
+   }
+ 
+   let userCreated = req.body;
+   console.log(userCreated)
+ 
+   userCreated.imagen = req.file.filename;// p/la imagen de un nuevo usuario
+ 
+   let idUserCreated = (userData[userData.length -1].id) + 1;
+   userCreated.id = idUserCreated; // p/el id de un nuevo usuario
+ 
+   userCreated.password = bcrypt.hashSync(userCreated.password, 10) // p/encriptar la password
+ 
+   userData.push(userCreated);
+ 
+   fs.writeFileSync(usersFilePath, JSON.stringify(userData))
+ 
+   res.redirect("/")
+ },
 
 login: (req,res)=>{
     res.render ('users/login');
