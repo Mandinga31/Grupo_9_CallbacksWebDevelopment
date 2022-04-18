@@ -1,6 +1,7 @@
 
 // ************ Require's ************
 const express = require('express');
+const res = require('express/lib/response');
 const router = express.Router();
 
 
@@ -8,5 +9,5 @@ const router = express.Router();
 const mainController = require('../controllers/maincontrollers');
 
 router.get('/', mainController.index); 
-
+router.get('/construir', mainController.contruir)
 module.exports = router;

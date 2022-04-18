@@ -10,26 +10,32 @@
                 
                 <form action="" method="POST">
                     <div class="ingresa"><h2>Completá los datos para ingresar</h2></div>
-                <label for="email"></label>
-                <input type="email" name="email" id="email" class="control" placeholder="E-mail">
+                    <label for="email"></label>
+                    <input type="email" 
+                    name="email" 
+                    id="email" 
+                    class="control"
+                    placeholder="Email"
+                    value="<%= locals.oldData && oldData.email? oldData.email : null %>" 
+                    >
+                
                 <% if (locals.errors && errors.email){ %>
                     <p class="error"><%= errors.email.msg%></p>
                   <% }%>
                 
                 <label for="password"></label>
-                <input type="password" name="password" id="password" placeholder="Escribí tu contraseña" class="control">
-                
-                <% if (locals.errors && errors.password){ %>
+                <input type="password" name="password" id="password" placeholder="Escribí tu contraseña" class="control" 
+            ><% if (locals.errors && errors.password){ %>
                     <p class="error"><%= errors.password.msg%></p>
                   <% }%>
                 
                 <div class="each-checkbox">
                     <input type="checkbox" name="newsletter" value="newsletter" id="newsletter">
-                    <label for="newsletter">Recordar mi contraseña</label>
+                    <label for="newsletter">Recordar mi usuario</label>
                 </div>
                 
                 <div class="control"><button type="submit" class="boton-css-nuevo">Ingresar</button></div>
-                <div class="olvidastecontra"><a href= "#" style="text-decoration: none; color: white;">¿Olvidaste tu contraseña?</a></div>
+                <div class="olvidastecontra"><a href= "../construir" style="text-decoration: none; color: white;">¿Olvidaste tu contraseña?</a></div>
     
             </form>
             
@@ -39,8 +45,7 @@
         <div>
              <p>¿No tenés cuenta?</p>
             <form action='/users/register' method="get" class="formulario-login">
-                <div class="control"><button type="submit" class="register">Crear cuenta</button></div>
-                </form>  
+                <div class="control" style="margin-bottom: 30px;"><button type="submit" class="register">Crear cuenta</button></div>                </form>  
         </div>
          
             

@@ -58,25 +58,23 @@ processLogin: (req,res)=>{
     if(errors.isEmpty() == true){
         let emailIngresado = req.body.email
         let contraseñaIngresada = req.body.password
-        let userToLogin = User.findByField('email', emailIngresado)
+        let userToLogin = User.findByField('email', emailIngresado);
         
         if(userToLogin){ 
-            let passwordIsOkey = bcryptjs.compareSync(contraseñaIngresada, userToLogin.contraseña)
-            //if(passwordIsOkey){ req.session.userLogged = userToLogin
-                //return res.redirect('userProfile')}
-            if(contraseñaIngresada == userToLogin.contraseña){
-                req.session.userLogged = userToLogin
+            let passwordIsOkey = bcrypt.compareSync(contraseñaIngresada, userToLogin.password)
+            if(passwordIsOkey){ req.session.userLogged = userToLogin
                 return res.redirect('userProfile')
-            }
-            {return res.render('users/login', {
+            }{
+                return res.render('users/login', {
                 errors: {
                     password: {
                         msg: "La contraseña es incorrecta"
                     }
                 } 
-             })}
+             }
+             )}
         }{
-            return res.render('users/login',{
+                return res.render('users/login',{
                 errors: {
                     email: {
                         msg: "Este mail no está registrado"
@@ -88,7 +86,7 @@ processLogin: (req,res)=>{
     }else{
         
         
-        res.render('users/login', {errors: errors.mapped()})
+        res.render('users/login', {errors: errors.mapped(), oldData: req.body})
 }
 },
 profile: (req,res)=>{
