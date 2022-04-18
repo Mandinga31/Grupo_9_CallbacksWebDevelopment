@@ -3,14 +3,14 @@
 <%- include ('../partials/head.ejs') %> 
 <body>
 <%- include ('../partials/header.ejs') %> 
-<div class="bienvenido"><h2>Bienvenido de vuelta @<%= user.usuario %></h2></div>
+<div class="bienvenido"><h2>Bienvenid@ de vuelta <%= user.usuario %>!</h2></div>
 <main class="main-bievenidos" style="background-color: #fff;">
     
     <div class="bienvenido-main-body">
     
     <div class="body-elemento1">
         <div class="bienvenido-contenedor">
-            <img src="../images/avatar-1.jpg " class="imagen">
+            <img src="../images/<%= user.imagen %>  " class="imagen">
         </div>
     
         
@@ -24,7 +24,7 @@
         <div class="user-icons">
             
             
-            <a style="color: black; text-decoration: none; cursor: pointer;" href="#">
+            <a style="color: red; text-decoration: none; cursor: pointer;" href="#">
                 
                 <i class="fa-brands fa-gratipay"></i>
                 <h4>Mi wishlist</h4>
@@ -33,7 +33,7 @@
         <div class="user-icons">
             
             
-            <a style="color: black; text-decoration: none; cursor: pointer;" href="#">
+            <a style="color: gray; text-decoration: none; cursor: pointer;" href="#">
                 
                 <i class="fa-solid fa-receipt"></i>
                 <h4>Mis pedidos</h4>
@@ -46,9 +46,9 @@
 
 
 
-<hr>
-<div style="text-align-last: center;">
-    <a class="boton-css-nuevo" href="/users/logout/">Logout</a>
+
+<div style="text-align-last: center; margin-bottom: 20px;">
+    <a class="boton-css-nuevo" href="/users/logout/" style="text-decoration: none;">Logout</a>
 </div>
 
 

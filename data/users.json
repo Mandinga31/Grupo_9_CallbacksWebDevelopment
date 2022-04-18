@@ -1,1 +1,34 @@
-[{"id":1,"nombre":"Rick","usuario":"rpembridge0","imagen":"http://dummyimage.com/241x100.png/cc0000/ffffff","email":"rmcshirie0@china.com.cn","contraseña":"hX2wx0hv"},{"id":2,"nombre":"Rhodia","usuario":"rirnis1","imagen":"http://dummyimage.com/130x100.png/cc0000/ffffff","email":"rsinkins1@webmd.com","contraseña":"rlFWBPrsHPH"},{"id":3,"nombre":"Ileane","usuario":"icalveley2","imagen":"http://dummyimage.com/211x100.png/ff4444/ffffff","email":"icleyne2@alexa.com","contraseña":"h5x2W4F"},{"id":4,"nombre":"Iolanthe","usuario":"ikorn3","imagen":"http://dummyimage.com/135x100.png/5fa2dd/ffffff","email":"ikennermann3@quantcast.com","contraseña":"kogMvpmHXt"},{"id":5,"nombre":"Shawnee","usuario":"sliddle4","imagen":"http://dummyimage.com/165x100.png/cc0000/ffffff","email":"sgiffin4@list-manage.com","contraseña":"UDD5A1u"},{"id":6,"nombre":"Angelica","usuario":"asimionato5","imagen":"http://dummyimage.com/200x100.png/ff4444/ffffff","email":"afairbrass5@topsy.com","contraseña":"74iJICRsj"},{"id":7,"nombre":"Miranda","usuario":"mgoane6","imagen":"http://dummyimage.com/153x100.png/5fa2dd/ffffff","email":"melbourn6@phpbb.com","contraseña":"5NRR7x"},{"id":8,"nombre":"Kandace","usuario":"kaspinell7","imagen":"http://dummyimage.com/161x100.png/5fa2dd/ffffff","email":"kjarritt7@reverbnation.com","contraseña":"60W3QU20biW"},{"id":9,"nombre":"Orsa","usuario":"oberrington8","imagen":"http://dummyimage.com/139x100.png/cc0000/ffffff","email":"obedberry8@delicious.com","contraseña":"t2mWhlMuR"},{"id":10,"nombre":"Quinlan","usuario":"qstoneham9","imagen":"http://dummyimage.com/243x100.png/dddddd/000000","email":"qburnhill9@prnewswire.com","contraseña":"R8b78ZPJtC"},{"id":11,"nombre":"Petronia","usuario":"pconmana","imagen":"http://dummyimage.com/223x100.png/cc0000/ffffff","email":"pkilborna@ucoz.ru","contraseña":"tUEvV1joX2V9"},{"id":12,"nombre":"Terri","usuario":"tglauberb","imagen":"http://dummyimage.com/138x100.png/5fa2dd/ffffff","email":"thadrillb@hatena.ne.jp","contraseña":"0bHGWJjvJib"},{"id":13,"nombre":"Hermann","usuario":"hcaultonc","imagen":"http://dummyimage.com/153x100.png/ff4444/ffffff","email":"hretallickc@webnode.com","contraseña":"FmTr8ZAM8"},{"id":14,"nombre":"Lian","usuario":"lemmettd","imagen":"http://dummyimage.com/223x100.png/cc0000/ffffff","email":"lscroobyd@odnoklassniki.ru","contraseña":"4liAHYF0Wy"},{"id":15,"nombre":"Egan","usuario":"eboyne","imagen":"http://dummyimage.com/213x100.png/5fa2dd/ffffff","email":"eduforee@mail.ru","contraseña":"rneukqEDt"},{"id":16,"nombre":"Lurlene","usuario":"lmousbyf","imagen":"http://dummyimage.com/197x100.png/5fa2dd/ffffff","email":"lzavittierif@sina.com.cn","contraseña":"wO3NynI3v"},{"id":17,"nombre":"Benjie","usuario":"bpickerg","imagen":"http://dummyimage.com/105x100.png/cc0000/ffffff","email":"bbeardsellg@liveinternet.ru","contraseña":"GX8CjuC"},{"id":18,"nombre":"Lewiss","usuario":"lnernh","imagen":"http://dummyimage.com/148x100.png/dddddd/000000","email":"lbraileyh@ustream.tv","contraseña":"AoxDuIh98X"},{"id":19,"nombre":"Mellicent","usuario":"mpavelkai","imagen":"http://dummyimage.com/219x100.png/cc0000/ffffff","email":"mdodgei@wunderground.com","contraseña":"CsgdaZEfWc4S"},{"id":20,"nombre":"Darcey","usuario":"dstutterj","imagen":"http://dummyimage.com/175x100.png/dddddd/000000","email":"dgatej@phoca.cz","contraseña":"lhCgtmZDck"},{"id":21,"nombre":"Thain","usuario":"trudolferk","imagen":"http://dummyimage.com/193x100.png/5fa2dd/ffffff","email":"tsunshinek@wikimedia.org","contraseña":"B3fkWFfpHgc"},{"id":22,"nombre":"Vanya","usuario":"vmacgregorl","imagen":"http://dummyimage.com/209x100.png/cc0000/ffffff","email":"vjiggensl@mlb.com","contraseña":"DFSfDooZ2Dt"},{"id":23,"nombre":"Silas","usuario":"stewesm","imagen":"http://dummyimage.com/106x100.png/cc0000/ffffff","email":"smessierm@slate.com","contraseña":"CSGgEmegWK"},{"id":24,"nombre":"Helga","usuario":"hhowelln","imagen":"http://dummyimage.com/231x100.png/5fa2dd/ffffff","email":"hmeinn@springer.com","contraseña":"TdBWAwJW"},{"id":25,"nombre":"Rhoda","usuario":"rortegao","imagen":"../images/avatar-1.jpg","email":"rgreenleafo@etsy.com","contraseña":"123456"},{"nombre":"Chavito","usuario":"del Ocho","email":"chavo@gmail.com","password":"$2a$10$Xc6eJhzZm3PRWGngtaiEAOOVa/wH1QjoZC9eq/UJVvAFBcjGil4Ui","imagen":"1650205522614.jpg","id":26}]
+[
+    {
+        "nombre": "Chavito",
+        "usuario": "del Ocho",
+        "email": "chavo@gmail.com",
+        "password": "$2a$10$Xc6eJhzZm3PRWGngtaiEAOOVa/wH1QjoZC9eq/UJVvAFBcjGil4Ui",
+        "imagen": "1650205522614.jpg",
+        "id": 1
+    },
+    {
+        "nombre": "Valentina Espindola",
+        "usuario": "ValenEsp",
+        "email": "vce@hotmail.com.ar",
+        "password": "$2a$10$d8uvLa4gfwbYA3.6lUYa2uY..4FGi4gleV.t1trOiYnvQxi9Rx7La",
+        "imagen": "1650235558521.jpg",
+        "id": 2
+    },
+    {
+        "nombre": "Valen",
+        "usuario": "Valenesp",
+        "email": "valen@gmail.com",
+        "password": "$2a$10$hDUt9l5nZ6E14RhcPklRB.KtkCc2hhGRSWCTisB9CRQ/TUvXBHTL.",
+        "imagen": "1650235988557.jpg",
+        "id": 3
+    },
+    {
+        "nombre": "Vicky",
+        "usuario": "vicky",
+        "email": "victoria-esp@gmail.com",
+        "password": "$2a$10$ii.JmrQQBBKMr5W31BcUSeesqgxujflsrgfo0rY4ydyc0rznq/3pS",
+        "imagen": "1650309413041.jpg",
+        "id": 4
+    }
+]

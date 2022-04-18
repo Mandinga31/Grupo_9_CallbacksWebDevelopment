@@ -11,7 +11,7 @@
 }
 
 body{
-    font-family: 'Montserrat';
+    font-family: 'Inter';
     background-color: #e8e4e6;
     margin-top: 160px;
 }
@@ -162,7 +162,7 @@ header form .search-bar, .texto-search{
 
     .bienvenido-contenedor{
     position: relative;
-    height: 290px;
+    height: 200px;
     width: 290px;
     float: left;
     }
@@ -428,8 +428,8 @@ div.control-formulario input {
     padding: 25px 15px;
     margin-right: auto;
     margin-left: auto;
-    background-color: rgb(202, 202, 202);
-    max-width: 545px;
+    background-color:#bdd1d0;
+    max-width: 400px;
     margin-bottom: 70px;
 }
 button.home {
