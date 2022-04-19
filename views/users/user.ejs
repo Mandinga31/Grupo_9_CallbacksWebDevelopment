@@ -3,7 +3,7 @@
 <%- include ('../partials/head.ejs') %> 
 <body>
 <%- include ('../partials/header.ejs') %> 
-<div class="bienvenido"><h2>Bienvenid@ de vuelta <%= user.usuario %>!</h2></div>
+<div class="bienvenido"><h2>Bienvenido de vuelta <%= user.usuario %>!</h2></div>
 <main class="main-bievenidos" style="background-color: #fff;">
     
     <div class="bienvenido-main-body">
@@ -30,15 +30,39 @@
                 <h4>Mi wishlist</h4>
             </a>
         </div>
+        <hr>
         <div class="user-icons">
             
             
-            <a style="color: gray; text-decoration: none; cursor: pointer;" href="#">
+            <a style="    color: #004643; text-decoration: none; cursor: pointer;" href="../construir">
                 
                 <i class="fa-solid fa-receipt"></i>
                 <h4>Mis pedidos</h4>
             </a>
         </div>
+        <hr>
+        <div class="user-icons">
+            
+            
+            <a style="    color: #004643; text-decoration: none; cursor: pointer;" href="../construir">
+                
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <h4>Datos de facturación</h4>
+            </a>
+        </div>
+        <hr>
+        <div class="user-icons">
+            
+            
+            <a style="    color: #004643; text-decoration: none; cursor: pointer;" href="../construir">
+                
+                <i class="fa-solid fa-address-book"></i>
+                <h4>Editar mis datos</h4>
+            </a>
+        </div>
+        <hr>
+        
+        
         
       
     </div>          

@@ -2,9 +2,9 @@
 <html lang="en">
 <%- include ('../partials/head.ejs') %> 
 <body>
-<%- include ('../partials/header-logo.ejs') %> 
+<%- include ('../partials/header.ejs') %> 
         
-        <main class="login-flex">
+        <main class="login-flex" style="background-color: #bdd1d0;;">
             
             <div class="login" >
                 
@@ -37,12 +37,12 @@
                 <div class="control"><button type="submit" class="boton-css-nuevo">Ingresar</button></div>
                 <div class="olvidastecontra"><a href= "../construir" style="text-decoration: none; color: white;">¿Olvidaste tu contraseña?</a></div>
     
-            </form>
+             </form>
             
             </div>
+            
          
-         
-        <div>
+        <div class="register">
              <p>¿No tenés cuenta?</p>
             <form action='/users/register' method="get" class="formulario-login">
                 <div class="control" style="margin-bottom: 30px;"><button type="submit" class="register">Crear cuenta</button></div>                </form>  
