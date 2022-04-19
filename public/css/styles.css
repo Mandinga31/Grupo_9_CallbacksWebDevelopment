@@ -9,11 +9,18 @@
     display: flex;
     justify-content: center;
 }
+.envios{
+    background-color: #e8e4e6;
+    height: 20px;
 
+}
+.envios h4{
+    font-size: small;
+}
 body{
     font-family: 'Inter';
     background-color: #e8e4e6;
-    margin-top: 160px;
+    
 }
 header{
     background-color: #195855;
@@ -73,6 +80,7 @@ font-family: 'Montserrat';
 .imagenes-banner img{
     width: 100%;
     margin-bottom: 40px;
+    margin-top: 80px;
 }
 
 .imagenes-banner-2{
@@ -157,7 +165,7 @@ header form .search-bar, .texto-search{
   /**** Página User* **/
   .bienvenido {
     text-align: center;
-    margin-top: 236px;
+    margin-top: 136px;
     color: #004643;}
 
     .bienvenido-contenedor{
@@ -204,7 +212,7 @@ header form .search-bar, .texto-search{
     color: #fff; /* color de fuente */
     border: 2px solid #195855; /* tamaño y color de borde */
     padding: 16px 20px;
-    border-radius: 3px; /* redondear bordes */
+    border-radius: 70px; /* redondear bordes */
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -338,15 +346,14 @@ h3.titulo-descripcion{
     margin-bottom: 20px;
 }
 button.register {
-    width: 90%;
+    width: 10px;
     height: 50px;
     padding: 8px;
-    border-radius: 10px;
+    border-radius: 103px;
     border-color: transparent;
     margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1200px;
     background-color: #004643;
     color: #fff;
     cursor: pointer;
@@ -410,7 +417,7 @@ div.control-formulario input {
     width: 90%;
     height: 50px;
     padding: 8px;
-    border-radius: 5px;
+    border-radius: 100px;
     border-color: transparent;
     margin-top: 5px;
     margin-left: auto;
@@ -431,6 +438,7 @@ div.control-formulario input {
     background-color:#bdd1d0;
     max-width: 400px;
     margin-bottom: 70px;
+    margin-top: 157px;
 }
 button.home {
     background-color: #004643;
@@ -527,16 +535,22 @@ button.home:hover {
     margin-bottom: 30px;
     color: white;
 }
+.register{
+    
+    margin: auto;
+}
 
 .login {
     display: flex;
     justify-content: center;
     align-self: center;
-    background-color:#bdd1d0;
+    
     padding: 50px;
     margin: auto;
     width: 320px;
     margin-bottom: 40px;
+    margin-top: 157px;
+    border-radius: 70px;
 }
 .login form{
     display: flex;
@@ -595,7 +609,7 @@ input#newsletter
 }
 .todos-productos{
     text-align: center;
-    margin-top: 200px;
+    margin-top: 135px;
 }
 h4{
     text-align: center;
@@ -635,7 +649,7 @@ p.bold{
     margin-bottom: 20px;
     text-align: center;
     color: #004643;
-    margin-top: 200px ;
+    margin-top: 135px ;
 }
 .elementos-carrito{
     display: flex;
@@ -702,7 +716,58 @@ button.register {
 button.register:hover {
     background-color: #195855;
 }
+.container {
+	position: absolute;
+	transform: translate(-100%,0%);
+	padding: 10px;
+}
 
+input {
+    outline: none;
+    box-sizing: border-box;
+    width: 0px;
+    color: #000;
+    border-radius: 50px;
+    font-size: 20px;
+    border: 0px solid #195855;
+    transition: all .7s ease;
+}
+
+::placeholder {
+	color: grey;
+}
+
+.btn {
+    position: absolute;
+    right: 0px;
+    top: -16px;
+    width: 25px;
+    height: 25px;
+    background: #195855;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn i {
+	font-size: 21px;
+	color: white;
+
+	transition: all .7s ease;
+}
+
+.container:hover input {
+	width: 150px;
+}
+
+.container:hover i{
+	transform: rotate(-360deg);
+}
+
+.btn:hover{
+	background: #195855;
+}
 
 /*Página index*/
 
@@ -757,11 +822,7 @@ button.register:hover {
     .navbar li a:hover{
         color: #56918e
     }
-    .elementos1y2footer{
-        display: flex;
-        justify-content: space-between;
-        
-    }
+    
     
 }
 @media(min-width:460px){
@@ -795,6 +856,11 @@ button.register:hover {
            cursor: pointer;
            width: 49%;
        }
+       .elementos1y2footer{
+        display: flex;
+        justify-content: space-between;
+        
+    }
       
     
    
@@ -817,16 +883,17 @@ button.register:hover {
     padding: 30px;
     min-width: none;
     }
+    
 }
 @media(max-width:560px){
     html{
         inline-size: fit-content;
     }
+    
 }
 @media (max-width: 650px){
-    header form .search-bar, .texto-search {
+    .main-header-top-elemento2{
         display: none;
-
     }
 }
 @media(min-width: 650px){
@@ -837,11 +904,14 @@ button.register:hover {
     }
     .bienvenido-main-body{
         display: flex;
-        flex-direction: row;
+        
     }
     .carrito {
         display: flex;
         justify-content: space-around;
+    }
+    .login-flex{
+        display: flex;
     }
 
     .elementos-carrito-2{
