@@ -117,3 +117,47 @@ values("Callwatch Fendi P-98", "1 Con un diseño sobrio y ultradelgado, el Maste
 ("Callwatch Margarine F-670", "10 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", null, 24690, 4, 4, 3),
 ("Callwatch Pink SmartWatch P-90", "11 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", null, 15000, 5, 3, 2);
 
+
+drop table if exists Products_Color;
+create table Products_Color(
+ID int primary key not null auto_increment,
+IdProducts int,
+IdColorr int,
+constraint FK_IdProducts_Products foreign key (IdProducts) references Products(ID),
+constraint FK_IdColorr_Color foreign key (IdColorr) references Color(ID)
+);
+
+insert into products_color (IdProducts, IdColorr)
+values ( 1, 1),
+( 2, 2),
+( 3, 3),
+( 4, 4),
+( 5, 5),
+( 6, 6),
+( 7, 1),
+( 8, 2),
+( 9, 3),
+( 10, 4),
+( 11, 5);
+
+drop table if exists Products_Talle;
+create table Products_Talle (
+ID int primary key not null auto_increment,
+IdProductss int,
+IdTallee int,
+constraint FK_IdProductss_Products foreign key (IdProductss) references products(id),
+constraint FK_IdTalless_Talle foreign key (IdTallee) references talle(id)
+);
+
+insert into Products_Talle (IdProductss, IdTallee)
+values ( 1, 13),
+( 2, 12),
+( 3, 11),
+( 4, 10),
+( 5, 9),
+( 6, 8),
+( 7, 7),
+( 8, 6),
+( 9, 5),
+( 10, 4),
+( 11, 3);
