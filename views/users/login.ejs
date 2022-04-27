@@ -16,7 +16,9 @@
                     id="email" 
                     class="control"
                     placeholder="Email"
-                    value="<%= locals.oldData && oldData.email? oldData.email : null %>" 
+                    <% if (locals.oldData && oldData.email){ %>
+                    value= "<%= oldData.email%>" 
+                    <% }else{""} %> 
                     >
                 
                 <% if (locals.errors && errors.email){ %>
