@@ -4,20 +4,21 @@
 <body>
 <%- include ('../partials/header.ejs') %> 
 
-    <main>
+    <main style="margin-top: -118px;">
         
         <div class="main-body">
         
         <div class="body-elemento1">
+            
             <div class="top-img">
-                <p>Relojes / </p>
-                <p><%= productToEdit.category %>  / </p>
+                <a href="/products" style="text-decoration: none;"><p style="color: black;">Relojes </p></a>
+                <p style="color: black;"> /  <%= productToEdit.category %> / </p>
                 <p><%= productToEdit.nombre %></p> 
             </div>
-
+            
                 
             <div class="contenedor">
-                <img src="../public/images/<%= productToEdit.imagen %>" class="reloj" />
+                <img src="../../images/<%= productToEdit.imagen %>" class="reloj" />
             </div>
         
             
@@ -43,16 +44,36 @@
             
             
             <div class="detail-bottom">
-                <i class="fas fa-info-circle"></i>
-                <form action='/carrito' method="get" class="formulario-login">
-                <div class="control"><button type="submit" class="register">Agregar al Carrito</button></div>
+                
+                <form action='/products/carrito/<%=productToEdit.id %> ' method="get" class="formulario-login">
+                <div class="control-carrito"><button type="submit" class="register">Agregar al Carrito</button></div>
                 </form>
 
             </div>
 
+            <div class="botones-detail">
+                
+                    <form action='<%=productToEdit.id%>?_method=DELETE' method="POST" class="formulario-login">
+                       
+                            <button class="detail-a" type="submit" >
+                                Eliminar
+                            </button>
+                        
+                        
+                    </form>
+               
+
+            
+                   <div class="detail-b"><a  href="../<%=productToEdit.id%>/edit">Editar</a>
+                    </div>
+            
+            </div>
+
+            
+            
             <div class="descripcion">
-                <h3 class="titulo-descripcion">Descripcion del producto</h3>
-                <p> <%= productToEdit.descripcion %></p>
+            <h3 class="titulo-descripcion">Descripcion del producto</h3>
+            <p> <%= productToEdit.descripcion %></p>
             </div>
         </div>
     </div>

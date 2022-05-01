@@ -3,15 +3,71 @@
 // ************ Require's ************
 const express = require('express');
 const router = express.Router();
+const multer = require('multer');
+const req = require('express/lib/request');
+const path = require('path');
+const { contentType } = require('express/lib/response');
+const {check} = require('express-validator')
 
-
+const storage = multer.diskStorage(
+  {
+      destination: (req,file,cb) => {
+          cb(null, path.join(__dirname, '../public/images'))
+      },
+      filename: (req,file,cb)=>{
+          let imageName = Date.now() + path.extname(file.originalname)
+           cb(null, imageName );
+      }
+  }  
+)
+const upload = multer({storage})
+// ************ middlewares ************
+const guestMiddleware = require('../middlewares/guestmiddleware');
+const authMiddleware = require('../middlewares/authmiddleware');
 // ************ Controller Require ************
 const userController = require('../controllers/usercontroller');
+const { Router } = require('express');
 
-router.get('/register', userController.register);
+// ************ validaciones ************
+const validaciones = [
+    check('email')
+    .notEmpty().withMessage('Debes completar el email').bail()
+    .isEmail().withMessage('Debes completar un email válido crack'),
+    check('password')
+    .notEmpty().withMessage('Debes completar la contraseña').bail()
+]
 
-router.get('/login', userController.login); 
+const registerValidations = [
+    check("nombre").notEmpty().withMessage("Debes completar con tu nombre y apellido").bail(),
+    check("usuario").notEmpty().withMessage("Debes completar con un nombre de usuario").bail(),
+    check("email").notEmpty().withMessage("Debes completar con tu email").bail().isEmail().withMessage("Debe ser un email valido"),
+    check("password").notEmpty().withMessage("Debes completar con tu contraseña").bail(),
+    check("imagen").custom((values, {req}) =>{
+        let file = req.file;
+        let extensionesValidas = [".jpg", ".png", ".gift"]
 
+        if (!file){
+            throw new Error ("Debes seleccionar una imagen de perfil")
+        } else {
+            let extensionArchivo = path.extname(file.originalname);
+            if(!extensionesValidas.includes(extensionArchivo)){
+                throw new Error (`la imagen debe tener extension ${extensionesValidas. join(", ")}`)
+            }
+        }
+        return true
+    })
+]
+
+// ************ rutas ************
+router.get('/register', guestMiddleware ,userController.register);
+router.post('/register', upload.single('imagen'), registerValidations, userController.processRegister)
+
+router.get('/login', guestMiddleware ,userController.login); 
+router.post('/login', validaciones ,userController.processLogin)
+
+router.get('/userProfile',authMiddleware ,userController.profile); 
+
+router.get('/logout/', userController.logout)
 module.exports = router;
 
 

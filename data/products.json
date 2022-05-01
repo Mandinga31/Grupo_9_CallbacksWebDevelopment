@@ -63,15 +63,6 @@
         "precio": 19490
     },
     {
-        "id": 8,
-        "nombre": "Callwatch Boss R-890",
-        "descripcion": "Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.",
-        "imagen": "../images/smartwatch-1.jpg",
-        "category": "smartwatch",
-        "color": "Red",
-        "precio": 19190
-    },
-    {
         "id": 9,
         "nombre": "Callwatch Peach P-200",
         "descripcion": "Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.",
@@ -99,72 +90,12 @@
         "precio": 24690
     },
     {
-        "id": 12,
-        "nombre": "Callwatch Corn - Mini",
-        "descripcion": "Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.",
-        "imagen": "../images/Reloj-2.jpg",
-        "category": "Male",
-        "color": "Orange",
-        "precio": 200000
-    },
-    {
-        "nombre": "hola",
-        "color": "color-azul",
-        "precio": "89",
+        "nombre": "Callwatch Pink SmartWatch P-90",
+        "descripcion": " Este smartWatch esta buenisimo compralo!!!",
+        "category": "smartwatch",
+        "color": "blanco",
+        "precio": "15000",
+        "imagen": "1647811072250.jpg",
         "id": 13
-    },
-    {
-        "nombre": "Hola",
-        "color": "color-azul",
-        "precio": "8999",
-        "id": 14
-    },
-    {
-        "nombre": "cualquier cosa",
-        "color": "color-negro",
-        "precio": "",
-        "id": 15
-    },
-    {
-        "nombre": "NNN N N N",
-        "color": "color-negro",
-        "precio": "7000",
-        "image": "1647296467016.jpg",
-        "id": 16
-    },
-    {
-        "nombre": "Valentina Clara",
-        "color": "color-negro",
-        "precio": "8000",
-        "imagen": "1647296521896.jpg",
-        "id": 17
-    },
-    {
-        "nombre": "hola",
-        "color": "color-negro",
-        "precio": "7000",
-        "imagen": "1647296574587.jpg",
-        "id": 18
-    },
-    {
-        "nombre": "Valentina Clara",
-        "color": "color-azul",
-        "precio": "8000",
-        "imagen": "1647296687033Nueva Imagen",
-        "id": 19
-    },
-    {
-        "nombre": "HOA",
-        "color": "negro",
-        "precio": "8000",
-        "imagen": "1647297112271Nueva Imagen",
-        "id": 20
-    },
-    {
-        "nombre": "Valentina Clara",
-        "color": "marron",
-        "precio": "700",
-        "imagen": "1647297458127.jpg",
-        "id": 21
     }
 ]

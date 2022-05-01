@@ -5,30 +5,84 @@
     <%- include ('../partials/header-logo.ejs') %> 
     
     <main>
-        <div class="ingresa"><h2>Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</h2></div>
-    <form action='/' method="get" class="formulario">
+        <div class="ingresa" style="margin-top: 150px;"><h2>Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</h2></div>
+            <form action="./register" method="POST" class="formulario" enctype="multipart/form-data" style="margin-top: 0px;">
         
         
         <div class="control-formulario">
-            <label for="nombre"></label>
-            <input type="text" name="nombre" id="nombre" class="control" placeholder="Nombre y apellido" >
-        </div>
+            <label for="nombre"><b>Nombre y apellido</b></label>
+            <input type="text" 
+            name="nombre" 
+            id="nombre"
+            class="control" 
+            value="<%=locals.oldData? oldData.nombre : null%>" 
+            >
+            <% if (locals.errors && errors.nombre) { %>
+                <div class="text-danger">
+                    <%= errors.nombre.msg %> 
+                </div>
+            <% } %>
+       </div>
+        
+
         <div class="control-formulario">
-            <label for="usuario"></label>
-            <input type="text" name="usuario" id="usuario" class="control" placeholder="Nombre de usuario">
+            <label for="usuario"><b>Nombre de usuario</b></label>
+            <input type="text" 
+            name="usuario" 
+            id="usuario" 
+            class="control"  
+            value="<%=locals.oldData? oldData.usuario : null %>" 
+            >
+            <% if (locals.errors && errors.usuario) { %>
+                <div class="text-danger">
+                    <%= errors.usuario.msg %> 
+                </div>
+            <% } %>    
         </div>
+        
         <div class="control-formulario">
-            <label for="email"></label>
-            <input type="email" name="email" id="email" class="control" placeholder="E-mail">
+            <label for="email"><b>E-mail</b></label>
+            <input type="email" 
+            name="email" 
+            id="email" 
+            class="control"
+            value="<%= locals.oldData ? oldData.email : null %>" 
+            >
+            <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                    <%= errors.email.msg %> 
+                </div>
+            <% } %>
         </div>
+       
+
         <div class="control-formulario">
-            <label for="password"></label>
-            <input type="password" name="password" id="password" class="control" placeholder="Ingresá tu contraseña">
+            <label for="imagen"><b>Selecciona tu foto de perfil:</b></label>    
+              <!-- Acá lo que tenemos que hacer es que por defecto quede la imagen ya ingresada.-->
+            <input type="file" name="imagen" id="imagen" class="control"> 
+            <% if (locals.errors && errors.imagen) { %>
+                <div class="text-danger">
+                    <%= errors.imagen.msg %> 
+                </div>
+            <% } %>
         </div>
+
+
         <div class="control-formulario">
-            <label for="password"></label>
-            <input type="password" name="password" id="password" class="control" placeholder="Confirmá tu contraseña">
+            <label for="password"><b>Ingresá tu contraseña</b></label>
+            <input type="password" 
+            name="password" 
+            id="password" 
+            class="control" 
+            >
+            <% if (locals.errors && errors.password) { %>
+                <div class="text-danger">
+                    <%= errors.password.msg %> 
+                </div>
+            <% } %>
         </div>
+        
+
         <div class="each-checkbox">
             <input type="checkbox" name="newsletter" value="newsletter" id="newsletter">
             <label for="newsletter">Quiero recibir la newsletter para recibir descuentos y novedades</label>

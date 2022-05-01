@@ -4,10 +4,23 @@
     padding: 0px;
     }
 
-body{
-    font-family: 'Roboto';
+.text-danger{
+    color: red;
+    display: flex;
+    justify-content: center;
+}
+.envios{
     background-color: #e8e4e6;
-    margin-top: 160px;
+    height: 20px;
+
+}
+.envios h4{
+    font-size: small;
+}
+body{
+    font-family: 'Inter';
+    background-color: #e8e4e6;
+    
 }
 header{
     background-color: #195855;
@@ -20,17 +33,23 @@ p, .olvidastecontra{
     
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 15px;
 }
-
+.error{
+    color: #e62929;
+    margin-block-start: auto;
+    font-size: small;
+}
 footer{
-    
+    max-height: fit-content;
     background-color: #195855;
-    padding: 40px;
-    margin-top: 50px;
+    padding: 30px;
+    min-width: fit-content;
+    
     
 }
 textarea{
-font-family: 'Roboto';
+font-family: 'Montserrat';
  
 }
 .mapa iframe{
@@ -61,6 +80,7 @@ font-family: 'Roboto';
 .imagenes-banner img{
     width: 100%;
     margin-bottom: 40px;
+    margin-top: 80px;
 }
 
 .imagenes-banner-2{
@@ -74,6 +94,13 @@ max-width: 70%;
 .top-header{
     display: flex;
     justify-content: space-between;
+}
+.user-icons{
+    text-align-last: center;
+}
+.user-icons i{
+    font-size: 1.5em;
+    margin-top: 10px;
 }
 .icons{
     display: flex;
@@ -135,6 +162,90 @@ header form .search-bar, .texto-search{
     
   
   }
+  /**** Página User* **/
+  .bienvenido {
+    text-align: center;
+    margin-top: 136px;
+    color: #004643;}
+
+    .bienvenido-contenedor{
+    position: relative;
+    height: 200px;
+    width: 290px;
+    float: left;
+    margin-bottom: 100px;
+    }
+    .main-bievenidos{
+        padding: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #fff;
+        width: min-content;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+    
+    .bienvenido-main-body{
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #fff;
+        width: min-content;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+    .bienvenido-contenedor img {
+        position: absolute;
+        left: 0;
+        transition: opacity 1.5s ease-in-out;
+        max-width: -webkit-fill-available;
+      }
+  /*** ESTILOS BOTÓN SLIDE LEFT ***/
+.boton-css-nuevo a {
+      text-decoration: none;
+      color: #fff;
+  }
+.boton-css-nuevo {
+    
+    background: #195855; /* color de fondo */
+    color: #fff; /* color de fuente */
+    border: 2px solid #195855; /* tamaño y color de borde */
+    padding: 16px 20px;
+    border-radius: 70px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    
+}
+.boton-css-nuevo:hover {
+    color: #fff;
+    cursor: pointer;
+}
+.boton-css-nuevo::after {
+    content: "";
+    background: #56918e; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+    }
+    .boton-css-nuevo:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+    }
   .body-elemento2{
       align-self: center;
       margin-right: 20px;
@@ -160,12 +271,21 @@ h2.nombre {
     margin-bottom: 5px;
     
 }
+h2.nombre p {
+    align-self: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
 h4.color{
     margin-bottom: 20px;
 }
-h4.cuota{
+h4.cuota {
     color:  #004643;
     margin-bottom: 40px;
+    text-align: left;
+}
+h4.cuotas{
+    text-align: left;
 }
 .detail-bottom{
     display: flex;
@@ -176,15 +296,13 @@ h4.cuota{
     align-self: center;
 
 }
-.descripcion {
-    margin-top: 40px;
+.botones-detail{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
 }
-h3.titulo-descripcion{
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-button.register {
-    width: 90%;
+.detail-a{
+    width: 100px;
     height: 50px;
     padding: 8px;
     border-radius: 10px;
@@ -193,6 +311,50 @@ button.register {
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
+    background-color: #e62929;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    
+
+}
+div.detail-b{
+    width: 100px;
+    height: 50px;
+    padding: 14px;
+    border-radius: 10px;
+    border-color: transparent;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    background-color: #71d682;
+    cursor: pointer;
+    text-align-last: center;
+    
+
+}
+div.detail-b a {
+    text-decoration: none;
+    color: #fff;
+
+}
+.descripcion {
+    margin-top: 40px;
+}
+h3.titulo-descripcion{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+button.register {
+    width: 10px;
+    height: 50px;
+    padding: 8px;
+    border-radius: 103px;
+    border-color: transparent;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #004643;
     color: #fff;
     cursor: pointer;
@@ -232,6 +394,8 @@ div.control-formulario input {
 .control-formulario label{
     align-self: center;
     margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: bold
 }
 .control-precio{
     display: flex;
@@ -241,11 +405,20 @@ div.control-formulario input {
 .control-precio input {
     width: 40%;
 }
+.control-carrito{
+        width: 90%;
+        height: 50px;
+        border-radius: 5px;
+        border-color: transparent;
+        max-width: 800px;
+        
+    }
+
 .control {
     width: 90%;
     height: 50px;
     padding: 8px;
-    border-radius: 5px;
+    border-radius: 100px;
     border-color: transparent;
     margin-top: 5px;
     margin-left: auto;
@@ -256,7 +429,6 @@ div.control-formulario input {
 }
 .ingresa h2{
     text-align: center;
-    margin-top: 70px;
     margin-bottom: 20px;
     color: #004643;
 }
@@ -264,9 +436,10 @@ div.control-formulario input {
     padding: 25px 15px;
     margin-right: auto;
     margin-left: auto;
-    background-color: rgb(202, 202, 202);
-    max-width: 545px;
+    background-color:#bdd1d0;
+    max-width: 400px;
     margin-bottom: 70px;
+    margin-top: 157px;
 }
 button.home {
     background-color: #004643;
@@ -315,18 +488,34 @@ button.home:hover {
     list-style-type: none;
     
 }
-.navbar li a {
-    color: white;
-    text-decoration: none;
-    font-size: 10px;
+.navbar li a{
+    position: relative;
+    color: #fff;
+    margin: 0px 15px;
 }
-.navbar li a:hover{
-    color: #56918e
+.navbar li a:after{
+    position: absolute;
+    bottom: 7px;
+    left: 0px;
+    width: 100%;
+    height: 4px;
+    background-color: #004643;
+    content: "";
+    opacity: 0;
+    transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+    transform: translateY(20px);        
 }
+.navbar li a:hover:after{
+    opacity:1;
+    transform: translateY(15px)
+}
+
 
 .top-img{
     display: flex;
+   
     margin-bottom: 50px;
+    margin-top: -51px;
 }
 .top-img p {
     font-size: 12px;
@@ -349,28 +538,32 @@ button.home:hover {
     margin-bottom: 30px;
     color: white;
 }
+.register{
+    
+    margin: auto;
+}
+
 .login {
     display: flex;
     justify-content: center;
     align-self: center;
-    background-color:#195855;
-    border-radius: 10px;
-    border: black 2px solid;
+    
     padding: 50px;
     margin: auto;
     width: 320px;
     margin-bottom: 40px;
+    margin-top: 157px;
+    border-radius: 70px;
 }
 .login form{
     display: flex;
     flex-direction: column;
-    margin:auto;
     padding: 10px;
 } 
-.login form .botonSend{
-    margin-top: 20px;
-    border: black 1px solid;
+.login form input{
+    width: 250px;
 }
+
 
 input, textarea {
     margin-bottom: 15px;
@@ -381,7 +574,10 @@ input#newsletter
         width: auto;
         height: auto;
     }
-
+    button.agregar-carrito a{
+        text-decoration: none;
+        color: #fff;
+    }
     button.agregar-carrito {
         background-color: #004643;
         border-radius: 5px;
@@ -416,7 +612,7 @@ input#newsletter
 }
 .todos-productos{
     text-align: center;
-    margin-top: 200px;
+    margin-top: 135px;
 }
 h4{
     text-align: center;
@@ -456,7 +652,7 @@ p.bold{
     margin-bottom: 20px;
     text-align: center;
     color: #004643;
-    margin-top: 200px ;
+    margin-top: 135px ;
 }
 .elementos-carrito{
     display: flex;
@@ -502,17 +698,18 @@ p.bold{
 }   
 .color-detalle{
     margin-bottom: 20px;
+    text-align: left;
 }
 button.register {
     width: 300px;
     height: 50px;
     padding: 8px;
-    border-radius: 10px;
+    border-radius: 190px;
     border-color: transparent;
     margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1200px;
+    max-width: 300px;
     background-color: #004643;
     color: #fff;
     cursor: pointer;
@@ -522,16 +719,71 @@ button.register {
 button.register:hover {
     background-color: #195855;
 }
+.container {
+	position: absolute;
+	transform: translate(-100%,0%);
+	padding: 10px;
+}
 
+input {
+    outline: none;
+    box-sizing: border-box;
+    width: 0px;
+    color: #000;
+    border-radius: 50px;
+    font-size: 20px;
+    border: 0px solid #195855;
+    transition: all .7s ease;
+}
+
+::placeholder {
+	color: grey;
+}
+
+.btn {
+    position: absolute;
+    right: 0px;
+    top: -16px;
+    width: 25px;
+    height: 25px;
+    background: #195855;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn i {
+	font-size: 21px;
+	color: white;
+
+	transition: all .7s ease;
+}
+
+.container:hover input {
+	width: 150px;
+}
+
+.container:hover i{
+	transform: rotate(-360deg);
+}
+
+.btn:hover{
+	background: #195855;
+}
 
 /*Página index*/
-.products{
+
+  
+  .products{
     padding: 70px;
     
 
 }
 .products a {
     display: block;
+    text-decoration: none;
+    color: #000;
 }
 .producto img {
     width: 100%;
@@ -575,11 +827,7 @@ button.register:hover {
     .navbar li a:hover{
         color: #56918e
     }
-    .elementos1y2footer{
-        display: flex;
-        justify-content: space-between;
-        
-    }
+    
     
 }
 @media(min-width:460px){
@@ -597,9 +845,28 @@ button.register:hover {
         flex-wrap: wrap;
         justify-content: space-around;
        }
-    .producto {
+       .products a {
            width: 48%;
+           color: black;
+           text-decoration: none;
+           margin-bottom: 20px;
        }
+       .producto {
+           width: 100%;
+           height: 100%;
+       }
+       
+       .products a:hover {
+           box-shadow: 0px 0px 10px rgb(100 100 100);
+           cursor: pointer;
+           width: 49%;
+       }
+       .elementos1y2footer{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+      
     
    
     
@@ -615,16 +882,23 @@ button.register:hover {
         background-color: #195855;
         width: 100%
     }
+    footer{
+    max-height: fit-content;
+    background-color: #195855;
+    padding: 30px;
+    min-width: none;
+    }
+    
 }
-@media(max-width:800px){
+@media(max-width:560px){
     html{
         inline-size: fit-content;
     }
+    
 }
 @media (max-width: 650px){
-    header form .search-bar, .texto-search {
+    .main-header-top-elemento2{
         display: none;
-
     }
 }
 @media(min-width: 650px){
@@ -633,9 +907,16 @@ button.register:hover {
         flex-direction: row;
         
     }
+    .bienvenido-main-body{
+        display: flex;
+        
+    }
     .carrito {
         display: flex;
         justify-content: space-around;
+    }
+    .login-flex{
+        display: flex;
     }
 
     .elementos-carrito-2{
@@ -650,17 +931,23 @@ button.register:hover {
      flex-wrap: wrap;
      justify-content: space-around;
     }
-    .producto {
+    .products a {
         width: 23%;
+        color: black;
+        text-decoration: none;
+        margin-bottom: 20px;
     }
-    .producto:hover {
+    .producto {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .products a:hover {
         box-shadow: 0px 0px 10px rgb(100 100 100);
         cursor: pointer;
-        width: 26%;
+        width: 24%;
     }
-    .products a {
-        display: block;
-    }
+   
     
     .detail-bottom{
         display: flex;

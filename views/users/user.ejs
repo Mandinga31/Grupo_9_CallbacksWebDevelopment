@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('../partials/head.ejs') %> 
+<body>
+<%- include ('../partials/header.ejs') %> 
+<div class="bienvenido"><h2>Bienvenido de vuelta <%= user.usuario %>!</h2></div>
+<main class="main-bievenidos" style="background-color: #fff;">
+    
+    <div class="bienvenido-main-body">
+    
+    <div class="body-elemento1">
+        <div class="bienvenido-contenedor">
+            <img src="../images/<%= user.imagen %>  " class="imagen">
+        </div>
+    
+        
+    </div>
+
+    <div class="body-elemento-2">
+        <h2 class="nombre">
+            
+            <p style="align-self: center;">Hola <%= user.nombre %>!</p>
+        </h2>
+        <div class="user-icons">
+            
+            
+            <a style="color: red; text-decoration: none; cursor: pointer;" href="#">
+                
+                <i class="fa-brands fa-gratipay"></i>
+                <h4>Mi wishlist</h4>
+            </a>
+        </div>
+        <hr>
+        <div class="user-icons">
+            
+            
+            <a style="    color: #004643; text-decoration: none; cursor: pointer;" href="../construir">
+                
+                <i class="fa-solid fa-receipt"></i>
+                <h4>Mis pedidos</h4>
+            </a>
+        </div>
+        <hr>
+        <div class="user-icons">
+            
+            
+            <a style="    color: #004643; text-decoration: none; cursor: pointer;" href="../construir">
+                
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <h4>Datos de facturación</h4>
+            </a>
+        </div>
+        <hr>
+        <div class="user-icons">
+            
+            
+            <a style="    color: #004643; text-decoration: none; cursor: pointer;" href="../construir">
+                
+                <i class="fa-solid fa-address-book"></i>
+                <h4>Editar mis datos</h4>
+            </a>
+        </div>
+        <hr>
+        
+        
+        
+      
+    </div>          
+</div>
+
+
+
+
+<div style="text-align-last: center; margin-bottom: 20px;">
+    <a class="boton-css-nuevo" href="/users/logout/" style="text-decoration: none;">Logout</a>
+</div>
+
+
+
+</main>
+
+<%- include ('../partials/footer.ejs') %> 
+</body>
+</html>

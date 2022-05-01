@@ -12,6 +12,9 @@ const controlador = {
 
 index: (req,res)=>{
 res.render('index',{products})
-}
+},
+contruir:(req,res)=>{
+    res.render('construir')
+    },
 };
 module.exports = controlador; 

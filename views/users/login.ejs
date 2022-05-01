@@ -2,30 +2,53 @@
 <html lang="en">
 <%- include ('../partials/head.ejs') %> 
 <body>
-<%- include ('../partials/header-logo.ejs') %> 
-        <div class="ingresa"><h2>Completá los datos para ingresar</h2></div>
-        <div>
+<%- include ('../partials/header.ejs') %> 
+        
+        <main class="login-flex" style="background-color: #bdd1d0;;">
+            
             <div class="login" >
-            <form action="/" method="get">
-                <input  type="text" name="user" placeholder="Nombre de usuario" class="control">
-                <input type="email" name="email" placeholder="Correo electrónico" class="control">
-                <input type="password" name="pass" placeholder="Escribí tu contraseña" class="control">
+                
+                <form action="" method="POST">
+                    <div class="ingresa"><h2>Completá los datos para ingresar</h2></div>
+                    <label for="email"></label>
+                    <input type="email" 
+                    name="email" 
+                    id="email" 
+                    class="control"
+                    placeholder="Email"
+                    <% if (locals.oldData && oldData.email){ %>
+                    value= "<%= oldData.email%>" 
+                    <% }else{""} %> 
+                    >
+                
+                <% if (locals.errors && errors.email){ %>
+                    <p class="error"><%= errors.email.msg%></p>
+                  <% }%>
+                
+                <label for="password"></label>
+                <input type="password" name="password" id="password" placeholder="Escribí tu contraseña" class="control" 
+            ><% if (locals.errors && errors.password){ %>
+                    <p class="error"><%= errors.password.msg%></p>
+                  <% }%>
+                
                 <div class="each-checkbox">
                     <input type="checkbox" name="newsletter" value="newsletter" id="newsletter">
-                    <label for="newsletter">Recordar mi contraseña</label>
+                    <label for="newsletter">Recordar mi usuario</label>
                 </div>
-                <div class="control"><button type="submit" class="home">Ingresar</button></div>
-                <div class="olvidastecontra"><a href= "#">¿Olvidaste tu contraseña?</a></div>
+                
+                <div class="control"><button type="submit" class="boton-css-nuevo">Ingresar</button></div>
+                <div class="olvidastecontra"><a href= "../construir" style="text-decoration: none; color: white;">¿Olvidaste tu contraseña?</a></div>
     
-            </form>
+             </form>
             
-         </div>
-         <div>
+            </div>
+            
+         
+        <div class="register">
              <p>¿No tenés cuenta?</p>
             <form action='/users/register' method="get" class="formulario-login">
-                <div class="control"><button type="submit" class="register">Crear cuenta</button></div>
-                </form>  
-         </div>
+                <div class="control" style="margin-bottom: 30px;"><button type="submit" class="register">Crear cuenta</button></div>                </form>  
+        </div>
          
             
         </main>
