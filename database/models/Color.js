@@ -9,7 +9,7 @@ module.exports = (sequelize, dataType) => {
             autoIncrement : true
         },
         color : {
-            type : dataType.VARCHAR(100)
+            type : dataType.STRING(100)
         },
         
     }
@@ -19,6 +19,14 @@ module.exports = (sequelize, dataType) => {
     };
 
         const Color = sequelize.define(alias, cols, config);
-
+        Color.associate = (models)=> {
+        Color.belongsToMany(models.products,{
+            as: "coloresProducto",
+            through: "products_talle",
+            foreignKey: "color_id",
+            otherKey:  "product_id",
+            timestamps: false
+        })
+    }
         return Color;
 }

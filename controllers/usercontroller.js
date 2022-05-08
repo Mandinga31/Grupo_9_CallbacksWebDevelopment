@@ -26,15 +26,28 @@ register: (req,res)=>{
 processRegister: (req,res) =>{
     //if {Validaciones} 
     const resultValidation = validationResult(req);
+    let userCreated = req.body;
+   console.log(userCreated)
  
     if(resultValidation.errors.length > 0){
      console.log(resultValidation.mapped())
      return res.render("users/register", {errors: resultValidation.mapped(),
      oldData: req.body})
    }
- 
-   let userCreated = req.body;
-   console.log(userCreated)
+
+   userData.forEach(usuario => {if (usuario.email === userCreated.email){
+    return res.render('users/register',{
+        errors: {
+            email: {
+                msg: "Este mail ya está registrado"
+            }
+        } 
+     })
+    }
+}
+)
+   
+
  
    userCreated.imagen = req.file.filename;// p/la imagen de un nuevo usuario
  

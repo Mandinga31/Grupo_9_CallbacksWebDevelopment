@@ -4,13 +4,32 @@ const path = require('path')
 const fs = require('fs')
 let productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
+let db = require("../database/models")
+
+
 
 
 
 
 const controlador = {
 listado: (req,res) => {
-    res.render('products', {products})
+	db.products.findAll()
+	.then(products=>{
+		res.render('products/products', {products})
+	})
+    
+},
+tech: (req,res)=>{
+	db.products.findAll()
+	.then(products=>{
+		res.render('products/products', {products})
+	})
+},
+vintage: (req,res)=>{
+	db.products.findAll()
+	.then(products=>{
+		res.render('products/products', {products})
+	})
 },
 carrito: (req,res)=>{
     const idProductToEdit = req.params.id - 1;
@@ -21,8 +40,13 @@ carrito: (req,res)=>{
 },
 detalle: (req,res)=>{
     let id = req.params.id
+	db.products.findByPk(id)
+	.then(productToEdit=> {
+		res.render('products/productDetail', {productToEdit: productToEdit})
+	})
+	
            
-	res.render('products/productDetail', {productToEdit: products.filter((producto)=> producto.id == id)[0]})
+	
     
 },
 crear: (req,res)=>{
