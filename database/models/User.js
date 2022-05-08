@@ -17,28 +17,33 @@ module.exports = (sequelize, dataType) => {
                 autoIncrement : true
             },
             nombre : {
-                type : dataType.VARCHAR(100)
+                type : dataType.STRING(50)
             },
             usuario : {
-                type : dataType.VARCHAR(100)
+                type : dataType.STRING(25)
             },
             email : {
-                type : dataType.VARCHAR(100)
+                type : dataType.STRING(50)
             },
             password : {
-                type : dataType.VARCHAR(10)
+                type : dataType.STRING(250)
             },
             imagen : {
-                type : dataType.INTERGER(10)
+                type : dataType.TEXT(200)
             }
 
         }
         let config = {
-                 tableName : 'user',
-                 timestamps  : true
+                 tableName : 'users',
+                 timestamps  : false
         };
 
             const User = sequelize.define(alias, cols, config);
-
+            User.associate(models =>{
+                User.belongsTo(models.categoryUser,{
+                    as: "categorias",
+                    foreignKey: "category_id"
+                })
+            })
             return User;
     }

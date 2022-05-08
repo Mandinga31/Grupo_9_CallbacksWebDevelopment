@@ -9,13 +9,13 @@ module.exports = (sequelize, dataType) => {
                     autoIncrement : true
                 },
                 nombre : {
-                    type : dataType.VARCHAR(100)
+                    type : dataType.STRING(100)
                 },
                 descripcion : {
-                    type : dataType.VARCHAR(100)
+                    type : dataType.STRING(100)
                 },
                 imagen : {
-                    type : dataType.INTERGER(10)
+                    type : dataType.TEXT(200)
                 },
                 precio : {
                     type : dataType.INTERGER(10)
@@ -28,7 +28,28 @@ module.exports = (sequelize, dataType) => {
             };
 
                 const Product = sequelize.define(alias, cols, config);
+            Product.associate = (models)=> {
+                Product.belongsTo(models.categoryProduct, {
+                    as: "categorias",
+                    foreignKey: "categoryProduct_id"
 
+                })
+                Product.belongsToMany(models.colors,{
+                    as: "colores",
+                    through: "products_color",
+                    foreignKey: "product_id",
+                    otherKey:  "color_id",
+                    timestamps: false
+                })
+                Product.belongsToMany(models.talles,{
+                    as: "talles",
+                    through: "products_talle",
+                    foreignKey: "product_id",
+                    otherKey:  "talle_id",
+                    timestamps: false
+                })
+            }
+             
                 return Product;
         }
 

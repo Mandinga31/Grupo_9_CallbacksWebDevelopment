@@ -48,6 +48,9 @@ footer{
     
     
 }
+html{
+    min-inline-size: fit-content;
+}
 textarea{
 font-family: 'Montserrat';
  
@@ -86,7 +89,6 @@ font-family: 'Montserrat';
 .imagenes-banner-2{
 text-align: center;
 margin: 100px auto;
-
 max-width: 70%;
 }
 
@@ -162,6 +164,15 @@ header form .search-bar, .texto-search{
     
   
   }
+  .mini-banner{
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 40px;
+  }
+  .mini-banner img{
+      width: 190px;
+  }
+  
   /**** Página User* **/
   .bienvenido {
     text-align: center;
@@ -681,7 +692,17 @@ p.bold{
 .boton-comprar{
     text-align: right;
 }
-
+.creditCards-footer{
+    display: flex;
+    justify-content: space-between;
+}
+.creditCards-footer li i{
+    font-size: 2em;
+    text-align-last: center;
+    align-self: center;
+    text-decoration: none;
+    list-style-type: none;
+}
 /*Página create*/
 .control-formulario-radio {
     display: flex;
@@ -835,6 +856,15 @@ input {
         background-color: #195855;
         width: 100%
     }
+    .mini-banner{
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 40px;
+    }
+    .mini-banner img{
+        width: 400px;
+    }
+    
     .lista-imagenes{
         
         width: 600px;
@@ -882,6 +912,9 @@ input {
         background-color: #195855;
         width: 100%
     }
+    .mini-banner-img{
+        display: none;
+      }
     footer{
     max-height: fit-content;
     background-color: #195855;
@@ -890,13 +923,9 @@ input {
     }
     
 }
-@media(max-width:560px){
-    html{
-        inline-size: fit-content;
-    }
-    
-}
-@media (max-width: 650px){
+
+
+@media (max-width: 800px){
     .main-header-top-elemento2{
         display: none;
     }
@@ -959,4 +988,4 @@ input {
     
     
    
-}
+} 

@@ -1,20 +1,20 @@
 module.exports = {
   "development": {
-    "username": "root",
-    "password": null,
+    "username": "callwatch_db",
+    "password": "callwatch",
     "database": "callwatch-db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
+    "username": "callwatch_db",
     "password": null,
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
+    "username": "callwatch_db",
     "password": null,
     "database": "database_production",
     "host": "127.0.0.1",

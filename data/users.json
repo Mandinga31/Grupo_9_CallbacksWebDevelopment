@@ -54,5 +54,37 @@
         "password": "$2a$10$hHQRquka7tcvaGUsdQD2BOuoqCJRtqaBt9J2lk7W9ksotz4UdK3iW",
         "imagen": "1650756636618.jpg",
         "id": 7
+    },
+    {
+        "nombre": "valen",
+        "usuario": "vaen",
+        "email": "vce@hotmail.com",
+        "password": "$2a$10$Hdje/jYaHaHH8W8jjtu/Z.Ksf0Scz98iK6bxzyiyehnKpu.OZ2uM2",
+        "imagen": "1651348826590.png",
+        "id": 8
+    },
+    {
+        "nombre": "lpm",
+        "usuario": "lpm",
+        "email": "lpm@gmail.com",
+        "password": "$2a$10$XAqoAGRy4I3hsdoRHgGJteGADar2DE6DqWyIsgHdA/yNzjsUoDS.2",
+        "imagen": "1651351551744.png",
+        "id": 9
+    },
+    {
+        "nombre": "cualquier cosa",
+        "usuario": "valen",
+        "email": "lpm@gmail.com",
+        "password": "$2a$10$hRBbPEgSwS11vMsF7VKkN.nzc8mvWrAgJDvTvkbDllVZGK3dcLT3K",
+        "imagen": "1651351583017.png",
+        "id": 10
+    },
+    {
+        "nombre": "lpm",
+        "usuario": "lpm",
+        "email": "lpm@gmail.com",
+        "password": "$2a$10$1mN.2UGbvlaRkpbNxoJYBeMRwyfMYI9RZXL5uNdBwRb2bYWsm1TKq",
+        "imagen": "1651351719464.png",
+        "id": 11
     }
 ]
