@@ -64,13 +64,13 @@ values ("Unisex"),
 ("Vintage");
 
 
-drop table if exists color;
-create table color(
+drop table if exists color_product;
+create table color_product(
 id int primary key not null auto_increment,
 color varchar(20) not null
 );
 
-insert into color(color)
+insert into color_product(color)
 values ("Marrón"),
 ("Negro"),
 ("Azul"),
@@ -87,45 +87,26 @@ descripcion text not null,
 imagen text(200),
 precio int not null,
 category_product_id int,
-constraint FK_category_product_id_category_product foreign key (category_product_id) references category_product(id)
+color_product_id int,
+constraint FK_category_product_id_category_product foreign key (category_product_id) references category_product(id),
+constraint FK_color_product_id_category_product foreign key (color_product_id) references color_product(id)
 );
 
-insert into product (nombre, descripcion, imagen, precio, category_product_id)
-values("Callwatch Fendi P-98", "1 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "../images/Reloj-4.jpg",25730 , 2),
-("Callwatch Sauza Silver", "2 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "../images/reloj-6.jpg", 26440,6),
-("Callwatch Sprouts", "3 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "../images/reloj-7.jpg", 24610,  2),
-("Callwatch Platinium Grape", "4 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "../images/reloj-8.jpg", 20550, 2),
-("Callwatch Kieths N-900", "5 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "../images/reloj-9.jpg", 19949, 2),
-("Callwatch Golden-Cherry", "6 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "../images/reloj1a.jpg", 28650, 6),
-("Callwatch Toku Katsuo", "7 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "../images/Reloj-2.jpg", 19490, 6),
-("Callwatch Peach P-200", "8 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "../images/smartwatch-2.jpg", 15950, 5),
-("Callwatch Blue Brizard", "9 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "../images/smartwatch-3.jpg", 13960, 5),
-("Callwatch Margarine F-670", "10 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "../images/smartwatch-4.jpg", 24690, 5),
-("Callwatch Pink SmartWatch P-90", "11 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "1647811072250.jpg", 15000, 5);
+insert into product (nombre, descripcion, imagen, precio, category_product_id, color_product_id)
+values("Callwatch Fendi P-98", "1 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "../images/Reloj-4.jpg",25730 , 2, 6),
+("Callwatch Sauza Silver", "2 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "../images/reloj-6.jpg", 26440,6, 5),
+("Callwatch Sprouts", "3 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "../images/reloj-7.jpg", 24610, 2, 4),
+("Callwatch Platinium Grape", "4 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "../images/reloj-8.jpg", 20550, 2, 3),
+("Callwatch Kieths N-900", "5 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "../images/reloj-9.jpg", 19949, 2, 2),
+("Callwatch Golden-Cherry", "6 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "../images/reloj1a.jpg", 28650, 6, 1),
+("Callwatch Toku Katsuo", "7 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "../images/Reloj-2.jpg", 19490, 6, 1),
+("Callwatch Peach P-200", "8 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "../images/smartwatch-2.jpg", 15950, 5, 2),
+("Callwatch Blue Brizard", "9 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "../images/smartwatch-3.jpg", 13960, 5, 3),
+("Callwatch Margarine F-670", "10 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "../images/smartwatch-4.jpg", 24690, 5, 4),
+("Callwatch Pink SmartWatch P-90", "11 Con un diseño sobrio y ultradelgado, el Master Callwatch superará sus expectativas siendo una de las mejores opciones en el mercado. Este reloj captura el ADN de la marca gracias a su forma arquitectónica de caja.  Este reloj minimalista de dos agujas se asegura con una pulsera de malla o una correa de cuero suave.", "1647811072250.jpg", 15000, 5, 5);
 
 
 
-drop table if exists product_color;
-create table product_color(
-id int primary key not null auto_increment,
-product_id int,
-color_id int,
-constraint FK_product_id_product foreign key (product_id) references product(id),
-constraint FK_color_id_color foreign key (color_id) references color(id)
-);
-
-insert into product_color (product_id, color_id)
-values ( 1, 1),
-( 2, 2),
-( 3, 3),
-( 4, 4),
-( 5, 5),
-( 6, 6),
-( 7, 1),
-( 8, 2),
-( 9, 3),
-( 10, 4),
-( 11, 5);
 
 drop table if exists product_talle;
 create table product_talle (
@@ -161,5 +142,4 @@ from product_color pc
 inner join color c  on color_id = c.id 
 inner join product p on product_id = p.id
 order by product_id */ 
-
 
