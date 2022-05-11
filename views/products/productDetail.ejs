@@ -12,7 +12,7 @@
             
             <div class="top-img">
                 <a href="/products" style="text-decoration: none;"><p style="color: black;">Relojes </p></a>
-                <p style="color: black;"> /  <%= productToEdit.category %> / </p>
+                <p style="color: black;"> /  <%= productToEdit.categorias.nombre %> / </p>
                 <p><%= productToEdit.nombre %></p> 
             </div>
             
@@ -28,8 +28,10 @@
             <h2 class="nombre">
                 <%= productToEdit.nombre %>
             </h2>
+            
             <h4 class="color-detalle">
-                <%= productToEdit.color %>
+                
+                <%= productToEdit.colores.color %> - <%= productToEdit.categorias.nombre %>
             </h4>
             
             <h3 class="precio">

@@ -12,7 +12,7 @@ module.exports = (sequelize, dataType) => {
     let cols = {
 
             id: {
-                type : dataType.INTERGER(10),
+                type : dataType.INTEGER(10),
                 primaryKey : true,
                 autoIncrement : true
             },
@@ -30,20 +30,23 @@ module.exports = (sequelize, dataType) => {
             },
             imagen : {
                 type : dataType.TEXT(200)
+            },
+            category_user_id:{
+                type : dataType.INTEGER(11)  
             }
 
         }
         let config = {
-                 tableName : 'users',
+                 tableName : 'user',
                  timestamps  : false
         };
 
             const User = sequelize.define(alias, cols, config);
-            User.associate(models =>{
+            User.associate = models =>{
                 User.belongsTo(models.categoryUser,{
                     as: "categorias",
-                    foreignKey: "category_id"
+                    foreignKey: "category_user_id"
                 })
-            })
+            }
             return User;
     }

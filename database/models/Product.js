@@ -4,7 +4,7 @@ module.exports = (sequelize, dataType) => {
         let cols = {
 
                 id: {
-                    type : dataType.INTERGER(10),
+                    type : dataType.INTEGER(10),
                     primaryKey : true,
                     autoIncrement : true
                 },
@@ -18,33 +18,37 @@ module.exports = (sequelize, dataType) => {
                     type : dataType.TEXT(200)
                 },
                 precio : {
-                    type : dataType.INTERGER(10)
+                    type : dataType.INTEGER(10)
+                },
+                category_product_id: { 
+                    type : dataType.INTEGER(10)
+                },
+                color_product_id: { 
+                    type : dataType.INTEGER(10)
+                }
                 }
 
-            }
+            
             let config = {
                      tableName : 'product',
-                     timestamps  : true
+                     timestamps  : false
             };
 
                 const Product = sequelize.define(alias, cols, config);
             Product.associate = (models)=> {
                 Product.belongsTo(models.categoryProduct, {
                     as: "categorias",
-                    foreignKey: "categoryProduct_id"
+                    foreignKey: "category_product_id"
 
                 })
-                Product.belongsToMany(models.colors,{
+                Product.belongsTo(models.colors,{
                     as: "colores",
-                    through: "products_color",
-                    foreignKey: "product_id",
-                    otherKey:  "color_id",
-                    timestamps: false
+                    foreignKey: "color_product_id"
                 })
                 Product.belongsToMany(models.talles,{
                     as: "talles",
-                    through: "products_talle",
-                    foreignKey: "product_id",
+                    through: "product_talle",
+                    foreignKey: "productt_id",
                     otherKey:  "talle_id",
                     timestamps: false
                 })

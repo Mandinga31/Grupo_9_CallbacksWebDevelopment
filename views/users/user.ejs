@@ -20,6 +20,7 @@
         <h2 class="nombre">
             
             <p style="align-self: center;">Hola <%= user.nombre %>!</p>
+            <p style="align-self: center;"><%= user.email %></p>
         </h2>
         <div class="user-icons">
             
@@ -57,7 +58,8 @@
             <a style="    color: #004643; text-decoration: none; cursor: pointer;" href="../construir">
                 
                 <i class="fa-solid fa-address-book"></i>
-                <h4>Editar mis datos</h4>
+                <a href="/users/editUserProfile/<%= user.id %> "><h4>Editar mis datos</h4></a>
+                
             </a>
         </div>
         <hr>

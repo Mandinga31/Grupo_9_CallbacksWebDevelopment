@@ -2,11 +2,11 @@
 <html lang="en">
     <%- include ('../partials/head.ejs') %> 
 <body>
-    <%- include ('../partials/header-logo.ejs') %> 
+    <%- include ('../partials/header.ejs') %> 
     
     <main>
-        <div class="ingresa" style="margin-top: 150px;"><h2>Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</h2></div>
-            <form action="./register" method="POST" class="formulario" enctype="multipart/form-data" style="margin-top: 0px;">
+        <div class="ingresa" style="margin-top: 150px;"><h2>Edita tu perfil</h2></div>
+            <form action="/users/<%= userToEdit.id %>?_method=PUT" method="POST" class="formulario" enctype="multipart/form-data" style="margin-top: 0px;">
         
         
         <div class="control-formulario">
@@ -15,8 +15,8 @@
             name="nombre" 
             id="nombre"
             class="control" 
-            value="<%=locals.oldData? oldData.nombre : null%>" 
-            >
+            value="<%= userToEdit.nombre %>">
+
             <% if (locals.errors && errors.nombre) { %>
                 <div class="text-danger">
                     <%= errors.nombre.msg %> 
@@ -31,8 +31,7 @@
             name="usuario" 
             id="usuario" 
             class="control"  
-            value="<%=locals.oldData? oldData.usuario : null %>" 
-            >
+            value="<%=userToEdit.usuario%>">
             <% if (locals.errors && errors.usuario) { %>
                 <div class="text-danger">
                     <%= errors.usuario.msg %> 
@@ -40,26 +39,12 @@
             <% } %>    
         </div>
         
-        <div class="control-formulario">
-            <label for="email"><b>E-mail</b></label>
-            <input type="email" 
-            name="email" 
-            id="email" 
-            class="control"
-            value="<%= locals.oldData ? oldData.email : null %>" 
-            >
-            <% if (locals.errors && errors.email) { %>
-                <div class="text-danger">
-                    <%= errors.email.msg %> 
-                </div>
-            <% } %>
-        </div>
        
 
         <div class="control-formulario">
             <label for="imagen"><b>Selecciona tu foto de perfil:</b></label>    
-              <!-- Acá lo que tenemos que hacer es que por defecto quede la imagen ya ingresada.-->
-            <input type="file" name="imagen" id="imagen" class="control"> 
+             
+            <input type="file" name="imagen" id="imagen" class="control">
             <% if (locals.errors && errors.imagen) { %>
                 <div class="text-danger">
                     <%= errors.imagen.msg %> 
@@ -69,7 +54,7 @@
 
 
         <div class="control-formulario">
-            <label for="password"><b>Ingresá tu contraseña</b></label>
+            <label for="password"><b>Ingresá tu nueva contraseña</b></label>
             <input type="password" 
             name="password" 
             id="password" 
@@ -84,7 +69,7 @@
         <div class="control-formulario">
             <label for="categorias" name="category">Categorias</label>
             <select class="control" name="category">
-                <option value="">Seleccionar</option>
+                <option value="<%= userToEdit.categorias.id %> "><%= userToEdit.categorias.nombre %></option>
                 <option value="1">Bronce</option>
                 <option value="2">Plata</option>
                 <option value="3">Oro</option>
@@ -94,10 +79,6 @@
         </div>
         
 
-        <div class="each-checkbox">
-            <input type="checkbox" name="newsletter" value="newsletter" id="newsletter">
-            <label for="newsletter">Quiero recibir la newsletter para recibir descuentos y novedades</label>
-        </div>
 
         <div class="control"><button type="submit" class="home">Continuar</button>   </div>
         

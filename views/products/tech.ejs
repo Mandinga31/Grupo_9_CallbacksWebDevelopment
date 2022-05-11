@@ -10,7 +10,7 @@
 	<div class="products" >
 
 
-		<% for(let i = 0; i < products.length; i ++) {if (products[i].category == 'smartwatch' ) { %> 
+		<% for(let i = 0; i < products.length; i ++) {if (products[i].categorias.nombre == 'SmartWatch' ) { %> 
 		<a href="/products/detalle/<%= products[i].id %>">
 		<article class="producto">
 			<img src= '../images/<%= products[i].imagen %>'  alt="imagen-principal">

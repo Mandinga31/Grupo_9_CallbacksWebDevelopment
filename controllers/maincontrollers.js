@@ -11,7 +11,14 @@ let db = require("../database/models")
 const controlador = {
 
 index: (req,res)=>{
-res.render('index',{products})
+    db.products.findAll(
+		{
+            include: [{association: 'categorias'}]
+		}
+	)
+	.then(products=>{
+		res.render('index', {products})
+	})
 },
 contruir:(req,res)=>{
     res.render('construir')
