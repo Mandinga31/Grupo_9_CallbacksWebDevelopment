@@ -61,8 +61,16 @@
                 <a href="/users/editUserProfile/<%= user.id %> "><h4>Editar mis datos</h4></a>
                 
             </a>
-        </div>
+        </div>        
         <hr>
+        <form action='<%=user.id%>?_method=DELETE' method="POST" class="formulario-login">
+                       
+            <button class="detail-a" type="submit" >
+                Eliminar
+            </button>
+        
+        
+    </form>
         
         
         
