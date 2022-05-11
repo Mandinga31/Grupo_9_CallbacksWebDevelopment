@@ -10,7 +10,7 @@
 	<div class="products" >
 
 
-		<% for(let i = 0; i < products.length; i ++) {if (products[i].category == 'vintage' ||products[i].category == 'Vintage' ) { %> 
+		<% for(let i = 0; i < products.length; i ++) {if (products[i].categorias.nombre == 'vintage' ||products[i].categorias.nombre == 'Vintage' ) { %> 
 		<a href="/products/detalle/<%= products[i].id %>">
 		<article class="producto">
 			<img src= '../images/<%= products[i].imagen %>'  alt="imagen-principal">

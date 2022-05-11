@@ -749,7 +749,6 @@ button.register:hover {
 input {
     outline: none;
     box-sizing: border-box;
-    width: 0px;
     color: #000;
     border-radius: 50px;
     font-size: 20px;

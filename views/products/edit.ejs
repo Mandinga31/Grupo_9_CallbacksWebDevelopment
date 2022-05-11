@@ -5,7 +5,7 @@
 <%- include ('../partials/header.ejs') %> 
 <main>
     <div class="title-carrito"><h2>Editá  tus productos</h2></div>
-<form action='../<%= productToEdit.id %>?_method=PUT' method="POST" class="formulario" enctype="multipart/form-data">
+<form action='../<%= productToEdit.id %>?_method=PUT' method="POST" class="formulario" enctype="multipart/form-data" style="margin-top: 0%">
     
     
     <div class="control-formulario">
@@ -21,13 +21,13 @@
     <div class="control-formulario">
         <label for="categorias" name="category">Categorias</label>
         <select class="control" name="category">
-            <option value="<%= productToEdit.category%>"><%= productToEdit.category%></option>
-            <option value="unisex">Unisex</option>
-            <option value="mujer">Mujer</option>
-            <option value="hombre">Hombre</option>
-            <option value="niño">Niños</option>
-            <option value="reloj-smart">Smart Watch</option>
-            <option value="vintage">Vintage</option>
+            <option value="<%= productToEdit.categorias.id%>"><%= productToEdit.categorias.nombre%></option>
+            <option value="1">Unisex</option>
+            <option value="2">Mujer</option>
+            <option value="3">Hombre</option>
+            <option value="4">Niños</option>
+            <option value="5">Smart Watch</option>
+            <option value="6 ">Vintage</option>
         </select>    
     </div>
     <div class="control-formulario">
@@ -36,17 +36,17 @@
     <div class="control-formulario-radio">
         
             <div class="each">
-                <input type="radio" name="color" value="color-marron" class="radio" id="color-marron">
+                <input type="radio" name="color" value="1" class="radio" id="color-marron">
                 <img src="../../images/marron.png" alt="imagen-marron" class="color"/> 
                 <label for="color-marron">Marrón</label>
             </div>
             <div class="each">
-                <input type="radio" name="color" value="color-negro" class="radio" id="color-negro">
+                <input type="radio" name="color" value="2" class="radio" id="color-negro">
                 <img src="../../images/negro.png" alt="imagen-negro" class="color"/> 
                 <label for="color-negro">Negro</label>
             </div>
             <div class="each">
-                <input type="radio" name="color" value="color-azul" class="radio" id="color-azul">
+                <input type="radio" name="color" value="3" class="radio" id="color-azul">
                 <img src="../../images/azul.png" alt="imagen-azul" class="color" /> 
                 <label for="color-azul">Azul</label>
             </div>
@@ -54,17 +54,17 @@
     <div class="control-formulario-radio">
         
             <div class="each">
-                <input type="radio" name="color" value="color-blanco" class="radio" id="color-blanco">
+                <input type="radio" name="color" value="4" class="radio" id="color-blanco">
                 <img src="../../images/blanco.png" alt="imagen-rojo" class="color"/> 
                 <label class="colores" for="color-blanco">Blanco</label>
             </div>
             <div class="each">
-                <input type="radio" name="color" value="color-verde" class="radio" id="color-verde">
-                <img src="../../images/verde.png" alt="imagen-verde" class="color"/> 
-                <label class="colores" for="color-verde">Verde</label>
+                <input type="radio" name="color" value="5" class="radio" id="color-rosa">
+                <img src="../../images/rosa.png" alt="imagen-rosa" class="color"/> 
+                <label class="colores" for="color-rosa">Rosa</label>
             </div>
             <div class="each">
-                <input type="radio" name="color" value="color-rojo" class="radio" id="color-rojo">
+                <input type="radio" name="color" value="6" class="radio" id="color-rojo">
                 <img src="../../images/rojo.png" alt="imagen-rojo" class="color"/> 
                 <label class="colores" for="color-rojo">Rojo</label>
             </div>

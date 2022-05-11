@@ -4,7 +4,7 @@ module.exports = (sequelize, dataType) => {
     let cols = {
 
         id: {
-            type : dataType.INTERGER(10),
+            type : dataType.INTEGER(10),
             primaryKey : true,
             autoIncrement : true
         },
@@ -23,7 +23,7 @@ module.exports = (sequelize, dataType) => {
         CategoryUser.associate = (models)=> {
         CategoryUser.hasMany(models.users, {
             as: "usuarios",
-            foreignKey: "category_id"
+            foreignKey: "category_user_id"
 
         })
     }
