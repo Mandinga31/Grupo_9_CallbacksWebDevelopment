@@ -91,6 +91,8 @@ router.get('/editUserProfile/:id',authMiddleware,userController.editUser);
 router.put('/:id', upload.single('imagen'),editValidations,userController.processUserEdit)
 
 router.get('/logout/', userController.logout)
+router.delete("/:id", userController.eliminar)
+
 module.exports = router;
 
 

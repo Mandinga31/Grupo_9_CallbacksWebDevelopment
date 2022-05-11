@@ -172,6 +172,18 @@ processUserEdit: (req,res)=>{
 logout: (req,res)=>{
     req.session.destroy();
     return res.redirect('/');
+},
+eliminar: (req,res)=>{
+
+	
+    let idSelected = req.params.id
+    db.users.destroy({
+        where: { 
+            id: idSelected
+        },
+        force: true
+    })
+    .then(()=>{res.redirect('/products')})
 } 
 }
 module.exports = controlador; 
