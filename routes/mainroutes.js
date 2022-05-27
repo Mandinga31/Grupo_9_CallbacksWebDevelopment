@@ -9,5 +9,8 @@ const router = express.Router();
 const mainController = require('../controllers/maincontrollers');
 
 router.get('/', mainController.index); 
-router.get('/construir', mainController.contruir)
+router.post('/', mainController.buscar);
+
+router.get('/construir', mainController.contruir);
+
 module.exports = router;

@@ -32,24 +32,21 @@ processRegister: (req,res) =>{
     let userCreated = req.body;
     console.log(userCreated)
     
-    if(resultValidation.errors.length > 0){
-        console.log(resultValidation.mapped())
-        return res.render("users/register", {errors: resultValidation.mapped(),
-        oldData: req.body})
+    if(resultValidation.errors.length > 0){           
+        return res.render("users/register", {errors: resultValidation.mapped(),oldData: req.body})
       }
  
     
    db.users.findAll().then(usuarios => usuarios.forEach(usuario => 
-    {if (usuario.email === userCreated.email){
-    return res.render('users/register',{
-        errors: {
-            email: {
-                msg: "Este mail ya está registrado"
-            }
-        } 
-     })
-    }}))
-    .then(db.users.create({
+        {if (usuario.email === userCreated.email){
+            return res.render('users/register',{
+            errors: {
+                email: {
+                    msg: "Este mail ya está registrado"
+                }
+            } 
+        })
+    }})).then(db.users.create({
         nombre: req.body.nombre,
         usuario: req.body.usuario,
         email: req.body.email,
@@ -148,26 +145,33 @@ processUserEdit: (req,res)=>{
         oldData: req.body, userToEdit}))
       }{
 
-     db.users.findByPk(id).then(user =>
-        {
-        
+     db.users.findByPk(id).then(user =>{
+            let imagen;
+            if(req.file.filename == undefined){
+                imagen = user.imagen
+            }else{
+                imagen = req.file.filename
+            }
             db.users.update({
             nombre: req.body.nombre,
             usuario: req.body.usuario,
             email: user.email,
             password:  bcrypt.hashSync(req.body.password, 10),
-            imagen: req.file.filename,
+            imagen: imagen,
             category_user_id: req.body.category
            },{
             where: {id: req.params.id}
-        }).then(()=> {return res.redirect("/")})
+        }).then(()=> {return request.session.reload( function (err) {
+                request.render('users/user', { user: req.session.user });
+             });
+        })})
            .catch((e)=>{return res.send(e)})
-        }
-       )
+        }  
+       
     
     
     
-      } 
+     
 },
 logout: (req,res)=>{
     req.session.destroy();
