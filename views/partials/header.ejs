@@ -33,14 +33,16 @@
 
         <div class="icons">
             <div class="icon">
+            <div class="search-box-iconPart">
+                <form action="/" method="POST">
+                    <input name="buscar" type="text" class="input-search-iconPart" placeholder="¿Qué estas buscando?">
+                    <button class="btn-search-iconPart"><i class="fas fa-search"></i></button>
+                </form> 
+            </div>
+            </div>
             
-                <div class="container">
-                <input type="text" placeholder="Buscar" style="width: 0px ;">
-                <div class="btn">
-                    <i class="fa fa-search"></i>
-                </div>
-            </div>
-            </div>
+            
+            
             <% if(locals.isLogged == false){ %> 
             <div class="icon">
                 
@@ -61,10 +63,25 @@
                 
             </div>
             
-            
-           
-        </div>
         
+        </div>
+             
     </section>
+    <div class="search-box">
+        <form action="/" method="POST">
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+            <input name="buscar" type="text" class="input-search" placeholder="¿Qué estas buscando?">
+        </form> 
+    </div>
+    <!-- <div class="search-bar" >
+        <form action="/buscar" method="POST">
+            <div class="container">
+                <input class="busquedad" type="text" placeholder="Buscar" name="buscar" width="100%">
+                   <style="width: 0px ;"> <i class="fa fa-search" style="color:white ;"></i>
+                   
+               </div>
+        </form> 
+    </div>    
+    -->
     
     </header>

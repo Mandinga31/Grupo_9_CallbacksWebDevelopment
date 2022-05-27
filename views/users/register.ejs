@@ -10,9 +10,10 @@
         
         
         <div class="control-formulario">
-            <label for="nombre"><b>Nombre y apellido</b></label>
+            
             <input type="text" 
             name="nombre" 
+            placeholder="Ingresá tu nombre completo"
             id="nombre"
             class="control" 
             value="<%=locals.oldData? oldData.nombre : null%>" 
@@ -26,8 +27,9 @@
         
 
         <div class="control-formulario">
-            <label for="usuario"><b>Nombre de usuario</b></label>
-            <input type="text" 
+                   
+            <input type="text"
+            placeholder="Ingresá un nombre de usuario" 
             name="usuario" 
             id="usuario" 
             class="control"  
@@ -41,11 +43,12 @@
         </div>
         
         <div class="control-formulario">
-            <label for="email"><b>E-mail</b></label>
+            
             <input type="email" 
             name="email" 
             id="email" 
             class="control"
+            placeholder="Ingresá tu Email"
             value="<%= locals.oldData ? oldData.email : null %>" 
             >
             <% if (locals.errors && errors.email) { %>
@@ -69,8 +72,8 @@
 
 
         <div class="control-formulario">
-            <label for="password"><b>Ingresá tu contraseña</b></label>
             <input type="password" 
+            placeholder="Ingresá tu contraseña"
             name="password" 
             id="password" 
             class="control" 

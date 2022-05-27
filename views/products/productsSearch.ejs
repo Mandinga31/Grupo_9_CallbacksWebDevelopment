@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('../partials/head.ejs') %> 
+<body>
+<%- include ('../partials/header.ejs') %> 
+    
+    
+<div class="todos-productos"><h2>Según tu búsquedad</h2></div>
+<% if(productosEncontrados) {%> 
+	<div class="products" >
+
+
+		<% for(let i = 0; i < productosEncontrados.length; i ++){  %> 
+		<a href="/products/detalle/<%= productosEncontrados[i].id %>">
+		<article class="producto">
+			<img src= '../images/<%= productosEncontrados[i].imagen %>'  alt="imagen-principal">
+			<div class="cuerpo-card"> 
+                    <h3><%= productosEncontrados[i].nombre %> </h3>
+                    <p>$<%= productosEncontrados[i].precio %></p>
+			</div> 
+				
+
+		</article>
+	    </a>
+	    
+		<% } }else{ %> 
+		
+			<h3>No encontramos nada perri :(</h3>
+			<button class="boton-css-nuevo"> <a href="/products" >Ver todos los relojes</a></button>
+			<% } %> 
+    </div>
+	
+    <%- include ('../partials/footer.ejs') %> 
+</body>
+
+</body>
+</html>

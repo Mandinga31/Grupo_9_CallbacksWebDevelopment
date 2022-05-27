@@ -62,18 +62,18 @@ detalle: (req,res)=>{
 },
 //Acá va el CRUD
 crear: (req,res)=>{
-	db.categoryProduct.findAll()
-	.then(categorias=>{
-		res.render('products/create', {categorias});
-	})
+	
+	let promCategoria = db.categoryProduct.findAll()
+	let promColor = db.colors.findAll()
+	Promise.all([promCategoria,promColor])
+	.then(([resultCategoria,resultColor])=>
+	res.render('products/create',{categorias: resultCategoria,colores: resultColor}))
+	.catch(()=>{res.send('error')})
     
 },
 creado: (req,res)=>{
-	 
-	console.log(req.body.color)
-	
 
-	db.products.create(
+	 db.products.create(
 		
 		{
 			nombre: req.body.nombre,
@@ -116,11 +116,12 @@ editar: (req,res)=>{
 
         })
 		let promCategoria = db.categoryProduct.findAll()
-		Promise.all([promReloj, promCategoria])
-        .then(([resultReloj,resultCategoria])=> res.render('products/edit',{productToEdit: resultReloj, categorias: resultCategoria}))
-        .catch(()=>{res.send('error')})
+		let promColor = db.colors.findAll()
+		Promise.all([promReloj, promCategoria,promColor])
+        .then(([resultReloj,resultCategoria,resultColor])=> res.render('products/edit',{productToEdit: resultReloj, categorias: resultCategoria,colores: resultColor}))
+		.catch(()=>{res.send('error')})
 
-			.then(productToEdit => res.render("products/edit", {productToEdit}))
+			
 	},
 	// let id = req.params.id
 	// let productToEdit = products.filter((producto)=> producto.id == id)[0];
@@ -130,27 +131,27 @@ editar: (req,res)=>{
 		
     
 editado: (req,res)=>{
-
-	let imagen = req.file.filename
-	if(req.file === "undefined"){
-		imagen = 'imagenPredeterminada.webp'
-	}
-		console.log(req.file.filename)
-        db.products.update({
-			
-			nombre: req.body.nombre,
-			descripcion: req.body.descripcion,
-			imagen: imagen,
-			precio: req.body.precio,
-			category_product_id: req.body.category,
-			color_product_id: req.body.color
-
-
-		},
-        {
-            where: {id: req.params.id}
-        })
-		.then( products => res.redirect('/products'))
+	db.products.findByPk(req.params.id)
+	.then(product=>{
+		let imagen;
+		if(req.file){
+			imagen = req.file.filename
+		}else{
+			imagen = product.imagen
+		}
+	db.products.update({
+		
+		nombre: req.body.nombre,
+		descripcion: req.body.descripcion,
+		imagen: imagen,
+		precio: req.body.precio,
+		category_product_id: req.body.category,
+		color_product_id: req.body.color
+	},{
+		where: {id: req.params.id}
+	})
+	})
+	.then( products => res.redirect('/products'))
     
 
 		// // ESTO ES EL PRODUCTO CON MODIFICACIONES
