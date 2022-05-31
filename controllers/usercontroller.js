@@ -54,7 +54,7 @@ processRegister: (req,res) =>{
         imagen: req.file.filename,
         category_user_id: req.body.category
        }
-       ).then(()=> {return res.redirect("/")})
+       ).then(()=> {return res.redirect("/users/login")})
        .catch((e)=>{return res.send(e)}))
         
     
