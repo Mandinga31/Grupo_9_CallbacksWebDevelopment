@@ -9,32 +9,34 @@
     
     
     <div class="control-formulario">
-        <label for="nombre"></label>
+        <label for="nombre">Nombre del producto</label>
         <input type="text" name="nombre" id="nombre" class="control" placeholder="Nombre del producto" >
+        <p class="error" id="nombre"></p>
     </div>
     <div class="control-formulario">
         <label for="descripcion">Descripción del producto</label>
-        <textarea name= "descripcion" type="text" id="descripcion" class="control" placeholder="Descripción del producto"> </textarea>
+        <textarea name="descripcion" type="text" id="descripcion" class="control"></textarea>
+        <p class="error" id="descripcion"></p>
     </div>
     
     
     <div class="control-formulario">
         <label for="categorias" name="category">Categorias</label>
-        <select class="control" name="category">
+        <select class="control" name="category" id="category">
             <option value="">Seleccionar</option>
             <% for(let i = 0; i<categorias.length; i ++) {%> 
             <option value="<%=categorias[i].id%>"><%=categorias[i].nombre%></option>
             <% }%> 
         </select>    
-        
     </div>
+    <p class="error" id="category"></p>
     <div class="control-formulario">
         <label for="color">Color del producto</label>
     </div>
     <div class="control-formulario-radio">
         <% for(let i = 0; i<colores.length; i ++) {if(colores[i].id <= 3){%>
             <div class="each">
-                <input type="radio" name="color" value="<%=colores[i].id%>" class="radio" id="color-<%=colores[i].color%>">
+                <input type="radio" name="color" value="<%=colores[i].id%>" class="radio" id="color">
                 <img src="../../images/<%=colores[i].color%>.png" alt="imagen-<%=colores[i].color%>" class="color"/> 
                 <label for="color-<%=colores[i].color%>"><%=colores[i].color%></label>
             </div>
@@ -55,12 +57,14 @@
     <div class="control-formulario">
         <label for="imagen"></label>
         <input type="file" name="imagen" id="imagen" class="control" >
-    </div>   
+        <p class="error" id="imagen"></p>
+    </div>
+
     
     <div class="control-formulario">
         <label for="precio">Precio</label>
         <input type= "number" name="precio" placeholder="Precio del producto" id="precio" class="control"> 
-        
+        <p class="error" id="precio"></p>
         <!--  
         <div class="control-precio">
         <input type= "number" name="precio" placeholder="Mínimo" id="precio" class="control"> 
@@ -69,10 +73,7 @@
         </div> -->  
      
     </div> 
-<div class="each-checkbox">
-        <input type="checkbox" name="envio" value="envio" id="envio">
-        <label for="envio">Envío gratis</label>
-</div>
+
     <div>
         
        <form action='/index' method="get" class="formulario-login">
@@ -83,6 +84,7 @@
 
 </main>
 <%- include ('../partials/footer.ejs') %> 
+<script src="/js/products.js"></script>
 </body>
 
 

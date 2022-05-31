@@ -39,6 +39,7 @@ p, .olvidastecontra{
     color: #e62929;
     margin-block-start: auto;
     font-size: small;
+    align-self: center;
 }
 footer{
     max-height: fit-content;
@@ -99,6 +100,7 @@ max-width: 70%;
 .top-header{
     display: flex;
     justify-content: space-between;
+    height: 90px;
 }
 .user-icons{
     text-align-last: center;
@@ -215,6 +217,10 @@ header .search-bar form, .texto-search{
         transition: opacity 1.5s ease-in-out;
         max-width: -webkit-fill-available;
       }
+.linkUserProfile{
+    text-decoration: none;
+    color: #004643;
+}
   /*** ESTILOS BOTÓN SLIDE LEFT ***/
 .boton-css-nuevo a {
       text-decoration: none;
@@ -879,7 +885,7 @@ button.register:hover {
 
 @media(min-width:361px){
     .separador-banner{
-        margin-top: 160px;
+        margin-top: 180px;
     }
     .main-nav-bar {
         display: flex;
@@ -954,7 +960,7 @@ button.register:hover {
         
         }
         .separador-banner{
-            margin-top: 130px;
+            margin-top: 105px;
         }
 
 

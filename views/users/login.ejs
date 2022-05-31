@@ -8,7 +8,7 @@
             
             <div class="login" >
                 
-                <form action="" method="POST">
+                <form action="" method="POST" class="login-form">
                     <div class="ingresa"><h2>Completá los datos para ingresar</h2></div>
                     <label for="email"></label>
                     <input type="email" 
@@ -20,16 +20,18 @@
                     value= "<%= oldData.email%>" 
                     <% }else{""} %> 
                     >
+                <p class="error" id="email"></p>
                 
                 <% if (locals.errors && errors.email){ %>
                     <p class="error"><%= errors.email.msg%></p>
                   <% }%>
                 
                 <label for="password"></label>
-                <input type="password" name="password" id="password" placeholder="Escribí tu contraseña" class="control" 
-            ><% if (locals.errors && errors.password){ %>
+                <input type="password" name="password" id="password" placeholder="Escribí tu contraseña" class="control" >
+                <% if (locals.errors && errors.password){ %>
                     <p class="error"><%= errors.password.msg%></p>
                   <% }%>
+                <p class="error" id="password"></p>
                 
                 <div class="each-checkbox">
                     <input type="checkbox" name="newsletter" value="newsletter" id="newsletter">
@@ -52,7 +54,9 @@
          
             
         </main>
-</body>
-<%- include ('../partials/footer.ejs') %> 
-</body>
+
+
+        <%- include ('../partials/footer.ejs') %> 
+        <script src="/js/login.js"></script>
+    </body>
 </html>
