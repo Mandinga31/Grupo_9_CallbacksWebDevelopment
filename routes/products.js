@@ -54,20 +54,7 @@ const EditValidations = [
     check("precio").notEmpty().withMessage("Debes asignarle un precio al producto").bail(),
     check("category").notEmpty().withMessage("Debes asignarle una categoria al producto").bail(),
     check("color").notEmpty().withMessage("Debes asignarle un color al producto").bail(),
-    check("imagen").custom((values, {req}) =>{
-        let file = req.file;
-        let extensionesValidas = [".jpg", ".jpeg", ".png", ".gift"]
-
-        if (!file){
-            throw new Error ("Debes asignarle una imagen al producto con extension")
-        } else {
-            let extensionArchivo = path.extname(file.originalname);
-            if(!extensionesValidas.includes(extensionArchivo)){
-                throw new Error (`La imagen debe tener extension ${extensionesValidas. join(", ")}`)
-            }
-        }
-        return true
-    })
+    
 ]
 
 
