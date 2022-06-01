@@ -5,6 +5,7 @@ const fs = require('fs')
 let productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
 let db = require("../database/models")
+const {validationResult} = require("express-validator")
 
 
 
@@ -72,27 +73,33 @@ crear: (req,res)=>{
     
 },
 creado: (req,res)=>{
+	 
+     const resultValidation = validationResult(req);
+	 console.log(resultValidation)
+	 let productCreated = req.body;	 
 
-	 db.products.create(
-		
-		{
+       let promCategoria = db.categoryProduct.findAll()
+
+	   let promColor = db.colors.findAll()
+	   
+	   Promise.all([promCategoria,promColor])
+	   .then(([resultCategoria,resultColor])=>{
+		   if(resultValidation.errors.length > 0){ res.render('products/create',{categorias: resultCategoria, colores: resultColor, errors: resultValidation.mapped(), oldData: productCreated})
+		}else{
+		db.products.create({
 			nombre: req.body.nombre,
 			descripcion: req.body.descripcion,
 			imagen: req.file.filename,
 			precio: req.body.precio,
 			category_product_id: req.body.category,
 			color_product_id: req.body.color
-			
-
-
-		})
+			})
 		.then(()=> {res.redirect("/products");})
-        .catch(()=>{res.send('error')})
-	
+		.catch(()=>{res.send('error')})
+		
+	  }})
 
-    
-    
-	//let newProductId = (products[products.length - 1].id) + 1;
+	  //let newProductId = (products[products.length - 1].id) + 1;
    
 	// aclaraciones para la creacion del producto 	
 	//newProduct.imagen = req.file.filename // que la imagen sea la que ingreso por formulario
@@ -103,20 +110,15 @@ creado: (req,res)=>{
 			
 			
 	//fs.writeFileSync(productsFilePath, JSON.stringify(products))
-		  
-	
-	
+	 
+},   
 
-    
-},
 editar: (req,res)=>{
         let promReloj = db.products.findByPk(req.params.id, {
-            include: [{association: 'categorias'}, {association:'colores'}]
-
-
-        })
+            include: [{association: 'categorias'}, {association:'colores'}]})
 		let promCategoria = db.categoryProduct.findAll()
 		let promColor = db.colors.findAll()
+
 		Promise.all([promReloj, promCategoria,promColor])
         .then(([resultReloj,resultCategoria,resultColor])=> res.render('products/edit',{productToEdit: resultReloj, categorias: resultCategoria,colores: resultColor}))
 		.catch(()=>{res.send('error')})
@@ -131,6 +133,26 @@ editar: (req,res)=>{
 		
     
 editado: (req,res)=>{
+
+	//                                  SEGUNDO INTENTO
+
+	let id = req.params.id
+	const resultValidation = validationResult(req)
+	console.log(resultValidation)
+	let promReloj = db.products.findByPk(id, {
+		include: [{association: 'categorias'}, {association:'colores'}]
+	})
+	let promCategoria = db.categoryProduct.findAll()
+	let promColor = db.colors.findAll()
+
+	if (resultValidation.errors.length > 0){ 
+	Promise.all([promReloj, promCategoria,promColor])
+	.then(([resultReloj,resultCategoria,resultColor])=> {	
+		res.render('products/edit',{
+		errors: resultValidation.mapped(), productToEdit: resultReloj, categorias: resultCategoria,colores: resultColor
+	})
+})
+} else{
 	db.products.findByPk(req.params.id)
 	.then(product=>{
 		let imagen;
@@ -152,7 +174,48 @@ editado: (req,res)=>{
 	})
 	})
 	.then( products => res.redirect('/products'))
-    
+	.catch(()=>{res.send('error')})
+	
+}
+
+//                                                         PRIMER INTENTO
+
+/*const resultValidation = validationResult(req)
+
+if(resultValidation.errors.length > 0){
+
+	let promReloj = db.products.findByPk(req.params.id, {
+		include: [{association: 'categorias'}, {association:'colores'}]})
+	let promCategoria = db.categoryProduct.findAll()
+	let promColor = db.colors.findAll()
+
+	Promise.all([promReloj, promCategoria,promColor])
+	.then(([resultReloj,resultCategoria,resultColor])=> res.render('products/edit',{errors: resultValidation.mapped(), productToEdit: resultReloj, categorias: resultCategoria,colores: resultColor}))
+	.catch(()=>{res.send('error')})
+	
+}{	
+	db.products.findByPk(req.params.id)
+	.then(product=>{
+		let imagen;
+		if(req.file){
+			imagen = req.file.filename
+		}else{
+			imagen = product.imagen
+		}
+	db.products.update({
+		
+		nombre: req.body.nombre,
+		descripcion: req.body.descripcion,
+		imagen: imagen,
+		precio: req.body.precio,
+		category_product_id: req.body.category,
+		color_product_id: req.body.color
+	},{
+		where: {id: req.params.id}
+	})
+	})
+	.then( products => res.redirect('/products'))
+}*/
 
 		// // ESTO ES EL PRODUCTO CON MODIFICACIONES
 		// const body = req.body 
