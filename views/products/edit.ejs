@@ -12,6 +12,7 @@
         <label for="nombre"></label>
         <input type="text" name="nombre" id="nombre" class="control" placeholder="<%= productToEdit.nombre %>" 
         value="<%= productToEdit.nombre %>" >
+
     </div>
     <% if(locals.errors && errors.nombre){ %>
         <div class="text-danger"> <%= errors.nombre.msg %> </div>
@@ -19,7 +20,8 @@
 
     <div class="control-formulario">
         <label for="descripcion">Descripción del producto</label>
-        <textarea name="descripcion" type="text" id="descripcion" class="control" placeholder="<%= productToEdit.descripcion %>" value="<%= productToEdit.descripcion %>"> <%= productToEdit.descripcion %></textarea>
+        <textarea name="descripcion" type="text" id="descripcion" class="control"  value="<%= productToEdit.descripcion %>"> <%= productToEdit.descripcion %></textarea>
+        <p class="error" id="descripcion"></p>
     </div>
     <% if(locals.errors && errors.descripcion){ %>
         <div class="text-danger"> <%= errors.descripcion.msg %> </div>
@@ -98,6 +100,7 @@
         <label for="precio">Precio</label>
         <input type= "number" name="precio" placeholder="Precio del producto" id="precio" class="control"
         value="<%=productToEdit.precio %>"> 
+        <p class="error" id="precio"></p>
         
         <!--  
         <div class="control-precio">
@@ -120,6 +123,7 @@
 </div>
     
 
+
        
  <div class="control"><button type="submit" class="register">Guardar cambios</button></div>
              
@@ -128,6 +132,7 @@
 
 </main>
 <%- include ('../partials/footer.ejs') %> 
+<script src="/js/editProducts.js"></script>
 </body>
 
 
