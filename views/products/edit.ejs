@@ -12,10 +12,11 @@
         <label for="nombre"></label>
         <input type="text" name="nombre" id="nombre" class="control" placeholder="<%= productToEdit.nombre %>" 
         value="<%= productToEdit.nombre %>" >
+        <p class="error" id="nombre"></p>
 
     </div>
     <% if(locals.errors && errors.nombre){ %>
-        <div class="text-danger"> <%= errors.nombre.msg %> </div>
+        <div class="error"> <%= errors.nombre.msg %> </div>
     <% } %>
 
     <div class="control-formulario">
@@ -24,7 +25,7 @@
         <p class="error" id="descripcion"></p>
     </div>
     <% if(locals.errors && errors.descripcion){ %>
-        <div class="text-danger"> <%= errors.descripcion.msg %> </div>
+        <div class="error"> <%= errors.descripcion.msg %> </div>
     <% } %>
     
     
@@ -38,9 +39,8 @@
             <option value="<%=categorias[i].id%>"><%=categorias[i].nombre%></option>
             <% }} %> 
         </select>    
-
         <% if(locals.errors && errors.category){ %>
-            <div class="text-danger"> <%= errors.category.msg %> </div>
+            <div class="error"> <%= errors.category.msg %> </div>
         <% } %>
         
         
@@ -76,7 +76,7 @@
     </div>   
     
     <% if(locals.errors && errors.color){ %>
-        <div class="text-danger"> <%= errors.color.msg %> </div>
+        <div class="error"> <%= errors.color.msg %> </div>
     <% } %>
         
            
@@ -91,7 +91,7 @@
     
     
     <% if(locals.errors && errors.imagen){ %>
-        <div class="text-danger"> <%= errors.imagen.msg %> </div>
+        <div class="error"> <%= errors.imagen.msg %> </div>
     <% } %>
     
     
@@ -113,7 +113,7 @@
     
     
     <% if(locals.errors && errors.precio){ %>
-        <div class="text-danger"> <%= errors.precio.msg %> </div>
+        <div class="error"> <%= errors.precio.msg %> </div>
     <% } %>
 
 
