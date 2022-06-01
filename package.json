@@ -4,7 +4,8 @@
   "description": "Proyecto Digital House",
   "main": "app.js",
   "scripts": {
-    "test": "node app.js"
+    "test": "node app.js",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "gonza",

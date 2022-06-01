@@ -5,19 +5,27 @@
 <%- include ('../partials/header.ejs') %> 
 <main>
     <div class="title-carrito"><h2>Editá  tus productos</h2></div>
-<form action='../<%= productToEdit.id %>?_method=PUT' method="POST" class="formulario" enctype="multipart/form-data" style="margin-top: 0%">
+<form action='../<%= productToEdit.id %>/edit' method="POST" class="formulario" enctype="multipart/form-data" style="margin-top: 0%">
     
     
     <div class="control-formulario">
         <label for="nombre"></label>
-        <input type="text" name="nombre" id="nombre" class="control"  value="<%= productToEdit.nombre %>" >
-        <p class="error" id="nombre"></p>
+        <input type="text" name="nombre" id="nombre" class="control" placeholder="<%= productToEdit.nombre %>" 
+        value="<%= productToEdit.nombre %>" >
+
     </div>
+    <% if(locals.errors && errors.nombre){ %>
+        <div class="text-danger"> <%= errors.nombre.msg %> </div>
+    <% } %>
+
     <div class="control-formulario">
         <label for="descripcion">Descripción del producto</label>
         <textarea name="descripcion" type="text" id="descripcion" class="control"  value="<%= productToEdit.descripcion %>"> <%= productToEdit.descripcion %></textarea>
         <p class="error" id="descripcion"></p>
     </div>
+    <% if(locals.errors && errors.descripcion){ %>
+        <div class="text-danger"> <%= errors.descripcion.msg %> </div>
+    <% } %>
     
     
     <div class="control-formulario">
@@ -30,6 +38,11 @@
             <option value="<%=categorias[i].id%>"><%=categorias[i].nombre%></option>
             <% }} %> 
         </select>    
+
+        <% if(locals.errors && errors.category){ %>
+            <div class="text-danger"> <%= errors.category.msg %> </div>
+        <% } %>
+        
         
     </div>
     <div class="control-formulario">
@@ -60,8 +73,11 @@
                 <label for="color-<%=colores[i].color%>"><%=colores[i].color%></label>
             </div>
             <% } %>          
-    </div>
-   
+    </div>   
+    
+    <% if(locals.errors && errors.color){ %>
+        <div class="text-danger"> <%= errors.color.msg %> </div>
+    <% } %>
         
            
            
@@ -72,6 +88,11 @@
         <input type="file" name="imagen" id="imagen" class="control" accept=".jpg"> 
     <!-- Acá lo que tenemos que hacer es que por defecto quede la imagen ya ingresada.-->
     </div>
+    
+    
+    <% if(locals.errors && errors.imagen){ %>
+        <div class="text-danger"> <%= errors.imagen.msg %> </div>
+    <% } %>
     
     
     
@@ -87,8 +108,20 @@
         <h4 style="align-self: center;">-</h4>
         <input type= "number" name="precio" placeholder="Máximo" id="precio" class="control">
         </div> -->  
-     
     </div> 
+
+    
+    
+    <% if(locals.errors && errors.precio){ %>
+        <div class="text-danger"> <%= errors.precio.msg %> </div>
+    <% } %>
+
+
+<div class="each-checkbox">
+        <input type="checkbox" name="envio" value="envio" id="envio">
+        <label for="envio">Envío gratis</label>
+</div>
+    
 
 
        

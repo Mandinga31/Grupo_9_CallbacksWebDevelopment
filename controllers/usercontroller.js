@@ -33,7 +33,7 @@ processRegister: (req,res) =>{
     console.log(userCreated)
     
     if(resultValidation.errors.length > 0){           
-        return res.render("users/register", {errors: resultValidation.mapped(),oldData: req.body})
+        return res.render("users/register", {errors: resultValidation.mapped(), oldData: req.body})
       }
  
     
@@ -139,7 +139,6 @@ processUserEdit: (req,res)=>{
     
     
     if(resultValidation.errors.length > 0){
-        console.log(resultValidation.mapped())
         return db.users.findByPk(id, {include: [{association: 'categorias'}]}).then(userToEdit =>
         res.render("users/editUser", {errors: resultValidation.mapped(),
         oldData: req.body, userToEdit}))
