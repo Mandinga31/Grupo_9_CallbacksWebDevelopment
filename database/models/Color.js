@@ -4,21 +4,26 @@ module.exports = (sequelize, dataType) => {
     let cols = {
 
         id: {
-            type : dataType.INTERGER(10),
+            type : dataType.INTEGER(10),
             primaryKey : true,
             autoIncrement : true
         },
         color : {
-            type : dataType.VARCHAR(100)
+            type : dataType.STRING(100)
         },
         
     }
     let config = {
-             tableName : 'color',
-             timestamps  : true
+             tableName : 'color_product',
+             timestamps  : false
     };
 
         const Color = sequelize.define(alias, cols, config);
-
+        Color.associate = (models)=> {
+        Color.hasMany(models.products,{
+            as: "productos",
+            foreignKey: "color_product_id"
+        })
+    }
         return Color;
 }

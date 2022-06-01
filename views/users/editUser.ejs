@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('../partials/head.ejs') %> 
+<body>
+    <%- include ('../partials/header.ejs') %> 
+    
+    <main>
+        <div class="ingresa" style="margin-top: 150px;"><h2>Edita tu perfil</h2></div>
+            <form action="/users/<%= userToEdit.id %>?_method=PUT" method="POST" class="formulario" enctype="multipart/form-data" style="margin-top: 0px;">
+        
+        
+        <div class="control-formulario">
+            <label for="nombre"><b>Nombre y apellido</b></label>
+            <input type="text" 
+            name="nombre" 
+            id="nombre"
+            class="control" 
+            value="<%= userToEdit.nombre %>">
+
+            <% if (locals.errors && errors.nombre) { %>
+                <div class="text-danger">
+                    <%= errors.nombre.msg %> 
+                </div>
+            <% } %>
+       </div>
+        
+
+        <div class="control-formulario">
+            <label for="usuario"><b>Nombre de usuario</b></label>
+            <input type="text" 
+            name="usuario" 
+            id="usuario" 
+            class="control"  
+            value="<%=userToEdit.usuario%>">
+            <% if (locals.errors && errors.usuario) { %>
+                <div class="text-danger">
+                    <%= errors.usuario.msg %> 
+                </div>
+            <% } %>    
+        </div>
+        
+       
+
+        <div class="control-formulario">
+            <label for="imagen"><b>Selecciona tu foto de perfil:</b></label>    
+             
+            <input type="file" name="imagen" id="imagen" class="control">
+            <% if (locals.errors && errors.imagen) { %>
+                <div class="text-danger">
+                    <%= errors.imagen.msg %> 
+                </div>
+            <% } %>
+        </div>
+
+
+        <div class="control-formulario">
+            <label for="password"><b>Ingresá tu nueva contraseña</b></label>
+            <input type="password" 
+            name="password" 
+            id="password" 
+            class="control" 
+            >
+            <% if (locals.errors && errors.password) { %>
+                <div class="text-danger">
+                    <%= errors.password.msg %> 
+                </div>
+            <% } %>
+        </div>
+        <div class="control-formulario">
+            <label for="categorias" name="category">Categorias</label>
+            <select class="control" name="category">
+                <option value="<%= userToEdit.categorias.id %> "><%= userToEdit.categorias.nombre %></option>
+                <option value="1">Bronce</option>
+                <option value="2">Plata</option>
+                <option value="3">Oro</option>
+                <option value="4">Platino</option>
+                
+            </select>    
+        </div>
+        
+
+
+        <div class="control"><button type="submit" class="home">Continuar</button>   </div>
+        
+          
+        
+    </form>
+    
+    </main>
+<%- include ('../partials/footer.ejs') %> 
+</body>
+</html>

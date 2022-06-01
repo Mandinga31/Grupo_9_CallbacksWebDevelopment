@@ -3,7 +3,7 @@ Proyecto Digital House
 
 
 
-Link de Trello Sprint 5: https://trello.com/b/cw2SvoUu/sprint-5
+Link de Trello Sprint 7: https://trello.com/b/J5eM0i7D/sprint-7-validaciones
 
 # Relojes Callwatch.
 Este e-commerce ofrecerá tanto venta de relojes clásicos, como venta de relojes Smartwatch y sus respectivos accesorios. Consideramos que es importante 

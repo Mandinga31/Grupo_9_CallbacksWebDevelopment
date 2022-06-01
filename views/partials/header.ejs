@@ -14,8 +14,8 @@
                     <ul class="navbar">
                         
                         <li><a href="/products">Relojes</a></li>
-                        <li><a href="/construir">Joyas</a></li>
-                        <li><a href="/construir">Tech</a></li>
+                        <li><a href="/products/vintage">Vintage</a></li>
+                        <li><a href="/products/tech">Tech</a></li>
                         <li><a href="/products/create">Vendé</a></li>
                         
                         
@@ -33,14 +33,16 @@
 
         <div class="icons">
             <div class="icon">
+            <div class="search-box-iconPart">
+                <form action="/" method="POST">
+                    <input name="buscar" type="text" class="input-search-iconPart" placeholder="¿Qué estas buscando?">
+                    <button class="btn-search-iconPart"><i class="fas fa-search"></i></button>
+                </form> 
+            </div>
+            </div>
             
-                <div class="container">
-                <input type="text" placeholder="Buscar">
-                <div class="btn">
-                    <i class="fa fa-search"></i>
-                </div>
-            </div>
-            </div>
+            
+            
             <% if(locals.isLogged == false){ %> 
             <div class="icon">
                 
@@ -50,9 +52,8 @@
             <% }else{ %>
                 <div class="icon">
                 <li><a href="/users/login">
-                    <img src="/images/<%= locals.userInfo.imagen %>" alt="" width="25" height="25" style="border-radius: 100%;margin-top: 7px;">                </a></li>
-            </div>
-
+                    <img src="/images/1653861363281.jpg" alt="" width="25" height="25" style="border-radius: 100%;vertical-align: middle;">            </div>
+                </li>
             <% } %> 
             
             <div class="icon">
@@ -61,10 +62,25 @@
                 
             </div>
             
-            
-           
-        </div>
         
+        </div>
+             
     </section>
+    <div class="search-box">
+        <form action="/" method="POST">
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+            <input name="buscar" type="text" class="input-search" placeholder="¿Qué estas buscando?">
+        </form> 
+    </div>
+    <!-- <div class="search-bar" >
+        <form action="/buscar" method="POST">
+            <div class="container">
+                <input class="busquedad" type="text" placeholder="Buscar" name="buscar" width="100%">
+                   <style="width: 0px ;"> <i class="fa fa-search" style="color:white ;"></i>
+                   
+               </div>
+        </form> 
+    </div>    
+    -->
     
     </header>

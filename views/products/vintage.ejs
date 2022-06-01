@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include ('./partials/head.ejs') %> 
+<%- include ('../partials/head.ejs') %> 
 <body>
-<%- include ('./partials/header.ejs') %> 
+<%- include ('../partials/header.ejs') %> 
     
     
-<div class="todos-productos"><h2>Todos los relojes</h2></div>
+<div class="todos-productos"><h2>Vintage</h2></div>
 
 	<div class="products" >
 
 
-		<% for(let i = 0; i < products.length; i ++){  %> 
+		<% for(let i = 0; i < products.length; i ++) {if (products[i].categorias.nombre == 'vintage' ||products[i].categorias.nombre == 'Vintage' ) { %> 
 		<a href="/products/detalle/<%= products[i].id %>">
 		<article class="producto">
 			<img src= '../images/<%= products[i].imagen %>'  alt="imagen-principal">
@@ -23,10 +23,10 @@
 		</article>
 	    </a>
 	    
-		<% } %> 
+		<% }} %> 
     
     </div>
-    <%- include ('./partials/footer.ejs') %> 
+    <%- include ('../partials/footer.ejs') %> 
 </body>
 
 </body>

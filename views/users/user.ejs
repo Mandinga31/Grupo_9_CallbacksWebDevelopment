@@ -20,6 +20,7 @@
         <h2 class="nombre">
             
             <p style="align-self: center;">Hola <%= user.nombre %>!</p>
+            <p style="align-self: center;"><%= user.email %></p>
         </h2>
         <div class="user-icons">
             
@@ -34,7 +35,7 @@
         <div class="user-icons">
             
             
-            <a style="    color: #004643; text-decoration: none; cursor: pointer;" href="../construir">
+            <a class="linkUserProfile" href="../construir">
                 
                 <i class="fa-solid fa-receipt"></i>
                 <h4>Mis pedidos</h4>
@@ -44,7 +45,7 @@
         <div class="user-icons">
             
             
-            <a style="    color: #004643; text-decoration: none; cursor: pointer;" href="../construir">
+            <a class="linkUserProfile" href="../construir">
                 
                 <i class="fa-solid fa-file-invoice-dollar"></i>
                 <h4>Datos de facturación</h4>
@@ -54,13 +55,22 @@
         <div class="user-icons">
             
             
-            <a style="    color: #004643; text-decoration: none; cursor: pointer;" href="../construir">
+            <a href="/users/editUserProfile/<%= user.id %>" class="linkUserProfile">
                 
                 <i class="fa-solid fa-address-book"></i>
-                <h4>Editar mis datos</h4>
+                <h4>Editar mis datos</h4></a>
+                
             </a>
-        </div>
+        </div>        
         <hr>
+        <form action='<%=user.id%>?_method=DELETE' method="POST" class="formulario-login" style="text-align: center ;">
+                       
+            <button class="detail-a" type="submit" >
+                Eliminar
+            </button>
+        
+        
+    </form>
         
         
         

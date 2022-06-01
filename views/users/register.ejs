@@ -10,15 +10,16 @@
         
         
         <div class="control-formulario">
-            <label for="nombre"><b>Nombre y apellido</b></label>
+            
             <input type="text" 
             name="nombre" 
+            placeholder="Ingresá tu nombre completo"
             id="nombre"
             class="control" 
             value="<%=locals.oldData? oldData.nombre : null%>" 
             >
             <% if (locals.errors && errors.nombre) { %>
-                <div class="text-danger">
+                <div class="error">
                     <%= errors.nombre.msg %> 
                 </div>
             <% } %>
@@ -26,30 +27,32 @@
         
 
         <div class="control-formulario">
-            <label for="usuario"><b>Nombre de usuario</b></label>
-            <input type="text" 
+                   
+            <input type="text"
+            placeholder="Ingresá un nombre de usuario" 
             name="usuario" 
             id="usuario" 
             class="control"  
             value="<%=locals.oldData? oldData.usuario : null %>" 
             >
             <% if (locals.errors && errors.usuario) { %>
-                <div class="text-danger">
+                <div class="error">
                     <%= errors.usuario.msg %> 
                 </div>
             <% } %>    
         </div>
         
         <div class="control-formulario">
-            <label for="email"><b>E-mail</b></label>
+            
             <input type="email" 
             name="email" 
             id="email" 
             class="control"
+            placeholder="Ingresá tu Email"
             value="<%= locals.oldData ? oldData.email : null %>" 
             >
             <% if (locals.errors && errors.email) { %>
-                <div class="text-danger">
+                <div class="error">
                     <%= errors.email.msg %> 
                 </div>
             <% } %>
@@ -61,7 +64,7 @@
               <!-- Acá lo que tenemos que hacer es que por defecto quede la imagen ya ingresada.-->
             <input type="file" name="imagen" id="imagen" class="control"> 
             <% if (locals.errors && errors.imagen) { %>
-                <div class="text-danger">
+                <div class="error">
                     <%= errors.imagen.msg %> 
                 </div>
             <% } %>
@@ -69,17 +72,28 @@
 
 
         <div class="control-formulario">
-            <label for="password"><b>Ingresá tu contraseña</b></label>
             <input type="password" 
+            placeholder="Ingresá tu contraseña"
             name="password" 
             id="password" 
             class="control" 
             >
             <% if (locals.errors && errors.password) { %>
-                <div class="text-danger">
+                <div class="error" >
                     <%= errors.password.msg %> 
                 </div>
             <% } %>
+        </div>
+        <div class="control-formulario">
+            <label for="categorias" name="category">Categorias</label>
+            <select class="control" name="category">
+                <option value="">Seleccionar</option>
+                <option value="1">Bronce</option>
+                <option value="2">Plata</option>
+                <option value="3">Oro</option>
+                <option value="4">Platino</option>
+                
+            </select>    
         </div>
         
 

@@ -7,82 +7,122 @@
     <div class="title-carrito"><h2>Vendé tus Relojes</h2></div>
 <form action='/products' method="POST" class="formulario" enctype="multipart/form-data" style="margin-top: 0px;">
     
-    
     <div class="control-formulario">
+
         <label for="nombre"></label>
-        <input type="text" name="nombre" id="nombre" class="control" placeholder="Nombre del producto" >
+        <input type="text"
+         name="nombre" 
+         id="nombre" 
+         class="control" 
+         placeholder="Nombre del producto"
+         value="<%=locals.oldData? oldData.nombre : null%>"  >
+
     </div>
+    <% if(locals.errors && errors.nombre){ %>
+        <div class="text-danger"> <%= errors.nombre.msg %> </div>
+    <% } %>
+
     <div class="control-formulario">
         <label for="descripcion">Descripción del producto</label>
-        <textarea name= "descripcion" type="text" id="descripcion" class="control" placeholder="Descripción del producto"> </textarea>
+
+        <textarea name= "descripcion" 
+        type="text" 
+        id="descripcion" 
+        class="control" 
+        placeholder="Descripción del producto"
+        value="<%=locals.oldData? oldData.descripcion: null%>" ></textarea>
+    </textarea>
+
     </div>
+    <% if(locals.errors && errors.descripcion){ %>
+        <div class="text-danger"> <%= errors.descripcion.msg %> </div>
+    <% } %>
     
     
     <div class="control-formulario">
-        <label for="category">Categorias</label>
-        <select class="control" name="category" id="category">
+        <label for="categorias" name="category">Categorias</label>
+
+        <select class="control" 
+        name="category"
+        value="<%=locals.oldData? oldData.category: null%>">
+
             <option value="">Seleccionar</option>
-            <option value="unisex">Unisex</option>
-            <option value="mujer">Mujer</option>
-            <option value="hombre">Hombre</option>
-            <option value="niño">Niños</option>
-            <option value="smartwatch">Smart Watch</option>
-            <option value="vintage">Vintage</option>
+            <% for(let i = 0; i<categorias.length; i ++) {%> 
+            <option value="<%=categorias[i].id%>"><%=categorias[i].nombre%></option>
+            <% }%> 
         </select>    
     </div>
+
+    <% if(locals.errors && errors.category){ %>
+        <div class="text-danger"> <%= errors.category.msg %> </div>
+    <% } %>
+
+    
+
     <div class="control-formulario">
         <label for="color">Color del producto</label>
     </div>
     <div class="control-formulario-radio">
-        
+        <% for(let i = 0; i<colores.length; i ++) {if(colores[i].id <= 3){%>
             <div class="each">
-                <input type="radio" name="color" value="marron" class="radio" id="color-marron">
-                <img src="../images/marron.png" alt="imagen-marron" class="color"/> 
-                <label for="color-marron">Marrón</label>
+                <input type="radio" 
+                name="color" 
+                class="radio" 
+                id="color-<%=colores[i].color%>"
+                value="<%=colores[i].id%>" >
+
+                <img src="../../images/<%=colores[i].color%>.png" alt="imagen-<%=colores[i].color%>" class="color"/> 
+                <label for="color-<%=colores[i].color%>"><%=colores[i].color%></label>
             </div>
-            <div class="each">
-                <input type="radio" name="color" value="negro" class="radio" id="color-negro">
-                <img src="../images/negro.png" alt="imagen-negro" class="color"/> 
-                <label for="color-negro">Negro</label>
-            </div>
-            <div class="each">
-                <input type="radio" name="color" value="azul" class="radio" id="color-azul">
-                <img src="../images/azul.png" alt="imagen-azul" class="color" /> 
-                <label for="color-azul">Azul</label>
-            </div>
+            <% } }%>          
     </div>
-    
+
+
     <div class="control-formulario-radio">
-        
+        <% for(let i = 0; i < colores.length; i ++) {if(colores[i].id > 3){%>
             <div class="each">
-                <input type="radio" name="color" value="blanco" class="radio" id="color-blanco">
-                <img src="../images/blanco.png" alt="imagen-rojo" class="color"/> 
-                <label class="colores" for="color-blanco">Blanco</label>
+                <input type="radio" name="color" value="<%=colores[i].id%>" class="radio" id="color-<%=colores[i].color%>">
+                <img src="../../images/<%=colores[i].color%>.png" alt="imagen-<%=colores[i].color%>" class="color"/> 
+                <label for="color-<%=colores[i].color%>"><%=colores[i].color%></label>
             </div>
-            <div class="each">
-                <input type="radio" name="color" value="verde" class="radio" id="color-verde">
-                <img src="../images/verde.png" alt="imagen-verde" class="color"/> 
-                <label class="colores" for="color-verde">Verde</label>
-            </div>
-            <div class="each">
-                <input type="radio" name="color" value="rojo" class="radio" id="color-rojo">
-                <img src="../images/rojo.png" alt="imagen-rojo" class="color"/> 
-                <label class="colores" for="color-rojo">Rojo</label>
-            </div>
-            
-        
+            <% }} %>          
     </div>
+
+        
+<% if(locals.errors && errors.color){ %>
+    <div class="text-danger"> <%= errors.color.msg %> </div>
+<% } %>
+    
     
    
     <div class="control-formulario">
         <label for="imagen"></label>
-        <input type="file" name="imagen" id="imagen" class="control" >
+
+        <input type="file" name="imagen" 
+        id="imagen" 
+        class="control"
+        value="<%=locals.oldData? oldData.imagen: null%>"> 
     </div>   
+    <% if(locals.errors && errors.imagen){ %>
+        <div class="text-danger"> <%= errors.imagen.msg %> </div>
+    <% } %>
+
+
     
     <div class="control-formulario">
         <label for="precio">Precio</label>
-        <input type= "number" name="precio" placeholder="Precio del producto" id="precio" class="control"> 
+
+        <input type= "number" name="precio" 
+        placeholder="Precio del producto" 
+        id="precio" 
+        class="control"
+        value="<%=locals.oldData? oldData.precio: null%>"> 
+
+        <% if(locals.errors && errors.precio){ %>
+            <div class="text-danger"> <%= errors.precio.msg %> </div>
+        <% } %>
         
+
         <!--  
         <div class="control-precio">
         <input type= "number" name="precio" placeholder="Mínimo" id="precio" class="control"> 
@@ -91,10 +131,7 @@
         </div> -->  
      
     </div> 
-<div class="each-checkbox">
-        <input type="checkbox" name="envio" value="envio" id="envio">
-        <label for="envio">Envío gratis</label>
-</div>
+
     <div>
         
        <form action='/index' method="get" class="formulario-login">
@@ -105,6 +142,7 @@
 
 </main>
 <%- include ('../partials/footer.ejs') %> 
+<script src="/js/products.js"></script>
 </body>
 
 

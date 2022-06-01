@@ -5,72 +5,82 @@
 <%- include ('../partials/header.ejs') %> 
 <main>
     <div class="title-carrito"><h2>Editá  tus productos</h2></div>
-<form action='../<%= productToEdit.id %>?_method=PUT' method="POST" class="formulario" enctype="multipart/form-data">
+<form action='../<%= productToEdit.id %>/edit' method="POST" class="formulario" enctype="multipart/form-data" style="margin-top: 0%">
     
     
     <div class="control-formulario">
         <label for="nombre"></label>
-        <input type="text" name="nombre" id="nombre" class="control" placeholder="<%= productToEdit.nombre %>" value="<%= productToEdit.nombre %>" >
+        <input type="text" name="nombre" id="nombre" class="control" placeholder="<%= productToEdit.nombre %>" 
+        value="<%= productToEdit.nombre %>" >
+
     </div>
+    <% if(locals.errors && errors.nombre){ %>
+        <div class="text-danger"> <%= errors.nombre.msg %> </div>
+    <% } %>
+
     <div class="control-formulario">
         <label for="descripcion">Descripción del producto</label>
-        <textarea name="descripcion" type="text" id="descripcion" class="control" placeholder="<%= productToEdit.descripcion %>" value="<%= productToEdit.descripcion %>"> <%= productToEdit.descripcion %></textarea>
+        <textarea name="descripcion" type="text" id="descripcion" class="control"  value="<%= productToEdit.descripcion %>"> <%= productToEdit.descripcion %></textarea>
+        <p class="error" id="descripcion"></p>
     </div>
+    <% if(locals.errors && errors.descripcion){ %>
+        <div class="text-danger"> <%= errors.descripcion.msg %> </div>
+    <% } %>
     
     
     <div class="control-formulario">
         <label for="categorias" name="category">Categorias</label>
         <select class="control" name="category">
-            <option value="<%= productToEdit.category%>"><%= productToEdit.category%></option>
-            <option value="unisex">Unisex</option>
-            <option value="mujer">Mujer</option>
-            <option value="hombre">Hombre</option>
-            <option value="niño">Niños</option>
-            <option value="reloj-smart">Smart Watch</option>
-            <option value="vintage">Vintage</option>
+            
+            <% for(let i = 0; i<categorias.length; i ++) {if(categorias[i].id == productToEdit.categorias.id){%>
+            <option selected value="<%= productToEdit.categorias.id%>"><%= productToEdit.categorias.nombre%> </option> 
+            <%}else if(categorias[i].id != productToEdit.categorias.id){ %> 
+            <option value="<%=categorias[i].id%>"><%=categorias[i].nombre%></option>
+            <% }} %> 
         </select>    
+
+        <% if(locals.errors && errors.category){ %>
+            <div class="text-danger"> <%= errors.category.msg %> </div>
+        <% } %>
+        
+        
     </div>
     <div class="control-formulario">
         <label for="color">Color del producto</label>
     </div>
     <div class="control-formulario-radio">
-        
-            <div class="each">
-                <input type="radio" name="color" value="color-marron" class="radio" id="color-marron">
-                <img src="../../images/marron.png" alt="imagen-marron" class="color"/> 
-                <label for="color-marron">Marrón</label>
-            </div>
-            <div class="each">
-                <input type="radio" name="color" value="color-negro" class="radio" id="color-negro">
-                <img src="../../images/negro.png" alt="imagen-negro" class="color"/> 
-                <label for="color-negro">Negro</label>
-            </div>
-            <div class="each">
-                <input type="radio" name="color" value="color-azul" class="radio" id="color-azul">
-                <img src="../../images/azul.png" alt="imagen-azul" class="color" /> 
-                <label for="color-azul">Azul</label>
-            </div>
-    </div>   
-    <div class="control-formulario-radio">
-        
-            <div class="each">
-                <input type="radio" name="color" value="color-blanco" class="radio" id="color-blanco">
-                <img src="../../images/blanco.png" alt="imagen-rojo" class="color"/> 
-                <label class="colores" for="color-blanco">Blanco</label>
-            </div>
-            <div class="each">
-                <input type="radio" name="color" value="color-verde" class="radio" id="color-verde">
-                <img src="../../images/verde.png" alt="imagen-verde" class="color"/> 
-                <label class="colores" for="color-verde">Verde</label>
-            </div>
-            <div class="each">
-                <input type="radio" name="color" value="color-rojo" class="radio" id="color-rojo">
-                <img src="../../images/rojo.png" alt="imagen-rojo" class="color"/> 
-                <label class="colores" for="color-rojo">Rojo</label>
-            </div>
+        <% for(let i = 0; i<colores.length; i ++) {if(colores[i].id == productToEdit.colores.id){%>
             
-        
+            <div class="each">
+                <input type="radio" name="color" value="<%=productToEdit.colores.id%>" class="radio" id="color-<%= productToEdit.colores.color %>" checked="checked">
+                <img src="../../images/<%= productToEdit.colores.color %>.png" alt="imagen-<%= productToEdit.colores.color %>" class="color"/> 
+                <label for="color-<%= productToEdit.colores.color %>"><%= productToEdit.colores.color %></label>
+            </div>
+        <%}else if(colores[i].id != productToEdit.colores.id && colores[i].id > 3){%>
+            <div class="each">
+                <input type="radio" name="color" value="<%=colores[i].id%>" class="radio" id="color-<%=colores[i].color%>">
+                <img src="../../images/<%=colores[i].color%>.png" alt="imagen-<%=colores[i].color%>" class="color"/> 
+                <label for="color-<%=colores[i].color%>"><%=colores[i].color%></label>
+            </div>
+            <% }} %>        
     </div>
+     
+    <div class="control-formulario-radio">
+        <% for(let i = 0; i<colores.length; i ++) if(colores[i].id != productToEdit.colores.id && colores[i].id <= 3){%>
+            <div class="each">
+                <input type="radio" name="color" value="<%=colores[i].id%>" class="radio" id="color-<%=colores[i].color%>">
+                <img src="../../images/<%=colores[i].color%>.png" alt="imagen-<%=colores[i].color%>" class="color"/> 
+                <label for="color-<%=colores[i].color%>"><%=colores[i].color%></label>
+            </div>
+            <% } %>          
+    </div>   
+    
+    <% if(locals.errors && errors.color){ %>
+        <div class="text-danger"> <%= errors.color.msg %> </div>
+    <% } %>
+        
+           
+           
     
     <div class="control-formulario">
         <label for="imagen">Selecciona una nueva foto del producto</label>    
@@ -80,11 +90,17 @@
     </div>
     
     
+    <% if(locals.errors && errors.imagen){ %>
+        <div class="text-danger"> <%= errors.imagen.msg %> </div>
+    <% } %>
+    
+    
     
     <div class="control-formulario">
         <label for="precio">Precio</label>
         <input type= "number" name="precio" placeholder="Precio del producto" id="precio" class="control"
         value="<%=productToEdit.precio %>"> 
+        <p class="error" id="precio"></p>
         
         <!--  
         <div class="control-precio">
@@ -92,13 +108,21 @@
         <h4 style="align-self: center;">-</h4>
         <input type= "number" name="precio" placeholder="Máximo" id="precio" class="control">
         </div> -->  
-     
     </div> 
+
+    
+    
+    <% if(locals.errors && errors.precio){ %>
+        <div class="text-danger"> <%= errors.precio.msg %> </div>
+    <% } %>
+
+
 <div class="each-checkbox">
         <input type="checkbox" name="envio" value="envio" id="envio">
         <label for="envio">Envío gratis</label>
 </div>
     
+
 
        
  <div class="control"><button type="submit" class="register">Guardar cambios</button></div>
@@ -108,6 +132,7 @@
 
 </main>
 <%- include ('../partials/footer.ejs') %> 
+<script src="/js/editProducts.js"></script>
 </body>
 
 

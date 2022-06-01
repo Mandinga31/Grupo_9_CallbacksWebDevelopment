@@ -26,7 +26,7 @@ app.use('/products', productRouter)
 app.use('/users', userRouter)
 
 
-app.listen(2500, ()=>{
+app.listen(3001, ()=>{
     console.log('Servidor funcionando');
 });
 
