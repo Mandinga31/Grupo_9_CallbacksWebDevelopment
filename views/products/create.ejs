@@ -19,7 +19,7 @@
          <p class="error" id="nombre"></p>
     </div>
     <% if(locals.errors && errors.nombre){ %>
-        <div class="text-danger"> <%= errors.nombre.msg %> </div>
+        <div class="error"> <%= errors.nombre.msg %> </div>
     <% } %>
 
     <div class="control-formulario">
@@ -35,7 +35,7 @@
     </div>
     
     <% if(locals.errors && errors.descripcion){ %>
-        <div class="text-danger"> <%= errors.descripcion.msg %> </div>
+        <div class="error"> <%= errors.descripcion.msg %> </div>
     <% } %>
     
     

@@ -6,9 +6,7 @@ let formulario = document.querySelector("form.formulario");
         let campoDescripcion = document.querySelector("textarea#descripcion.control");
         let campoImagen = document.querySelector("input#imagen.control");
         let campoCategorias = document.querySelector("select#category.control");
-        console.log(campoCategorias)
         let campoPrecio = document.querySelector("input#precio.control");
-        console.log(campoPrecio.value)
        
         let errorNombre = document.querySelector("p#nombre.error");
         let errorDescripcion = document.querySelector("p#descripcion.error");
@@ -39,7 +37,8 @@ let formulario = document.querySelector("form.formulario");
             e.preventDefault();
             errorImagen.innerHTML="Debes subir una imagén"
         }
-        console.log(campoCategorias.value)
+        
+        
         if(campoCategorias.value == ""){
             e.preventDefault();
             errorCategorias.innerHTML="Debes seleccionar una categoría"
