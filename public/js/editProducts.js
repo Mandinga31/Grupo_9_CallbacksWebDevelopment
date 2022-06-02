@@ -24,7 +24,7 @@ let formulario = document.querySelector("form.formulario");
             errorDescripcion.innerHTML="Debes completar la descripción"
         }else if(campoDescripcion.value.length<20){
             e.preventDefault();
-            errorDescripcion.innerHTML="El nombre debe al menos 20 caracteres."
+            errorDescripcion.innerHTML="La descripción debe tener al menos 20 caracteres."
         }else{
             errorDescripcion.innerHTML=""
         }
