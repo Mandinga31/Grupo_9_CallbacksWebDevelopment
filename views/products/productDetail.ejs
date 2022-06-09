@@ -9,11 +9,11 @@
         <div class="main-body">
         
         <div class="body-elemento1">
-            
+            <div class="id-producto" data-id="<%= productToEdit.id%>"></div>
             <div class="top-img">
                 <a href="/products" style="text-decoration: none;"><p style="color: black;">Relojes </p></a>
                 <p style="color: black;"> /  <%= productToEdit.categorias.nombre %> / </p>
-                <p><%= productToEdit.nombre %></p> 
+                <p id="nombre"><%= productToEdit.nombre %></p> 
             </div>
             
                 
@@ -33,10 +33,11 @@
                 
                 <%= productToEdit.colores.color %> - <%= productToEdit.categorias.nombre %>
             </h4>
+            <div style="display:flex">
+                <h3 style="font-size: 30px; margin-bottom: 5px;">$</h3>
+                <h3 class="precio"><%=productToEdit.precio %></h3>
+            </div>
             
-            <h3 class="precio">
-                $ <%= productToEdit.precio %>
-            </h3>
             <h4 class="cuotas">
                 12 cuotas sin interés de $ <%= Math.trunc(productToEdit.precio / 12) %>
             </h4>
@@ -47,8 +48,8 @@
             
             <div class="detail-bottom">
                 
-                <form action='/products/carrito/<%=productToEdit.id %> ' method="get" class="formulario-login">
-                <div class="control-carrito"><button type="submit" class="register">Agregar al Carrito</button></div>
+                <form action='/products/carrito' method="get" class="formulario-login">
+                <div class="control-carrito"><button type="submit" class="register carrito-button">Agregar al Carrito</button></div>
                 </form>
 
             </div>
@@ -81,6 +82,7 @@
     </div>
     </main>
 <%- include ('../partials/footer.ejs') %> 
+<script src="/js/addToCart.js"></script>
 
 
 </body>
