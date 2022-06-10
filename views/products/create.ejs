@@ -15,11 +15,11 @@
          id="nombre" 
          class="control" 
          placeholder="Nombre del producto"
-         value="<%=locals.oldData? oldData.nombre : null%>"  >
-
+         value="<%=locals.oldData? oldData.nombre : null%>">
+         <p class="error" id="nombre"></p>
     </div>
     <% if(locals.errors && errors.nombre){ %>
-        <div class="text-danger"> <%= errors.nombre.msg %> </div>
+        <div class="error"> <%= errors.nombre.msg %> </div>
     <% } %>
 
     <div class="control-formulario">
@@ -30,12 +30,12 @@
         id="descripcion" 
         class="control" 
         placeholder="Descripción del producto"
-        value="<%=locals.oldData? oldData.descripcion: null%>" ></textarea>
-    </textarea>
-
+        value="<%=locals.oldData? oldData.descripcion: null%>"></textarea>
+        <p class="error" id="descripcion"></p>
     </div>
+    
     <% if(locals.errors && errors.descripcion){ %>
-        <div class="text-danger"> <%= errors.descripcion.msg %> </div>
+        <div class="error"> <%= errors.descripcion.msg %> </div>
     <% } %>
     
     
@@ -43,7 +43,7 @@
         <label for="categorias" name="category">Categorias</label>
 
         <select class="control" 
-        name="category"
+        name="category" id="category"
         value="<%=locals.oldData? oldData.category: null%>">
 
             <option value="">Seleccionar</option>
@@ -52,6 +52,9 @@
             <% }%> 
         </select>    
     </div>
+    <p class="error" id="category"></p>
+    
+    
 
     <% if(locals.errors && errors.category){ %>
         <div class="text-danger"> <%= errors.category.msg %> </div>
@@ -90,7 +93,7 @@
 
         
 <% if(locals.errors && errors.color){ %>
-    <div class="text-danger"> <%= errors.color.msg %> </div>
+    <div class="error"> <%= errors.color.msg %> </div>
 <% } %>
     
     
@@ -102,10 +105,12 @@
         id="imagen" 
         class="control"
         value="<%=locals.oldData? oldData.imagen: null%>"> 
+        <p class="error" id="imagen"></p>
     </div>   
     <% if(locals.errors && errors.imagen){ %>
-        <div class="text-danger"> <%= errors.imagen.msg %> </div>
+        <div class="error"> <%= errors.imagen.msg %> </div>
     <% } %>
+    
 
 
     
@@ -119,9 +124,9 @@
         value="<%=locals.oldData? oldData.precio: null%>"> 
 
         <% if(locals.errors && errors.precio){ %>
-            <div class="text-danger"> <%= errors.precio.msg %> </div>
+            <div class="error"> <%= errors.precio.msg %> </div>
         <% } %>
-        
+        <p class="error" id="precio"></p>
 
         <!--  
         <div class="control-precio">
