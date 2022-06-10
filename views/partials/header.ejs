@@ -1,15 +1,17 @@
+<body>
 <header>
     <div class="envios">
         <h4>Envios gratis a partir de los $10.000 | + 6 cuotas sin interés </h4>
-        </div>
+    </div>
         
     <section class="top-header"> 
         <div class="main-header-top-elemento1">
-            <a href="/"><img src="../../images/logo3.jpg" alt="Logo de Callwatch" class="logo"></a></div>
+            <a href="/"><img src="../../images/logo3.jpg" alt="Logo de Callwatch" class="logo"></a>
+        </div>
             
-
-        <div class="main-header-top-elemento2">
-
+        
+        
+            <div class="main-header-top-elemento2">
                 <nav class="main-nav-bar">
                     <ul class="navbar">
                         
@@ -22,27 +24,36 @@
                     </ul>
                     
                 </nav>
-                
+            </div>
             <!--   <div class="search-bar"><i class="fa fa-search"></i>
                 <input type="search" name="search-bar" id="search-bar" class="texto-search" 
                 placeholder="¿Qué estas buscando?">
                 </div>
                 </form> --> 
-        </div>
         
-
-        <div class="icons">
+        
+        <div class = "icons">
             <div class="icon">
-            <div class="search-box-iconPart">
-                <form action="/" method="POST">
-                    <input name="buscar" type="text" class="input-search-iconPart" placeholder="¿Qué estas buscando?">
-                    <button class="btn-search-iconPart"><i class="fas fa-search"></i></button>
-                </form> 
+                <div class="search-box-iconPart">
+                    <form action="/" method="POST">
+                        <input name="buscar" type="text" class="input-search-iconPart" placeholder="¿Qué estas buscando?">
+                        <button class="btn-search-iconPart"><i class="fas fa-search"></i></button>
+                    </form> 
+                </div>
+                </div>
+        </div>
+        <div class="icons">
+            
+            <div class="icon">     
+                <div class="burger nav-icon-5">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>              
+                
             </div>
-            </div>
             
-            
-            
+        
             <% if(locals.isLogged == false){ %> 
             <div class="icon">
                 
@@ -58,11 +69,11 @@
             
             <div class="icon">
                 
-                <li><a href="/products/carrito/1"><i class="fas fa-shopping-bag"></i></a></li>
+                <li><a href="/products/carrito"><i class="fas fa-shopping-bag"></i></a></li>
                 
             </div>
             
-        
+            
         </div>
              
     </section>
@@ -72,6 +83,7 @@
             <input name="buscar" type="text" class="input-search" placeholder="¿Qué estas buscando?">
         </form> 
     </div>
+   
     <!-- <div class="search-bar" >
         <form action="/buscar" method="POST">
             <div class="container">
@@ -83,4 +95,25 @@
     </div>    
     -->
     
+    
+        
+        <nav class="burger-nav">
+            
+            <ul class="nav-bar">                    
+                <li class="menu__item"><a href="/products">Relojes</a></li>
+                <li class="menu__item"><a href="/products/vintage">Vintage</a></li>
+                <li class="menu__item"><a href="/products/tech">Tech</a></li>
+                <li class="menu__item"><a href="/products/create">Vendé</a></li>
+                    
+                    
+            </ul>
+                
+        </nav>
+       
+   
     </header>
+    
+    <script src="/js/button.js"></script>
+
+</body>
+    

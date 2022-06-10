@@ -8,23 +8,14 @@
         <div class="title-carrito"><h2>Carrito de compras</h2>
         </div>
     <div class="carrito">
-        
-        
-        <div class="elementos-carrito">
+        <p class=""></p>
+        <div id="listaProductos">
             
-            <div class="elemento-carrito"><h5><%= productToEdit.nombre %> </h5>
-                <img src="../../images/<%= productToEdit.imagen %> " alt="imagen-principal"/></div> 
-            <div class="elemento-carrito">
-            <label for="cantidad">Cantidad</label>
-            <select id="cantidad" name="cantidad">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="+">+</option>
-              </select>
-            </div>
-            <div class="elemento-carrito"><h5>$ <%= productToEdit.precio %></h5></div>
-
+            <img src="" id="imagen"/>
+            
+               
+                
+         
             
         </div>
         <div class="elementos-carrito-2">
@@ -32,7 +23,7 @@
             
             <div class="elemento-comprar">
                 <p>Subtotal:</p>
-                <p> $ <%= productToEdit.precio %></p>
+                <p> $ suma</p>
             </div>
             <div class="elemento-comprar">
                 
@@ -43,14 +34,16 @@
             <tr><td colspan="2"><hr class="separatorTotals"></td></tr>
             <div class="elemento-comprar">
                 <p class="bold">Total a pagar:</p>
-                <p class="bold">$<%= productToEdit.precio %></p>
+                <p class="bold">$suma Total</p>
             </div>
             
-            
+            <div style="display:flex ;">
             <form action='/' method="get" class="formulario-login">
                 <div class="boton-comprar"><button class="agregar-carrito" type="submit">Finalizar compra</button></div>
-                </form>  
-            
+            </form>  
+            <form action='/products/carrito' method="get" class="formulario-login">
+                <div class="boton-comprar" id="vaciar"><button class="agregar-carrito red" >Vaciar carrito</button></div>            </form>  
+            </div>
         </div>
         
     </div>
@@ -122,7 +115,7 @@
     </main>
 
 <%- include ('../partials/footer.ejs') %> 
-
+<script src="/js/cart.js"></script>
 
 </body>
 </html>

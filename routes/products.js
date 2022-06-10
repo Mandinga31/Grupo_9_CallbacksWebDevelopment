@@ -61,7 +61,7 @@ const EditValidations = [
 
 router.get('/', productController.listado)
 
-router.get('/carrito/:id', productController.carrito);
+router.get('/carrito', productController.carrito);
 
 router.get('/tech', productController.tech);
 router.get('/vintage', productController.vintage);

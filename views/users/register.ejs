@@ -18,6 +18,8 @@
             class="control" 
             value="<%=locals.oldData? oldData.nombre : null%>" 
             >
+            <p class="error" id="nombre"></p>
+
             <% if (locals.errors && errors.nombre) { %>
                 <div class="error">
                     <%= errors.nombre.msg %> 
@@ -40,7 +42,10 @@
                     <%= errors.usuario.msg %> 
                 </div>
             <% } %>    
+            <p class="error" id="usuario"></p>
+
         </div>
+
         
         <div class="control-formulario">
             
@@ -57,7 +62,8 @@
                 </div>
             <% } %>
         </div>
-       
+        <p class="error" id="email"></p>
+
 
         <div class="control-formulario">
             <label for="imagen"><b>Selecciona tu foto de perfil:</b></label>    
@@ -68,8 +74,9 @@
                     <%= errors.imagen.msg %> 
                 </div>
             <% } %>
+            <p class="error" id="imagen"></p>           
         </div>
-
+ 
 
         <div class="control-formulario">
             <input type="password" 
@@ -83,10 +90,12 @@
                     <%= errors.password.msg %> 
                 </div>
             <% } %>
+            <p class="error" id="password"></p>
+            
         </div>
         <div class="control-formulario">
             <label for="categorias" name="category">Categorias</label>
-            <select class="control" name="category">
+            <select class="control" name="category" id="category">
                 <option value="">Seleccionar</option>
                 <option value="1">Bronce</option>
                 <option value="2">Plata</option>
@@ -95,7 +104,7 @@
                 
             </select>    
         </div>
-        
+        <p class="error" id="category"></p>
 
         <div class="each-checkbox">
             <input type="checkbox" name="newsletter" value="newsletter" id="newsletter">
@@ -110,5 +119,6 @@
     
     </main>
 <%- include ('../partials/footer.ejs') %> 
+<script src="/js/register.js"></script>
 </body>
 </html>

@@ -41,11 +41,8 @@ vintage: (req,res)=>{
 	})
 },
 carrito: (req,res)=>{
-    const idProductToEdit = req.params.id - 1;
-	const productToEdit = products[idProductToEdit]
 	
-	
-    res.render ('products/productCart', {productToEdit});
+	res.render ('products/productCart');
 },
 detalle: (req,res)=>{
     let id = req.params.id

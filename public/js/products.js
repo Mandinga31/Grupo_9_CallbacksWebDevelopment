@@ -7,7 +7,6 @@ let formulario = document.querySelector("form.formulario");
         let campoImagen = document.querySelector("input#imagen.control");
         let campoCategorias = document.querySelector("select#category.control");
         let campoPrecio = document.querySelector("input#precio.control");
-        console.log(campoPrecio.value)
        
         let errorNombre = document.querySelector("p#nombre.error");
         let errorDescripcion = document.querySelector("p#descripcion.error");
@@ -19,7 +18,7 @@ let formulario = document.querySelector("form.formulario");
             errorNombre.innerHTML="Debes completar el nombre del producto"
         }else if(campoNombre.value.length<5){
             e.preventDefault();
-            errorNombre.innerHTML="El nombre debe al menos 5 caracteres."
+            errorNombre.innerHTML="El nombre debe tener al menos 5 caracteres."
         }else{
             errorNombre.innerHTML=""
         }
@@ -38,6 +37,8 @@ let formulario = document.querySelector("form.formulario");
             e.preventDefault();
             errorImagen.innerHTML="Debes subir una imagén"
         }
+        
+        
         if(campoCategorias.value == ""){
             e.preventDefault();
             errorCategorias.innerHTML="Debes seleccionar una categoría"
