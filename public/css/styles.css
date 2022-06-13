@@ -221,6 +221,10 @@ header .search-bar form, .texto-search{
     text-decoration: none;
     color: #004643;
 }
+.lista-imagenes a {
+    text-decoration: none;
+    color: black;
+    text-align: center;}
   /*** ESTILOS BOTÓN SLIDE LEFT ***/
 .boton-css-nuevo a {
       text-decoration: none;
@@ -281,7 +285,14 @@ header .search-bar form, .texto-search{
     
     
 }
-
+#listaProductos{
+    width: 100%;
+}
+.flexCarrito{
+    background-color: #fff;
+    flex-direction: column;
+    width: 100%;
+}
 h3.precio{
     font-size: 30px;
     margin-bottom: 5px;
@@ -1090,7 +1101,7 @@ button.register:hover {
        .products a:hover {
            box-shadow: 0px 0px 10px rgb(100 100 100);
            cursor: pointer;
-           width: 49%;
+           width: 48%;
        }
        .elementos1y2footer{
         display: flex;
@@ -1159,6 +1170,9 @@ button.register:hover {
         flex-direction: row;
         
     }
+    p.productosCarrito{
+        width: 50%;
+    }
     .bienvenido-main-body{
         display: flex;
         
@@ -1197,7 +1211,7 @@ button.register:hover {
     .products a:hover {
         box-shadow: 0px 0px 10px rgb(100 100 100);
         cursor: pointer;
-        width: 24%;
+        width: 23%;
     }
    
     

@@ -31,7 +31,7 @@ const userAPIController = {
                 let respuesta = {
                     meta: {
                         status: 200,
-                        url: '/api/movie/:id'
+                        url: '/api/users/:id'
                     },
                     data: {
                         id: user.id,
