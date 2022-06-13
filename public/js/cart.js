@@ -29,7 +29,7 @@ cart.forEach(producto => {
 
     
     const listaProductos = document.querySelector("#listaProductos")
-    listaProductos.appendChild(productoHTML)
+    listaProductos.appendChild(productoHTML) //appendChild = .push? 
 })}else{
     let mensaje = document.querySelector(".carrito p")
     mensaje.innerHTML = "No hay nada"
@@ -43,15 +43,25 @@ localStorage.clear();
 
 //eliminar producto por producto 
 
-let botonEliminar = document.querySelectorAll("button.elemento-carrito");
-botonEliminar.forEach(boton=>{
-    var id = boton.getAttribute("data-id")
-    console.log(id)
+let botonEliminar = document.querySelectorAll("button.elemento-carrito"); //array c/todos los buttons
 
-    boton.addEventListener('click', ()=>{
-       
-       let newCart = cart.filter(item => item.id !== id);
-       console.log(newCart)
-       localStorage.setItem('carrito', JSON.stringify(newCart));
-    })
-})
+console.log(botonEliminar)
+for(let i = 0; i < botonEliminar.length; i++){
+botonEliminar[i].addEventListener("click", (e)=>{
+    const Cartid = botonEliminar[i].getAttribute("data-id");  // esto debe traer el id del elemento q se toque
+     cart = cart.filter((eachProductCart) => {
+       return eachProductCart.id != Cartid })
+       document.location.reload()
+   localStorage.setItem( "carrito", JSON.stringify(cart))
+     console.log(Cartid);
+     
+     Swal.fire(
+        'Good job!',
+        'You clicked the button!',
+        'success'
+      )
+})}
+
+
+
+
