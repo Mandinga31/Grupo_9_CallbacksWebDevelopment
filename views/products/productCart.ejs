@@ -4,107 +4,61 @@
 <body>
 <%- include ('../partials/header.ejs') %> 
 
-    <main>
+    <form>
         <div class="title-carrito"><h2>Carrito de compras</h2>
         </div>
     <div class="carrito">
-        <p class=""></p>
+        <div class="flexCarrito">
+
         <div id="listaProductos">
             
             <img src="" id="imagen"/>
             
                
-                
-         
-            
+        </div>
         </div>
         <div class="elementos-carrito-2">
             <p class="bold">Detalle de la compra:</p>
-            
-            <div class="elemento-comprar">
-                <p>Subtotal:</p>
-                <p> $ suma</p>
+            <div class="insertarTotal">
+
             </div>
-            <div class="elemento-comprar">
-                
-                <p>Envío:</p>
-                <p> Gratis</p>
-            </div>
-            
-            <tr><td colspan="2"><hr class="separatorTotals"></td></tr>
-            <div class="elemento-comprar">
-                <p class="bold">Total a pagar:</p>
-                <p class="bold">$suma Total</p>
-            </div>
-            
-            <div style="display:flex ;">
-            <form action='/' method="get" class="formulario-login">
-                <div class="boton-comprar"><button class="agregar-carrito" type="submit">Finalizar compra</button></div>
-            </form>  
-            <form action='/products/carrito' method="get" class="formulario-login">
-                <div class="boton-comprar" id="vaciar"><button class="agregar-carrito red" >Vaciar carrito</button></div>            </form>  
+            <div class="finalizar" style="display:flex ;">
+                <form action='/' method="get" class="formulario-login">
+                    <div class="boton-comprar"><button class="agregar-carrito" type="submit">Finalizar compra</button></div>
+                </form>  
+                <form action='/products/carrito' method="get" class="formulario-login">
+                    <div class="boton-comprar" id="vaciar"><button class="agregar-carrito red" >Vaciar carrito</button></div>            </form>  
+                </div>
+                </form>
             </div>
         </div>
+        
         
     </div>
     
         
     <div class="mas-vendidos"><h2>Te pueden interesar</h2></div>
+   
+
+
     <section class="galeria">
         
        
         
         <div class="lista-imagenes">
             
-           
+            <% for(let i = 0; i < products.length; i ++){  %> 
+            <a href="/products/detalle/<%= products[i].id %>">
             <div class="card">
-                <img src="../../images/Reloj-4.jpg" alt="imagen-principal"/> 
+                <img src="../../images/<%= products[i].imagen %>" alt="imagen-principal"/> 
                 <div class="cuerpo-card">
-                    <h5>Reloj Callwatch Pioneer P-908</h5>
-                    <p>$60.300</p>
+                    <h5><%= products[i].nombre %></h5>
+                    <p>$<%= products[i].precio %></p>
 
                 </div>
             </div>
-            <div class="card">
-                <img src="../../images/reloj-3.jpg" alt="imagen-principal"/> 
-                <div class="cuerpo-card">
-                    <h5>Reloj Callwatch Grandmaster</h5>
-                    <p>$23.405</p>
-
-                </div>
-            </div>
-            <div class="card">
-                <img src="../../images/reloj-6.jpg" alt="imagen-principal"/> 
-                <div class="cuerpo-card">
-                    <h5>Reloj Golden-Fetch Callwatch P-345</h5>
-                    <p>$27.795</p>
-
-                </div>
-            </div>
-            <div class="card">
-                <img src="../../images/reloj-7.jpg" alt="imagen-principal"/> 
-                <div class="cuerpo-card">
-                    <h5>Reloj Catmar Callwatch Y-905</h5>
-                    <p>$29.350</p>
-
-                </div>
-            </div>
-            <div class="card">
-                <img src="../../images/reloj-8.jpg" alt="imagen-principal"/> 
-                <div class="cuerpo-card">
-                    <h5> Reloj Silver-lining Callwatch T-5905</h5>
-                    <p>$45.000</p>
-
-                </div>
-            </div>
-            <div class="card">
-                <img src="../../images/reloj-9.jpg" alt="imagen-principal"/> 
-                <div class="cuerpo-card">
-                    <h5>Reloj Peña Callwatch T-786</h5>
-                    <p>$25.905</p>
-
-                </div>
-            </div>
+            </a>
+            <% } %> 
             
             
             
