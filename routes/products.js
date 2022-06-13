@@ -57,7 +57,6 @@ const EditValidations = [
     
 ]
 
-
 router.get('/', productController.listado)
 
 router.get('/carrito', productController.carrito);
@@ -69,7 +68,6 @@ router.get('/detalle/:id', productController.detalle);
 
 router.get('/:id/edit', productController.editar)
 router.post('/:id/edit', upload.single('imagen'), EditValidations, productController.editado)
-
 
 router.get('/create', productController.crear);
 router.post('/',upload.single('imagen'), CreateValidations, productController.creado);
