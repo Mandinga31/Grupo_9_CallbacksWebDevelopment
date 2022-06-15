@@ -288,6 +288,20 @@ header .search-bar form, .texto-search{
 #listaProductos{
     width: 100%;
 }
+.finalizar{
+    display: flex;
+}
+.noneDisplay{
+    display: none;
+}
+.carritoVacio{
+    
+    background-color: #fff;
+}
+.centerCarrito{
+    text-align: center;
+    margin: 30px;
+}
 .flexCarrito{
     background-color: #fff;
     flex-direction: column;
@@ -875,8 +889,10 @@ p.bold{
 
 }
 
-.carrito{
 
+
+.carrito{  
+    background-color: #fff;
     padding: 30px;
 }
 

@@ -1,11 +1,10 @@
 //aca lo voy a agregar a la vsita product cart
 let cart = JSON.parse(localStorage.getItem("carrito")) // todo lo que hay en carrito en un array
-
 let nombreHtml = document.querySelector(".elemento-carrito")
 let imagenHtml = document.querySelector("img#imagen").src
 
 //mostrar productos en el carrito
-if(cart != null){
+if(cart != null && cart.length>=1){
 cart.forEach(producto => {
     const productoHTML = document.createElement("div")
     productoHTML.className = "elementos-carrito"
@@ -30,14 +29,19 @@ cart.forEach(producto => {
     const listaProductos = document.querySelector("#listaProductos")
     listaProductos.appendChild(productoHTML) //appendChild = .push? 
 })}else{
-    const productoHTML = document.createElement("div")
-    productoHTML.className = "elementos-carrito"
-    productoHTML.innerHTML = 
-    `<p>No se encontró nada</p>`
+    const carritoHTML = document.createElement("div")
+    carritoHTML.className = "carritoVacio"
+    carritoHTML.innerHTML = 
+    `<div class="centerCarrito">
+    <h2>¡Lo sentimos!</h2>
+    <i class="fas fa-times" style="font-size: 10em;color: #195855"></i>
+    <h3>No tienes ningún artículo en tu carrito de compras.</h3>
+    </div>`
 
     
-    const listaProductos = document.querySelector("#listaProductos")
-    listaProductos.appendChild(productoHTML)
+    const listacarrito = document.querySelector("#listaProductos")
+    listacarrito.appendChild(carritoHTML) 
+    
 }
 //vaciar carrito 
 
@@ -99,46 +103,36 @@ if(cart != null && cart.length>=1){
         listaProductos.appendChild(productoHTML)
     }else{
         const productoHTML = document.createElement("div")
-        productoHTML.className = "elementos-carrito"
         productoHTML.innerHTML = 
-        `<p>No se encontró nada</p>`
-    
-        
-        const listaProductos = document.querySelector("#listaProductos")
-        listaProductos.appendChild(productoHTML) 
-    }
+        `<div class="centerCarrito">
+		
+        <h2>Descubrí nuestra línea de relojes inteligentes</h2>
 
-//botones de finalizar 
-if(cart != null && cart.length>=1){
-
-        const productoHTML = document.createElement("div")
-        productoHTML.innerHTML = 
-        `  
-        
-                <form action='/' method="get" class="formulario-login">
-                    <div class="boton-comprar"><button class="agregar-carrito" type="submit">Finalizar compra</button></div>
-                </form>  
-                <form action='/products/carrito' method="get" class="formulario-login">
-                    <div class="boton-comprar" id="vaciar"><button class="agregar-carrito red" >Vaciar carrito</button></div>            </form>  
-                </div>
-                </form>
-           
-        
+        <p>Conozca los cuatro nuevos modelos de esta colección de estilo clásico, 
+        fabricados en diversos materiales y con la tecnología Callwatch 
+		</p>
+			
+        <button class="boton-css-nuevo"> <a href="/products/tech">Descubrí nuevos Relojes</a></button>
+	</div>      
             `
     
         
-        const listaProductos = document.querySelector("div.finalizar")
+        const listaProductos = document.querySelector("div.insertarTotal")
         listaProductos.appendChild(productoHTML)
-    }else{
-        const productoHTML = document.createElement("div")
-        productoHTML.className = "elementos-carrito"
-        productoHTML.innerHTML = 
-        `<p>No se encontró nada</p>`
-    
-        
-        const listaProductos = document.querySelector("#listaProductos")
-        listaProductos.appendChild(productoHTML) 
     }
 
-   
+
+//botones de finalizar 
+const botones = document.querySelector(".finalizar");
+const detalleTitulo = document.querySelector(".bold");
+
+if(cart == null || cart.length == 0){
+    botones.classList.add('noneDisplay')
+    detalleTitulo.classList.add('noneDisplay')
+    console.log(detalleTitulo)
+}else if(cart != null && cart.length>=1){
+    if (document.querySelector(".noneDisplay")){
+    botones.classList.remove('noneDisplay')}
+    detalleTitulo.classList.remove('noneDisplay')
+}
 
