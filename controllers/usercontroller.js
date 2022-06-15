@@ -95,7 +95,7 @@ login: (req,res)=>{
     res.render ('users/login');
 }, 
 processLogin: (req,res)=>{
-
+    
     let errors = validationResult(req);
     if(errors.isEmpty() != true){
         res.render('users/login', {errors: errors.mapped(), oldData: req.body})
@@ -110,6 +110,9 @@ processLogin: (req,res)=>{
         }).then((userToLogin)=>{if(userToLogin){ 
                 let passwordIsOkey = bcrypt.compareSync(contraseñaIngresada, userToLogin.password)
                 if(passwordIsOkey){ req.session.userLogged = userToLogin
+                    if(req.body.newsletter){
+                        res.cookie('userEmail', req.body.email,{maxAge:(1000*60)*2})
+                    }
                     return res.redirect('userProfile')
                 }{
                     return res.render('users/login', {
@@ -195,6 +198,7 @@ processUserEdit: (req,res)=>{
 }      
 },
 logout: (req,res)=>{
+    res.clearCookie('userEmail')
     req.session.destroy();
     return res.redirect('/');
 },

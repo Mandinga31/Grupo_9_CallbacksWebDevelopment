@@ -37,7 +37,7 @@
                                                                     </div>
                                                                     <div >
                                                                         
-                                                            
+                                                                        <% if(locals.isLogged == true && locals.userInfo.email != 'admin@admin.com'){ %> 
                                                                         <div class="user-icons">
                                                                             
                                                                             
@@ -47,6 +47,20 @@
                                                                                 <h4>Mis pedidos</h4>
                                                                             </a>
                                                                         </div>
+                                                                        <% } %> 
+                                                                        <% if(locals.isLogged == true && locals.userInfo.email == 'admin@admin.com'){ %> 
+                                                                        <div class="user-icons">
+                                                                            
+                                                                            
+                                                                            <a class="linkUserProfile" href="../construir">
+                                                                                
+                                                                                <i class="fa-solid fa-receipt"></i>
+                                                                                <h4>Pedidos a preparar</h4>
+                                                                            </a>
+                                                                        </div>
+                                                                        <% }{%>
+
+                                                                        <%} %> 
                                                                         <hr>
                                                                         <div class="user-icons">
                                                                             
