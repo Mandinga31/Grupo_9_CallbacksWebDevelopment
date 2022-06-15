@@ -1,5 +1,4 @@
 
-
 //Lo que que me traigo del dom  
 let botonAgregar = document.querySelector(".carrito-button")
 let id = document.querySelector(".id-producto").getAttribute("data-id")
@@ -41,7 +40,7 @@ botonAgregar.addEventListener("click", (e)=>{
     Swal.fire({
         position: 'top-end',
         icon: 'success',
-        title: 'El producto ' + nombre + ' se agrego correctamente a tu carrito',
+        title: 'El producto ' + nombre + ' se agregó correctamente a tu carrito',
         showConfirmButton: false,
         timer: 2300
       })

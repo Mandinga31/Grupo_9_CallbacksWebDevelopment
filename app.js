@@ -3,13 +3,14 @@ const session = require('express-session');
 const app = express();
 const methodOverride = require('method-override');
 const loggedmiddleware = require('./middlewares/loggedmiddleware');
-
+const cookies = require('cookie-parser');
 
 app.use(session({
     secret: 'shhh, secreto',
     resave: false,
     saveUninitialized: false
 }));
+app.use(cookies())
 app.use(express.static('public'));
 app.set('view engine', 'ejs')
 
