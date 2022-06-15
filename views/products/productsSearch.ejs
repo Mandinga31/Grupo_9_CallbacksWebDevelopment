@@ -5,8 +5,9 @@
 <%- include ('../partials/header.ejs') %> 
     
     
-<div class="todos-productos"><h2>Según tu búsquedad</h2></div>
-<% if(productosEncontrados) {%> 
+
+<% if( productosEncontrados.length >= 1 /*&& productosEncontrados.length < productosEncontrados.length*/) {%> 
+	<div class="todos-productos"><h2>Según tu búsquedad</h2></div>
 	<div class="products" >
 
 
@@ -23,10 +24,17 @@
 		</article>
 	    </a>
 	    
-		<% } }else{ %> 
-		
-			<h3>No encontramos nada perri :(</h3>
+		<% } }else if (productosEncontrados.length < 1  /*|| productosEncontrados.length == productosEncontrados.length || productosEncontrados == null || productosEncontrados == undefined || productosEncontrados.length == db.products.length*/){ %> 
+			<div class="htmlNoneProduct">
+			<div class="noneProduct"></div>
+			<h3 class="h3NoneProduct"> Lo sentimos, no hay productos que coincidan con tu busqueda 🤔</h3>
+			<lu class="listNoneProducts">
+				<li> Utilizá palabras más genéricas o menos palabras. </li>
+				<li> Revisá la ortografía de la palabra. </li>
+			</lu>
+			<img src= '../images/lupa-con-cara-triste.png'  alt="" height="250" class="imgNoProduct">
 			<button class="boton-css-nuevo"> <a href="/products" >Ver todos los relojes</a></button>
+			</div>
 			<% } %> 
     </div>
 	

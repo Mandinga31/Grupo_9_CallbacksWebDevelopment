@@ -75,8 +75,8 @@ crear: (req,res)=>{
 creado: (req,res)=>{
 	 
      const resultValidation = validationResult(req);
-	 console.log(resultValidation)
 	 let productCreated = req.body;	 
+	 console.log(productCreated)
 
        let promCategoria = db.categoryProduct.findAll()
 
@@ -120,10 +120,10 @@ editar: (req,res)=>{
 		let promColor = db.colors.findAll()
 
 		Promise.all([promReloj, promCategoria,promColor])
-        .then(([resultReloj,resultCategoria,resultColor])=> res.render('products/edit',{productToEdit: resultReloj, categorias: resultCategoria,colores: resultColor}))
+        .then(([resultReloj,resultCategoria,resultColor])=>  res.render('products/edit',{productToEdit: resultReloj, categorias: resultCategoria,colores: resultColor}))
 		.catch(()=>{res.send('error')})
 
-			
+		
 	},
 	// let id = req.params.id
 	// let productToEdit = products.filter((producto)=> producto.id == id)[0];
@@ -138,12 +138,12 @@ editado: (req,res)=>{
 
 	let id = req.params.id
 	const resultValidation = validationResult(req)
-	console.log(resultValidation)
 	let promReloj = db.products.findByPk(id, {
 		include: [{association: 'categorias'}, {association:'colores'}]
 	})
 	let promCategoria = db.categoryProduct.findAll()
 	let promColor = db.colors.findAll()
+	console.log(promReloj)
 
 	if (resultValidation.errors.length > 0){ 
 	Promise.all([promReloj, promCategoria,promColor])

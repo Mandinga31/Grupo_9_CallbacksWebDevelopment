@@ -27,7 +27,7 @@ cart.forEach(producto => {
 
     
     const listaProductos = document.querySelector("#listaProductos")
-    listaProductos.appendChild(productoHTML)
+    listaProductos.appendChild(productoHTML) //appendChild = .push? 
 })}else{
     const carritoHTML = document.createElement("div")
     carritoHTML.className = "carritoVacio"
@@ -52,18 +52,23 @@ localStorage.clear();
 
 //eliminar producto por producto 
 
+
 let botonEliminar = document.querySelectorAll("button.elemento-carrito#eliminar"); //array c/todos los buttons
 
 console.log(botonEliminar)
 for(let i = 0; i < botonEliminar.length; i++){
 botonEliminar[i].addEventListener("click", (e)=>{
+   
     const Cartid = botonEliminar[i].getAttribute("data-id");  // esto debe traer el id del elemento q se toque
      cart = cart.filter((eachProductCart) => {
        return eachProductCart.id != Cartid })
+       
     document.location.reload()
+    
     localStorage.setItem( "carrito", JSON.stringify(cart))
      console.log(Cartid);
 })}
+
 
 
 //get total
@@ -116,6 +121,7 @@ if(cart != null && cart.length>=1){
         listaProductos.appendChild(productoHTML)
     }
 
+
 //botones de finalizar 
 const botones = document.querySelector(".finalizar");
 const detalleTitulo = document.querySelector(".bold");
@@ -130,4 +136,3 @@ if(cart == null || cart.length == 0){
     detalleTitulo.classList.remove('noneDisplay')
 }
 
-   

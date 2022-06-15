@@ -32,6 +32,11 @@ app.use('/users', userRouter)
 app.use('/api/products', productAPIRouter)
 app.use('/api/users', userAPIRouter)
 
+app.get("*", (req,res) => {
+    res.render(__dirname + '/views/error')
+})
+
+
 app.listen(3001, ()=>{
     console.log('Servidor funcionando');
 });

@@ -20,7 +20,7 @@
 body{
     font-family: 'Inter';
     background-color: #e8e4e6;
-    
+
 }
 header{
     background-color: #195855;
@@ -30,7 +30,7 @@ header{
     z-index: 99;
 }
 p, .olvidastecontra{
-    
+
     text-align: center;
     margin-top: 20px;
     margin-bottom: 15px;
@@ -46,29 +46,29 @@ footer{
     background-color: #195855;
     padding: 30px;
     min-width: fit-content;
-    
-    
+
+
 }
 html{
     min-inline-size: fit-content;
 }
 textarea{
 font-family: 'Montserrat';
- 
+
 }
 .mapa iframe{
-    
+
         width: 300px;
         height: 200px;
         border: 5px solid green;
-      
+
 }
 .footer ol {
     list-style: none;
     text-align: center;
     margin-top: 50px;
-    
-    
+
+
 }
 .footer ol li {
     margin-bottom: 28px;
@@ -120,7 +120,7 @@ max-width: 70%;
     align-self: center;
     text-decoration: none;
     list-style-type: none;
-    
+
 }
 .icon i:hover{
     color: #56918e;
@@ -132,12 +132,12 @@ max-width: 70%;
 .logo{
     padding: 0.4em;
     max-width: 30%
-    
+
 }
 .logo-solo{
-    
+
     max-width: 100px
-    
+
 }
 .logo-register{
     max-width: 70px;
@@ -160,13 +160,13 @@ header .search-bar form, .texto-search{
     border-radius: 5px;
     text-decoration: none;
   }
-  
+
   header form .search-bar {
     align-self: center;
     text-align: center;
     margin-left: 5px;
-    
-  
+
+
   }
   .mini-banner{
       display: flex;
@@ -176,7 +176,7 @@ header .search-bar form, .texto-search{
   .mini-banner img{
       width: 190px;
   }
-  
+
   /**** Página User* **/
   .bienvenido {
     text-align: center;
@@ -199,7 +199,7 @@ header .search-bar form, .texto-search{
         margin-top: 20px;
         margin-bottom: 50px;
     }
-    
+
     .bienvenido-main-body{
         display: flex;
         flex-direction: column;
@@ -231,7 +231,7 @@ header .search-bar form, .texto-search{
       color: #fff;
   }
 .boton-css-nuevo {
-    
+
     background: #195855; /* color de fondo */
     color: #fff; /* color de fuente */
     border: 2px solid #195855; /* tamaño y color de borde */
@@ -241,7 +241,7 @@ header .search-bar form, .texto-search{
     z-index: 1;
     overflow: hidden;
     display: inline-block;
-    
+
 }
 .boton-css-nuevo:hover {
     color: #fff;
@@ -275,15 +275,15 @@ header .search-bar form, .texto-search{
   }
   .body-elemento1{
     align-self: center;
-    
+
 }
 
   .reloj, img.top{
     max-width: 350px;
     padding: 10px;
-  
-    
-    
+
+
+
 }
 #listaProductos{
     width: 100%;
@@ -314,7 +314,7 @@ h3.precio{
 h2.nombre {
     margin-top: 20px;
     margin-bottom: 5px;
-    
+
 }
 h2.nombre p {
     align-self: center;
@@ -360,7 +360,7 @@ h4.cuotas{
     color: #fff;
     cursor: pointer;
     text-decoration: none;
-    
+
 
 }
 div.detail-b{
@@ -376,7 +376,7 @@ div.detail-b{
     background-color: #71d682;
     cursor: pointer;
     text-align-last: center;
-    
+
 
 }
 div.detail-b a {
@@ -406,7 +406,7 @@ button.register {
     background-color: #004643;
     color: #fff;
     cursor: pointer;
-    
+
 }
 button.register:hover {
     background-color: #195855;
@@ -437,7 +437,7 @@ button.register:hover {
 div.control-formulario input {
     display: flex;
     margin-bottom: 15px;
-    
+
 }
 .control-formulario label{
     align-self: center;
@@ -459,7 +459,7 @@ div.control-formulario input {
         border-radius: 5px;
         border-color: transparent;
         max-width: 800px;
-        
+
     }
 
 .control {
@@ -473,7 +473,7 @@ div.control-formulario input {
     margin-right: auto;
     max-width: 800px;
     text-align: center;
-    
+
 }
 .ingresa h2{
     text-align: center;
@@ -512,14 +512,14 @@ button.home:hover {
     margin: 50px 20px;
     float: left;
   }
-  
+
   .contenedor img {
     position: absolute;
     left: 0;
     transition: opacity 1.5s ease-in-out;
     max-width: -webkit-fill-available;
   }
-  
+
   .contenedor img.top:hover {
     opacity: 0;
   }
@@ -534,7 +534,7 @@ button.home:hover {
 .navbar li {
     margin: 30px;
     list-style-type: none;
-    
+
 }
 .navbar li a{
     position: relative;
@@ -551,7 +551,7 @@ button.home:hover {
     content: "";
     opacity: 0;
     transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
-    transform: translateY(20px);        
+    transform: translateY(20px);
 }
 .navbar li a:hover:after{
     opacity:1;
@@ -565,7 +565,7 @@ button.home:hover {
 .nav-bar{
     display: block;
     position: fixed;
-    right: -100%; 
+    right: -100%;
     width: 300px;
     height: 100%;
     margin: 0;
@@ -578,7 +578,7 @@ button.home:hover {
     background-color: #8CB89F;
     display: block;
     position: fixed;
-    right: 0; 
+    right: 0;
     width: 300px;
     height: 100%;
     margin: 0;
@@ -660,12 +660,12 @@ button.home:hover {
     background-color: #333;
     position: relative;
   }
-  
+
   /* Hide the links inside the navigation menu (except for logo/home) */
   .topnav #myLinks {
     display: none;
   }
-  
+
   /* Style navigation menu links */
   .topnav a {
     color: white;
@@ -674,7 +674,7 @@ button.home:hover {
     font-size: 17px;
     display: block;
   }
-  
+
   /* Style the hamburger menu */
   .topnav a.icon {
     background: black;
@@ -683,13 +683,13 @@ button.home:hover {
     right: 0;
     top: 0;
   }
-  
+
   /* Add a grey background color on mouse-over */
   .topnav a:hover {
     background-color: #ddd;
     color: black;
   }
-  
+
   /* Style the active link (or home/logo) */
   .active {
     background-color: #04AA6D;
@@ -698,7 +698,7 @@ button.home:hover {
 
 .top-img{
     display: flex;
-   
+
     margin-bottom: 50px;
     margin-top: -51px;
 }
@@ -724,7 +724,7 @@ button.home:hover {
     color: white;
 }
 .register{
-    
+
     margin: auto;
 }
 
@@ -732,7 +732,7 @@ button.home:hover {
     display: flex;
     justify-content: center;
     align-self: center;
-    
+
     padding: 50px;
     margin: auto;
     width: 320px;
@@ -744,7 +744,7 @@ button.home:hover {
     display: flex;
     flex-direction: column;
     padding: 10px;
-} 
+}
 .login form input{
     width: 250px;
 }
@@ -793,12 +793,46 @@ input#newsletter
 }
 .mas-vendidos{
     text-align: center;
-    
+
 }
 .todos-productos{
     text-align: center;
     margin-top: 135px;
 }
+
+.htmlNoneProduct{
+    display: flex;
+    flex-direction: column;
+}
+
+.noneProduct{
+    text-align: center;
+    margin-top: 135px;
+}
+.noneProduct, .h3NoneProduct{
+    color: rgb(216, 10, 10);
+    background-color: #8afbd2;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+.noneProduct, .imgNoProduct{
+    border-radius: 100%;
+	vertical-align: middle;
+	align-self: center;
+    margin-top: 30px;
+
+}
+.noneProduct, .boton-css-nuevo{
+	align-self: center;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+.noneProduct, .listNoneProducts{
+	align-self: center;
+}
+
+
 h4{
     text-align: center;
 }
@@ -822,7 +856,7 @@ h4{
     text-align: center;
 }
 .elemento-comprar {
-    
+
     background-color: #fff;
     padding: 10px;
     display: flex;
@@ -855,6 +889,8 @@ p.bold{
 
 }
 
+
+
 .carrito{  
     background-color: #fff;
     padding: 30px;
@@ -884,13 +920,13 @@ p.bold{
 }
 .control-formulario-radio .each {
     display: flex;
-    
+
 }
 .color{
     width: 15px;
     height: 15px;
     margin: 0px 10px;
-}   
+}
 .color-detalle{
     margin-bottom: 20px;
     text-align: left;
@@ -908,8 +944,8 @@ button.register {
     background-color: #004643;
     color: #fff;
     cursor: pointer;
-    
-    
+
+
 }
 button.register:hover {
     background-color: #195855;
@@ -936,7 +972,7 @@ button.register:hover {
     right: 0px;
     color:#ffffff ;
     background-color:transparent;
-    pointer-events: painted;  
+    pointer-events: painted;
   }
 .input-search{
   height: 50px;
@@ -1007,18 +1043,18 @@ button.register:hover {
     border-radius: 0px;
     background-color: transparent;
     border-bottom:1px solid rgba(255,255,255,.5);
-    
+
   }
-  
+
 
 
 
 /*Página index*/
 
-  
+
   .products{
     padding: 70px;
-    
+
 
 }
 .products a {
@@ -1040,8 +1076,8 @@ button.register:hover {
 }
 .cuerpo-card h3 {
     text-align: center;
-    
-    
+
+
 }
 
 
@@ -1061,7 +1097,7 @@ button.register:hover {
     .navbar li {
         margin: 30px;
         list-style-type: none;
-        
+
     }
     .navbar li a {
         color: white;
@@ -1071,8 +1107,8 @@ button.register:hover {
     .navbar li a:hover{
         color: #56918e
     }
-    
-    
+
+
 }
 @media(min-width:460px){
     header{
@@ -1090,11 +1126,11 @@ button.register:hover {
     .mini-banner img{
         width: 400px;
     }
-    
+
     .lista-imagenes{
-        
+
         width: 600px;
-        
+
     }
     .products{
         display: flex;
@@ -1111,7 +1147,7 @@ button.register:hover {
            width: 100%;
            height: 100%;
        }
-       
+
        .products a:hover {
            box-shadow: 0px 0px 10px rgb(100 100 100);
            cursor: pointer;
@@ -1120,18 +1156,18 @@ button.register:hover {
        .elementos1y2footer{
         display: flex;
         justify-content: space-between;
-        
+
         }
         .separador-banner{
             margin-top: 105px;
         }
 
 
-      
-    
-   
-    
-    
+
+
+
+
+
 }
 
 @media(max-width: 459px){
@@ -1160,7 +1196,7 @@ button.register:hover {
     .icons .icon .search-box-iconPart{
         display: none; /*muy importante que quede así*/
     }
-    
+
 }
 
 
@@ -1168,7 +1204,7 @@ button.register:hover {
     .main-header-top-elemento2{
         display: none;
     }
-    
+
 }
 @media (min-width: 1220px){
     .burger{
@@ -1182,14 +1218,14 @@ button.register:hover {
     .main-body{
         display: flex;
         flex-direction: row;
-        
+
     }
     p.productosCarrito{
         width: 50%;
     }
     .bienvenido-main-body{
         display: flex;
-        
+
     }
     .carrito {
         display: flex;
@@ -1203,9 +1239,9 @@ button.register:hover {
         background-color: #fff;
         padding: 20px;
         width: 40%;
-    
+
     }
-    
+
     .products{
      display: flex;
      flex-wrap: wrap;
@@ -1221,20 +1257,20 @@ button.register:hover {
         width: 100%;
         height: 100%;
     }
-    
+
     .products a:hover {
         box-shadow: 0px 0px 10px rgb(100 100 100);
         cursor: pointer;
         width: 23%;
     }
-   
-    
+
+
     .detail-bottom{
         display: flex;
         justify-content: flex-start;
     }
-    
-    
-    
-   
-} 
+
+
+
+
+}
