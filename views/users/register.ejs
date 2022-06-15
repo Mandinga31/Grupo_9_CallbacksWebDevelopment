@@ -94,6 +94,21 @@
             
         </div>
         <div class="control-formulario">
+            <input type="password" 
+            placeholder="Confirmá tu contraseña"
+            name="confirmarContra" 
+            id="confirmarContra" 
+            class="control" 
+            >
+            <% if (locals.errors && errors.confirmarContra) { %>
+                <div class="error" >
+                    <%= errors.confirmarContra.msg %> 
+                </div>
+            <% } %>
+            <p class="error" id="confirmarContra"></p>
+            
+        </div>
+        <div class="control-formulario">
             <label for="categorias" name="category">Categorias</label>
             <select class="control" name="category" id="category">
                 <option value="">Seleccionar</option>
@@ -106,10 +121,7 @@
         </div>
         <p class="error" id="category"></p>
 
-        <div class="each-checkbox">
-            <input type="checkbox" name="newsletter" value="newsletter" id="newsletter">
-            <label for="newsletter">Quiero recibir la newsletter para recibir descuentos y novedades</label>
-        </div>
+        
 
         <div class="control"><button type="submit" class="home">Continuar</button>   </div>
         

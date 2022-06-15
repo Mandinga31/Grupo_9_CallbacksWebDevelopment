@@ -30,8 +30,19 @@ processRegister: (req,res) =>{
     // if {Validaciones} 
     const resultValidation = validationResult(req);
     let userCreated = req.body;
-    console.log(userCreated)
-    
+    let password;    
+    if(req.body.confirmarContra === req.body.password){
+    password = bcrypt.hashSync(req.body.password, 10)
+    }else{
+        return res.render('users/register',{
+            errors: {
+                confirmarContra: {
+                    msg: "Las contraseñas no coinciden"
+                }
+            } 
+        })    
+    }
+    console.log(password)
     if(resultValidation.errors.length > 0){           
         return res.render("users/register", {errors: resultValidation.mapped(), oldData: req.body})
       }
@@ -50,7 +61,7 @@ processRegister: (req,res) =>{
         nombre: req.body.nombre,
         usuario: req.body.usuario,
         email: req.body.email,
-        password:  bcrypt.hashSync(req.body.password, 10),
+        password: password,
         imagen: req.file.filename,
         category_user_id: req.body.category
        }
@@ -84,6 +95,7 @@ login: (req,res)=>{
     res.render ('users/login');
 }, 
 processLogin: (req,res)=>{
+
     let errors = validationResult(req);
     if(errors.isEmpty() != true){
         res.render('users/login', {errors: errors.mapped(), oldData: req.body})
@@ -143,34 +155,44 @@ processUserEdit: (req,res)=>{
         res.render("users/editUser", {errors: resultValidation.mapped(),
         oldData: req.body, userToEdit}))
       }{
-
-     db.users.findByPk(id).then(user =>{
-            let imagen;
-            if(req.file.filename == undefined){
-                imagen = user.imagen
-            }else{
-                imagen = req.file.filename
-            }
-            db.users.update({
-            nombre: req.body.nombre,
-            usuario: req.body.usuario,
-            email: user.email,
-            password:  bcrypt.hashSync(req.body.password, 10),
-            imagen: imagen,
-            category_user_id: req.body.category
-           },{
-            where: {id: req.params.id}
-        }).then(()=> {return request.session.reload( function (err) {
-                request.render('users/user', { user: req.session.user });
-             });
-        })})
-           .catch((e)=>{return res.send(e)})
-        }  
-       
-    
-    
-    
+        let password;    
+    if(req.body.confirmarContra === req.body.password){
+    password = bcrypt.hashSync(req.body.password, 10)
+    db.users.findByPk(id).then(user =>{
+        let imagen;
+        if(req.file.filename == undefined){
+            imagen = user.imagen
+        }else{
+            imagen = req.file.filename
+        }
+        db.users.update({
+        nombre: req.body.nombre,
+        usuario: req.body.usuario,
+        email: user.email,
+        password:  password,
+        imagen: imagen,
+        category_user_id: req.body.category
+       },{
+        where: {id: req.params.id}
+    }).then(()=> { res.render('users/user', { user: req.session.userLogged });
+        
+    })
+})
+       .catch((e)=>{return res.send(e)})
+    }else{
+       db.users.findByPk(id, {include: [{association: 'categorias'}]}).then(userToEdit =>{
+            res.render('users/editUser',{
+                errors: {
+                    confirmarContra: {
+                        msg: "Las contraseñas no coinciden"
+                    }
+                } 
+            ,userToEdit})}    
+        )
+        
+    }
      
+}      
 },
 logout: (req,res)=>{
     req.session.destroy();

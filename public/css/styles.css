@@ -194,7 +194,6 @@ header .search-bar form, .texto-search{
         padding: 15px;
         margin-left: auto;
         margin-right: auto;
-        background-color: #fff;
         width: min-content;
         margin-top: 20px;
         margin-bottom: 50px;
@@ -215,8 +214,142 @@ header .search-bar form, .texto-search{
         position: absolute;
         left: 0;
         transition: opacity 1.5s ease-in-out;
-        max-width: -webkit-fill-available;
+        border-radius: 100%;
+        max-width: 130px;
+
       }
+    
+
+    
+    .user-card-full {
+        overflow: hidden;
+    }
+    
+    .card {
+        border-radius: 5px;
+        -webkit-box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
+        box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
+        border: none;
+        margin-bottom: 30px;
+    }
+    
+    .m-r-0 {
+        margin-right: 0px;
+    }
+    
+    .m-l-0 {
+        margin-left: 0px;
+    }
+    
+    .user-card-full .user-profile {
+        border-radius: 5px 0 0 5px;
+    }
+    
+    .bg-c-lite-green {
+            background-color: #004643;
+    }
+    
+    .user-profile {
+        padding: 20px 0;
+    }
+    
+    .card-block {
+        padding: 1.25rem;
+    }
+    
+    .m-b-25 {
+        margin-bottom: 25px;
+    }
+    
+    .img-radius {
+        border-radius: 5px;
+    }
+    
+    
+     
+    h6 {
+        font-size: 14px;
+    }
+    
+    .card .card-block p {
+        line-height: 25px;
+    }
+    
+    @media only screen and (min-width: 1400px){
+    p {
+        font-size: 14px;
+    }
+    }
+    
+    .card-block {
+        padding: 1.25rem;
+    }
+    
+    .b-b-default {
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .m-b-20 {
+        margin-bottom: 20px;
+    }
+    
+    .p-b-5 {
+        padding-bottom: 5px !important;
+    }
+    
+    .card .card-block p {
+        line-height: 25px;
+    }
+    
+    .m-b-10 {
+        margin-bottom: 10px;
+    }
+    
+    .text-muted {
+        color: #919aa3 !important;
+    }
+    
+    .b-b-default {
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .f-w-600 {
+        font-weight: 600;
+    }
+    
+    .m-b-20 {
+        margin-bottom: 20px;
+    }
+    
+    .m-t-40 {
+        margin-top: 20px;
+    }
+    
+    .p-b-5 {
+        padding-bottom: 5px !important;
+    }
+    
+    .m-b-10 {
+        margin-bottom: 10px;
+    }
+    
+    .m-t-40 {
+        margin-top: 20px;
+    }
+    
+    .user-card-full .social-link li {
+        display: inline-block;
+    }
+    
+    .user-card-full .social-link li a {
+        font-size: 20px;
+        margin: 0 10px 0 0;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    
+    
 .linkUserProfile{
     text-decoration: none;
     color: #004643;
@@ -574,28 +707,64 @@ button.home:hover {
     box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
     transition-duration: .45s;
 }
+
 .style{
-    background-color: #8CB89F;
+    background-color: #004643;
     display: block;
     position: fixed;
     right: 0; 
     width: 300px;
     height: 100%;
     margin: 0;
-    padding: 80px 0;
+    padding: 30px 0;
     list-style: none;
     box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
     transition-duration: .45s;
 
 
 }
-.menu__item a{
+.nav-bar-user{
+    display: none;
+}
+.hide{
+    background-color: #004643;
     display: block;
-    padding: 12px 24px;
+    position: fixed;
+    right: 0; 
+    width: 200px;
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
+    transition-duration: .45s;
+
+
+}
+.fs-20 a{
+    display: block;
+    padding: 12px ;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+.menu__item-title a{
+    display: block;
+    padding: 12px ;
     color: white;
     font-size: 30px;
     text-decoration: none;
     transition-duration: .25s;
+    text-align: center;
+}
+.menu__item a{
+    display: block;
+    padding: 12px ;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    transition-duration: .25s;
+    
   }
   .menu__item:hover {
     background-color: #CFD8DC;
@@ -811,15 +980,14 @@ h4{
 .card{
     text-decoration:none;
     padding: 10px;
+    box-shadow: 0px 0px 10px rgb(100 100 100);
 }
-.card:hover{
-     box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    cursor: pointer;
-}
+
 
 .elemento-carrito{
     align-self: center;
     text-align: center;
+    font-size: x-large;
 }
 .elemento-comprar {
     
