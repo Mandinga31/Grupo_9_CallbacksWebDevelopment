@@ -3,7 +3,7 @@ Proyecto Digital House
 
 
 
-Link de Trello Sprint 7: https://trello.com/b/J5eM0i7D/sprint-7-validaciones
+Link de Trello Sprint 8: https://trello.com/b/zG71mxeS/sprint-8
 
 # Relojes Callwatch.
 Este e-commerce ofrecerá tanto venta de relojes clásicos, como venta de relojes Smartwatch y sus respectivos accesorios. Consideramos que es importante 
@@ -16,7 +16,11 @@ En cuanto a la página, mas allá de sus funcionalidades, queremos lograr un dis
 ### Valentina Espíndola | Estudiante | 19 años 
 ### Braian Romero | Estudiante | 20 años
 
-
+## Paleta de colores
+#195855 Verde callwatch
+#e8e4e6 Gris claro
+#B4DBDC Verde claro banner
+#2F3031 Gris oscuro detalles
 ## Inspiración 
 SWATCH
 
