@@ -4,86 +4,89 @@
 <body>
 <%- include ('../partials/header.ejs') %> 
 <div class="bienvenido"><h2>Bienvenido de vuelta <%= user.usuario %>!</h2></div>
-<main class="main-bievenidos" style="background-color: #fff;">
-    
-    <div class="bienvenido-main-body">
-    
-    <div class="body-elemento1">
-        <div class="bienvenido-contenedor">
-            <img src="../images/<%= user.imagen %>  " class="imagen">
-        </div>
-    
-        
-    </div>
+<main class="main-bievenidos" >
+    <div class="page-content page-container" id="page-content">
+        <div class="padding">
+            <div class="row container d-flex justify-content-center">
+    <div class="col-xl-6 col-md-12">
+                                                    <div class="card user-card-full">
+                                                        <div class="row m-l-0 m-r-0" style="display: flex">
+                                                            <div class="col-sm-4 bg-c-lite-green user-profile">
+                                                                <div class="card-block text-center text-white">
+                                                                    <div class="m-b-25">
+                                                                        <img src="../images/<%= user.imagen %>  " class="imagen" style="border-radius:100%">                                                                    </div>
+                                                                    <h6 class="nombreProfile" style="font-size: x-large;
+                                                                    color: white;
+                                                                "><%= user.nombre %></h6>
 
-    <div class="body-elemento-2">
-        <h2 class="nombre">
-            
-            <p style="align-self: center;">Hola <%= user.nombre %>!</p>
-            <p style="align-self: center;"><%= user.email %></p>
-        </h2>
-        <div class="user-icons">
-            
-            
-            <a style="color: red; text-decoration: none; cursor: pointer;" href="#">
-                
-                <i class="fa-brands fa-gratipay"></i>
-                <h4>Mi wishlist</h4>
-            </a>
-        </div>
-        <hr>
-        <div class="user-icons">
-            
-            
-            <a class="linkUserProfile" href="../construir">
-                
-                <i class="fa-solid fa-receipt"></i>
-                <h4>Mis pedidos</h4>
-            </a>
-        </div>
-        <hr>
-        <div class="user-icons">
-            
-            
-            <a class="linkUserProfile" href="../construir">
-                
-                <i class="fa-solid fa-file-invoice-dollar"></i>
-                <h4>Datos de facturación</h4>
-            </a>
-        </div>
-        <hr>
-        <div class="user-icons">
-            
-            
-            <a href="/users/editUserProfile/<%= user.id %>" class="linkUserProfile">
-                
-                <i class="fa-solid fa-address-book"></i>
-                <h4>Editar mis datos</h4></a>
-                
-            </a>
-        </div>        
-        <hr>
-        <form action='<%=user.id%>?_method=DELETE' method="POST" class="formulario-login" style="text-align: center ;">
-                       
-            <button class="detail-a" type="submit" >
-                Eliminar
-            </button>
-        
-        
-    </form>
-        
-        
-        
-      
-    </div>          
-</div>
+                                                                    <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-8">
+                                                                <div class="card-block">
+                                                                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Información</h6>
+                                                                    <div class="row" style="display:flex ;">
+                                                                        <div class="col-sm-6" style="margin-right:14px ;">
+                                                                            <p class="m-b-10 f-w-600" >Email</p>
+                                                                            <h6 class="text-muted f-w-400"><%= user.email %></h6>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <p class="m-b-10 f-w-600">Usuario</p>
+                                                                            <h6 class="text-muted f-w-400"><%= user.usuario %></h6>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div >
+                                                                        
+                                                            
+                                                                        <div class="user-icons">
+                                                                            
+                                                                            
+                                                                            <a class="linkUserProfile" href="../construir">
+                                                                                
+                                                                                <i class="fa-solid fa-receipt"></i>
+                                                                                <h4>Mis pedidos</h4>
+                                                                            </a>
+                                                                        </div>
+                                                                        <hr>
+                                                                        <div class="user-icons">
+                                                                            
+                                                                            
+                                                                            <a class="linkUserProfile" href="../construir">
+                                                                                
+                                                                                <i class="fa-solid fa-file-invoice-dollar"></i>
+                                                                                <h4>Datos de facturación</h4>
+                                                                            </a>
+                                                                        </div>
+                                                                        <hr>
+                                                                        <div class="user-icons">
+                                                                            
+                                                                            
+                                                                            <a href="/users/editUserProfile/<%= user.id %>" class="linkUserProfile">
+                                                                                
+                                                                                <i class="fas fa-user-edit"></i>
+                                                                                <h4>Editar mis datos</h4></a>
+                                                                                
+                                                                            </a>
+                                                                        </div>        
+                                                                        <hr>
+                                                                    </div>
+                                                                    <form action='<%=user.id%>?_method=DELETE' method="POST" class="formulario-login" style="text-align: center; margin-top: 40px;">
+                                                                                   
+                                                                        <button class="detail-a" type="submit" >
+                                                                            Eliminar mi usuario
+                                                                        </button>
+                                                                    </form>
+                                                                    
+                                                                    
+                                                                    
+                                                                  
+                                                                </div>          
+                                                                    
+                                                 </div>
+                                                    </div>
+                                                </div>  
 
 
-
-
-<div style="text-align-last: center; margin-bottom: 20px;">
-    <a class="boton-css-nuevo" href="/users/logout/" style="text-decoration: none;">Logout</a>
-</div>
 
 
 

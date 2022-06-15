@@ -17,7 +17,7 @@ cart.forEach(producto => {
                 </div> 
                 
     <div class="elemento-carrito precio"><h5>$ ${producto.precio}</h5></div>
-    <div style="margin-top: 10%">
+    <div style="place-self: center">
     <button class="elemento-carrito" id="eliminar" data-id="${producto.id}"><i class="fas fa-trash-alt"></i>
                 </button></div>
                 
@@ -34,7 +34,8 @@ cart.forEach(producto => {
     carritoHTML.innerHTML = 
     `<div class="centerCarrito">
     <h2>¡Lo sentimos!</h2>
-    <i class="fas fa-times" style="font-size: 10em;color: #195855"></i>
+    <i class="fas fa-cart-plus" style="font-size: 7em;color: #195855;margin: 10px;"></i>
+    
     <h3>No tienes ningún artículo en tu carrito de compras.</h3>
     </div>`
 
@@ -76,22 +77,27 @@ if(cart != null && cart.length>=1){
     let arrayPrecios = []
     console.log(arrayPrecios)
     cart.map(producto => {arrayPrecios.push(producto.precio)})
+    let total = arrayPrecios.reduce((prev, curr) => prev + curr, 0)
+    let envios;
+    if(total>18000){envios = 0}else{
+        envios = 670
+    }
         const productoHTML = document.createElement("div")
         productoHTML.innerHTML = 
         `   <div class="elemento-comprar">
             <p>Subtotal:</p>
-            <p> $${arrayPrecios.reduce((prev, curr) => prev + curr, 0)}</p>
+            <p> $${total}</p>
         </div>
         <div class="elemento-comprar">
             
             <p>Envío:</p>
-            <p> Gratis</p>
+            <p> $${envios}</p>
         </div>
         
         <tr><td colspan="2"><hr class="separatorTotals"></td></tr>
         <div class="elemento-comprar">
             <p class="bold">Total a pagar:</p>
-            <p class="bold">$${arrayPrecios.reduce((prev, curr) => prev + curr, 0)}</p>
+            <p class="bold">$${total + envios}</p>
         </div>
         
         <div style="display:flex ;">

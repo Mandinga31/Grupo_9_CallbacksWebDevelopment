@@ -1,7 +1,7 @@
 <body>
 <header>
     <div class="envios">
-        <h4>Envios gratis a partir de los $10.000 | + 6 cuotas sin interés </h4>
+        <h4>Envios gratis a partir de los $18.000 | + 12 cuotas sin interés </h4>
     </div>
         
     <section class="top-header"> 
@@ -18,7 +18,10 @@
                         <li><a href="/products">Relojes</a></li>
                         <li><a href="/products/vintage">Vintage</a></li>
                         <li><a href="/products/tech">Tech</a></li>
+                        <% if(locals.isLogged == true && locals.userInfo.email == 'admin@admin.com'){ %> 
+
                         <li><a href="/products/create">Vendé</a></li>
+                        <%}%>
                         
                         
                     </ul>
@@ -55,13 +58,13 @@
             
         
             <% if(locals.isLogged == false){ %> 
-            <div class="icon">
+            <div class="icon" id="userProfileLogged">
                 
                 <li><a href="/users/login"><i class="fas fa-user-circle"></i></a></li>
                 
             </div>
             <% }else{ %>
-                <div class="icon">
+                <div class="icon" id="userProfileLogged">
                 <li><a href="/users/userProfile">
                     <img src="/images/<%=locals.userInfo.imagen%>" alt="" width="25" height="25" style="border-radius: 100%;vertical-align: middle;">            </div>
                 </li>
@@ -99,16 +102,41 @@
         
         <nav class="burger-nav">
             
-            <ul class="nav-bar">                    
+            <ul class="nav-bar">
+                <li class="menu__item-title"><a href="/products">Menú</a></li>                   
                 <li class="menu__item"><a href="/products">Relojes</a></li>
+
                 <li class="menu__item"><a href="/products/vintage">Vintage</a></li>
+ 
                 <li class="menu__item"><a href="/products/tech">Tech</a></li>
+
+                <% if(locals.isLogged == true && locals.userInfo.email == 'admin@admin.com'){ %> 
+
                 <li class="menu__item"><a href="/products/create">Vendé</a></li>
+
+                <%}%>
                     
                     
             </ul>
                 
         </nav>
+        <nav class="user-nav">
+            
+            <ul class="nav-bar-user">                    
+                <% if(locals.isLogged == true ){ %> 
+                    <li class="fs-20"><a href="/users/userProfile"><i class="fa-solid fa-user-check"></i> Mi perfil</a></li>
+                    <li class="fs-20"><a href="/users/logout/"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+                    
+                <%}else{%>
+                <li class="fs-20"><a href="/users/login">Ingresá</a></li>
+                <li class="fs-20"><a href="/users/register">Registrate</a></li>
+                    <%}%>
+                    
+                    
+            </ul>
+                
+        </nav>
+        
        
    
     </header>
