@@ -41,8 +41,11 @@ vintage: (req,res)=>{
 	})
 },
 carrito: (req,res)=>{
+	db.products.findAll()
+	.then(products=>{
+		res.render('products/productCart', {products})
+	})
 	
-	res.render ('products/productCart');
 },
 detalle: (req,res)=>{
     let id = req.params.id

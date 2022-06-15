@@ -21,6 +21,8 @@ function CreateNewCartId(){
 
 botonAgregar.addEventListener("click", (e)=>{
 
+
+
     e.preventDefault();
     
    
@@ -36,7 +38,13 @@ botonAgregar.addEventListener("click", (e)=>{
     }else{
         cart.push(producto)
     }
-    
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'El producto ' + nombre + ' se agrego correctamente a tu carrito',
+        showConfirmButton: false,
+        timer: 2300
+      })
     
     localStorage.setItem("carrito", JSON.stringify(cart))
     

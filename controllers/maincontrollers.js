@@ -32,13 +32,17 @@ buscar: (req,res)=>{
 
 
 		} 
-	).then((productosEncontrados)=>{if(productosEncontrados){ 
+	).then((productosEncontrados)=>{if(productosEncontrados.length >= 1){ 
+		console.log("MI CONSOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOL");
+		console.log(productosEncontrados);
 		res.render('products/productsSearch',{productosEncontrados})}
-		else
+		else //if (productosEncontrados.length < 1 || productosEncontrados == null || productosEncontrados == undefined || productosEncontrados.length == db.products.length)
 		{
-			res.render('products/productsSearch')
+		
+			res.render('products/productsSearch', {productosEncontrados})
 		}
 	})
-}
-};
+}};
+
+
 module.exports = controlador; 
