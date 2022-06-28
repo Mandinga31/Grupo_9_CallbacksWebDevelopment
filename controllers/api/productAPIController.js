@@ -40,7 +40,7 @@ const productAPIController = {
                   where: { 
                           category_product_id: 6}})
         
-        Promise.all([promCategoria, promColor ,promProducto,promUnisex,promMujer,promHombre,promNiños,promSmartwatch,promVintage])
+        Promise.all([promCategoria, promColor ,promProducto,promVintage,promMujer,promHombre,promNiños,promSmartwatch,promUnisex])
         .then(([categoria, color, product,vintage,mujer,hombre,niños,smartwatch,unisex])=>
 
      
