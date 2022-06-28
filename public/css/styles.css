@@ -1015,7 +1015,12 @@ h4{
     padding: 10px;
     box-shadow: 0px 0px 10px rgb(100 100 100);
 }
-
+button.elemento-carrito{
+    border: none;
+    background-color: white;
+    color: darkcyan;
+    cursor: pointer;
+}
 
 .elemento-carrito{
     align-self: center;
